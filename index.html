@@ -82,7 +82,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 0 20px;
-            height: 60px; /* Altura fixa para consistência */
+            height: 60px;
         }
 
         /* Botão Hambúrguer (Mobile) */
@@ -102,7 +102,7 @@
             display: flex;
             list-style: none;
             width: 100%;
-            justify-content: center; /* Centralizado no Desktop */
+            justify-content: center;
             gap: 20px;
         }
 
@@ -129,17 +129,17 @@
             border-bottom: 3px solid #3498db;
         }
         
-        /* Estilos de Mobile */
+        /* Estilos de Mobile para Nav */
         @media (max-width: 768px) {
             .menu-toggle {
-                display: block; /* Mostra o botão hambúrguer */
+                display: block;
                 z-index: 1001;
             }
 
             .nav-links {
-                display: none; /* Esconde o menu por padrão no mobile */
+                display: none;
                 position: absolute;
-                top: 60px; /* Logo abaixo da navbar */
+                top: 60px;
                 left: 0;
                 width: 100%;
                 background-color: #2c3e50;
@@ -149,7 +149,6 @@
                 box-shadow: 0 4px 6px rgba(0,0,0,0.2);
             }
 
-            /* Classe ativa quando o menu é aberto (via JS) */
             .nav-links.active {
                 display: flex;
                 animation: slideDown 0.3s ease-in-out;
@@ -166,7 +165,6 @@
             }
         }
 
-        /* Animação do menu */
         @keyframes slideDown {
             from { opacity: 0; transform: translateY(-10px); }
             to { opacity: 1; transform: translateY(0); }
@@ -308,13 +306,14 @@
             color: #555;
         }
         
+        /* --- CORREÇÃO RESPONSIVA DO ROTEIRO --- */
         .roteiro-texto {
             background: #f8f9fa;
             padding: 30px;
             border-radius: 8px;
             margin: 25px 0;
             border-left: 4px solid #27ae60;
-            font-family: 'Courier New', monospace;
+            font-family: 'Courier New', monospace; /* Desktop mantém monospace */
             font-size: 0.95em;
         }
         
@@ -331,6 +330,7 @@
             text-transform: uppercase;
             margin: 20px 0 10px 0;
             font-size: 1em;
+            line-height: 1.4;
         }
         
         .roteiro-texto .personagem {
@@ -339,8 +339,9 @@
             margin: 15px 0 5px 0;
         }
         
+        /* Diálogos com margem relativa para mobile */
         .roteiro-texto .dialogo {
-            margin-left: 40px;
+            margin-left: 40px; /* Desktop */
             color: #444;
             line-height: 1.6;
         }
@@ -352,7 +353,7 @@
         }
         
         .roteiro-texto .parentese {
-            margin-left: 60px;
+            margin-left: 60px; /* Desktop */
             font-style: italic;
             color: #666;
         }
@@ -363,6 +364,70 @@
             font-style: italic;
             color: #7f8c8d;
             font-family: 'Segoe UI', sans-serif;
+        }
+        
+        /* Imagem responsiva */
+        .imagem-roteiro {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px auto;
+            display: block;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        /* --- MEDIA QUERIES (MOBILE) --- */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            
+            h2 {
+                font-size: 1.8em;
+            }
+            
+            /* Melhorar padding dos cards no mobile */
+            .card, .roteiro-completo {
+                padding: 20px 15px;
+            }
+
+            .roteiro-completo .meta {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            /* CORREÇÃO: Fonte legível no mobile para roteiro */
+            .roteiro-texto {
+                font-family: 'Segoe UI', sans-serif; /* Troca para sans-serif no mobile */
+                padding: 20px 15px;
+                font-size: 1em;
+                line-height: 1.6;
+            }
+
+            .roteiro-texto h4 {
+                font-size: 1.2em;
+                margin-top: 20px;
+            }
+
+            .roteiro-texto .cena {
+                font-size: 0.95em;
+                margin-top: 25px;
+            }
+
+            /* Margens relativas para não quebrar layout */
+            .roteiro-texto .dialogo {
+                margin-left: 20px;
+                margin-right: 10px;
+            }
+            
+            .roteiro-texto .parentese {
+                margin-left: 20px; /* Reduz drasticamente a margem */
+                margin-bottom: 10px;
+                display: block; /* Garante que fique em bloco */
+                font-style: italic;
+                color: #555;
+            }
         }
         
         .checklist {
@@ -501,42 +566,9 @@
             color: #3498db;
         }
         
-        .imagem-roteiro {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            border-radius: 8px;
-            margin: 20px auto;
-            display: block;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        
         /* Anúncio in-feed (entre conteúdos) */
         .ad-space.in-feed {
             margin: 40px auto;
-        }
-        
-        /* Ajustes gerais para mobile */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2em;
-            }
-            
-            h2 {
-                font-size: 1.8em;
-            }
-            
-            .roteiro-completo .meta {
-                flex-direction: column;
-            }
-            
-            .roteiro-texto .dialogo {
-                margin-left: 20px;
-            }
-            
-            .roteiro-texto .parentese {
-                margin-left: 30px;
-            }
         }
     </style>
 </head>
@@ -563,7 +595,7 @@
     <!-- Menu Responsivo -->
     <nav>
         <div class="nav-container">
-            <!-- Botão Hambúrguer (Aparece apenas no celular) -->
+            <!-- Botão Hambúrguer -->
             <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir Menu">
                 ☰
             </button>
