@@ -70,6 +70,48 @@ document.getElementById('custom-ad-container').addEventListener('click', functio
             letter-spacing: 1px;
             margin-bottom: 10px;
         }
+
+        /* Estilo para embed do YouTube */
+        .video-embed {
+            background: white;
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-left: 5px solid #FF0000;
+        }
+
+        .video-embed h3 {
+            color: #2c3c50;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .video-embed p {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
         
         /* --- NAV PROFISSIONAL E RESPONSIVO --- */
         nav {
@@ -581,7 +623,7 @@ document.getElementById('custom-ad-container').addEventListener('click', functio
     max-width: 728px; /* Ou 100% para mobile */
     height: 90px;     /* Altura do header ad */
     margin: 0 auto;   /* Centraliza horizontalmente */
-    overflow: hidden; /* Evita que o anúncio “vaze” para fora */
+    overflow: hidden; /* Evita que o anúncio "vaze" para fora */
 }
 
 /* Header ad-space personalizado para Monetag */
@@ -610,18 +652,6 @@ document.getElementById('custom-ad-container').addEventListener('click', functio
             async 
             data-cfasync="false"></script>
     </div>
-
-        <!--<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-format="fluid"
-     data-ad-layout-key="-fb+5w+4e-db+86"
-     data-ad-client="ca-pub-7482420290445582"
-     data-ad-slot="3820255038"></ins>
-        <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>-->
-
-
     </div>
     
     <!-- Menu Responsivo -->
@@ -635,6 +665,7 @@ document.getElementById('custom-ad-container').addEventListener('click', functio
             <!-- Links de Navegação -->
             <ul class="nav-links" id="navLinks">
                 <li><a href="#sobre" onclick="toggleMenu()">Sobre</a></li>
+                <li><a href="#recursos" onclick="toggleMenu()">Recursos</a></li>
                 <li><a href="#roteiros" onclick="toggleMenu()">Roteiros</a></li>
                 <li><a href="#dicas" onclick="toggleMenu()">Dicas Profissionais</a></li>
                 <li><a href="#guias" onclick="toggleMenu()">Guias</a></li>
@@ -660,20 +691,33 @@ document.getElementById('custom-ad-container').addEventListener('click', functio
             async 
             data-cfasync="false"></script>
     </div>
-            <!--<ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-format="fluid"
-                 data-ad-layout-key="-fb+5w+4e-db+86"
-                 data-ad-client="ca-pub-7482420290445582"
-                 data-ad-slot="7610809317"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>-->
         </div>
+
+        <!-- Seção de Recursos com Vídeo do YouTube -->
+        <section id="recursos">
+            <h2>📚 Recursos para Roteiristas</h2>
+
+            <!-- Embed do YouTube -->
+            <div class="video-embed">
+                <h3>🎬 Como Velozes e Furiosos Faturou US$ 700 Mi (e Seu Roteiro Não)</h3>
+                <p><strong>Descrição:</strong></p>
+                <p>Velozes e Furiosos DEZ faturou setecentos milhões de dólares. O SEU roteiro... provavelmente, não. E se eu te disser que não é sobre ter mais talento, nem fazer mais ação, mas sobre um ÚNICO SEGREDO que a Universal Pictures dominou? Um segredo que você, como roteirista, pode aplicar HOJE para deixar de escrever para o seu bairro e começar a escrever para o mundo. Fica comigo que eu vou te entregar essa estratégia agora.</p>
+                
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/kcqCvkotV-Y" 
+                            title="Como Velozes e Furiosos Faturou US$ 700 Mi (e Seu Roteiro Não)" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
 
         <section id="roteiros">
             <h2>Roteiros Disponíveis</h2>
             
+            <!-- Roteiro 1: A Chamada Silenciosa -->
             <div class="card roteiro">
                 <div class="roteiro-completo">
                     <h3>"A Chamada Silenciosa"</h3>
@@ -796,7 +840,7 @@ document.getElementById('custom-ad-container').addEventListener('click', functio
                 </script>
             </div>
 
-            <!-- Roteiro: Na minha Linguagem! -->
+            <!-- Roteiro 2: Na minha Linguagem! -->
             <div class="card roteiro">
                 <div class="roteiro-completo">
                     <h3>"Na Minha Linguagem!"</h3>
@@ -851,7 +895,7 @@ document.getElementById('custom-ad-container').addEventListener('click', functio
                         <p class="acao">Paulo faz uma pausa, pensando, enquanto Carlos continua digitando.</p>
                         
                         <p class="personagem">PAULO</p>
-                        <p class="dialogo">— E… como é que se diz “mandioca” nesse tal de PHP?</p>
+                        <p class="dialogo">— E… como é que se diz "mandioca" nesse tal de PHP?</p>
                         
                         <p class="acao">Carlos solta uma risada baixa e começa a digitar rápido no teclado.</p>
                         
@@ -868,7 +912,7 @@ document.getElementById('custom-ad-container').addEventListener('click', functio
                         <p class="acao">Ele gesticula, tentando processar a informação.</p>
                         
                         <p class="personagem">PAULO</p>
-                        <p class="dialogo">— Primeiro fala “echo” e depois joga uma palavra de outro idioma? Nem árabe nem chinês falam assim… Isso é de que país afinal?</p>
+                        <p class="dialogo">— Primeiro fala "echo" e depois joga uma palavra de outro idioma? Nem árabe nem chinês falam assim… Isso é de que país afinal?</p>
                         
                         <p class="acao">Carlos para de digitar, olha para o amigo e sorri, divertido com a confusão.</p>
                         
@@ -882,6 +926,103 @@ document.getElementById('custom-ad-container').addEventListener('click', functio
                     </div>
                     
                     <em>Projeto leve, filmável e de baixo custo. Disponível para leitura e aquisição.</em>
+                </div>
+            </div>
+
+            <!-- Roteiro 3: Homem que fez porcaria! -->
+            <div class="card roteiro">
+                <div class="roteiro-completo">
+                    <h3>"Homem que fez porcaria!"</h3>
+                    
+                    <div class="meta">
+                        <span>Duração: 2–3 min</span>
+                        <span>Gênero: Comédia</span>
+                        <span>Personagens: 2</span>
+                        <span>Cenário: Interior (Casa)</span>
+                    </div>
+                    
+                    <p><strong>Sinopse:</strong></p>
+                    <p>Um mal-entendido hilarante acontece quando um homem anuncia à sua esposa que "fez uma porcaria". A mulher fica apavorada imaginando o pior, mas descobre que ele estava falando literalmente sobre abrir um negócio relacionado à venda de porcos. Uma comédia sobre equívocos linguísticos e empreendedorismo inesperado.</p>
+                    
+                    <div class="roteiro-texto">
+                        <h4>ROTEIRO COMPLETO</h4>
+                        
+                        <p class="cena">INT. SALA DE ESTAR - DIA</p>
+                        
+                        <p class="acao">JOÃO (30 anos) está em pé na sala, nervoso, segurando um envelope com dinheiro. Sua esposa, MARIA (28 anos), está sentada no sofá, tranquila.</p>
+                        
+                        <p class="personagem">JOÃO</p>
+                        <p class="dialogo">Amor, preciso te contar uma coisa...</p>
+                        
+                        <p class="acao">Maria olha para ele com naturalidade.</p>
+                        
+                        <p class="personagem">MARIA</p>
+                        <p class="dialogo">Fala, amor. Pode falar à vontade.</p>
+                        
+                        <p class="acao">João suspira fundo, como se estivesse prestes a confessar algo grave.</p>
+                        
+                        <p class="personagem">JOÃO</p>
+                        <p class="parentese">(Suspira fundo)</p>
+                        <p class="dialogo">Então... eu fiz uma porcaria.</p>
+                        
+                        <p class="acao">Maria se levanta assustada, os olhos arregalados.</p>
+                        
+                        <p class="personagem">MARIA</p>
+                        <p class="parentese">(Assustada)</p>
+                        <p class="dialogo">Como assim? Porcaria? Que porcaria?</p>
+                        
+                        <p class="personagem">JOÃO</p>
+                        <p class="dialogo">Calma, calma! Não é o que você tá pensando. Olha só isso.</p>
+                        
+                        <p class="acao">João mostra o envelope cheio de dinheiro. Maria fica ainda mais chocada.</p>
+                        
+                        <p class="personagem">MARIA</p>
+                        <p class="dialogo">Você fez merda pra conseguir isso e ainda vem me mostrar o dinheiro?</p>
+                        
+                        <p class="personagem">JOÃO</p>
+                        <p class="dialogo">Não, não. Eu não fiz merda. Eu fiz... porcaria!</p>
+                        
+                        <p class="acao">Maria está completamente confusa, andando de um lado para o outro.</p>
+                        
+                        <p class="personagem">MARIA</p>
+                        <p class="dialogo">Não entendo, o que é que você fez? Olha João, porque? Você quer nos sustentar com o dinheiro de merda? Que exemplo você quer dar pros nossos filhos?</p>
+                        
+                        <p class="acao">João tenta acalmá-la, segurando suas mãos.</p>
+                        
+                        <p class="personagem">JOÃO</p>
+                        <p class="dialogo">Eu não sei se você está entendendo como. Mas afinal, como se chama o lugar onde é vendido hamburger?</p>
+                        
+                        <p class="acao">Maria para, confusa com a mudança de assunto.</p>
+                        
+                        <p class="personagem">MARIA</p>
+                        <p class="dialogo">Hamburgueria.</p>
+                        
+                        <p class="personagem">JOÃO</p>
+                        <p class="dialogo">E como se chama o lugar onde se vende porco?</p>
+                        
+                        <p class="acao">Maria para para pensar, a ficha começando a cair.</p>
+                        
+                        <p class="personagem">MARIA</p>
+                        <p class="dialogo">Porcaria.</p>
+                        
+                        <p class="acao">Ela arregala os olhos, finalmente entendendo.</p>
+                        
+                        <p class="personagem">MARIA</p>
+                        <p class="dialogo">Hamm então você fez porcaria?</p>
+                        
+                        <p class="acao">João sorri aliviado, abrindo os braços.</p>
+                        
+                        <p class="personagem">JOÃO</p>
+                        <p class="dialogo">Exatamente isso amor!</p>
+                        
+                        <p class="acao">Maria suspira, aliviada, e começa a rir do mal-entendido. João se junta à risada.</p>
+                        
+                        <p class="cena">FADE OUT.</p>
+                        
+                        <p class="final">FIM</p>
+                    </div>
+                    
+                    <em>Comédia familiar leve, filmável em uma única locação. Perfeita para curta-metragem ou sketch. Disponível para leitura e aquisição.</em>
                 </div>
             </div>
             
@@ -1039,19 +1180,19 @@ document.getElementById('custom-ad-container').addEventListener('click', functio
                         <li>Um único conflito</li>
                         <li>Impacto rápido, preciso e concentrado</li>
                     </ul>
-                    <p>“Na Minha Linguagem!” é uma curta de conceito, sustentada pelo contraste cultural e pela linguagem como elemento dramático. O filme não depende de grandes ações, mas de significado.</p>
+                    <p>"Na Minha Linguagem!" é uma curta de conceito, sustentada pelo contraste cultural e pela linguagem como elemento dramático. O filme não depende de grandes ações, mas de significado.</p>
                 </div>
 
                 <div class="card anatomia-card">
                     <strong>Capítulo 1 – O Pulso da História</strong>
                     <p>Todo roteiro tem um pulso invisível: o desejo do protagonista. Esse desejo é o que dá vida à trama, o que conecta público e personagem. Sem ele, a narrativa parece morta — não importa o quanto de ação, efeitos visuais ou reviravoltas existam.</p>
-                    <p>A pergunta-chave que guia esse pulso é:<br><em>“O que meu protagonista quer tanto que estaria disposto a perder tudo para conseguir?”</em></p>
+                    <p>A pergunta-chave que guia esse pulso é:<br><em>"O que meu protagonista quer tanto que estaria disposto a perder tudo para conseguir?"</em></p>
                     
                     <p><strong>Exemplos de Filmes com o Pulso Bem Enquadrado:</strong></p>
                     <p><strong>O Poderoso Chefão (1972)</strong><br>Pulso: Michael Corleone deseja proteger a família, mas esse desejo o empurra para se tornar aquilo que ele mais rejeitava: o novo chefão da máfia. A cada decisão, vemos o preço de manter esse desejo — até que Michael perde justamente o que queria preservar: a pureza e a união familiar.</p>
                     <p><strong>Titanic (1997)</strong><br>Pulso: Rose deseja liberdade de uma vida sufocante de convenções sociais. O romance com Jack é apenas a forma visível desse desejo, mas o coração da história é a luta de Rose para se libertar e viver intensamente, mesmo diante da tragédia.</p>
                     
-                    <p><strong>Reflexão para quem escreve:</strong><br>Antes de começar a estruturar cenas, diálogos e reviravoltas, escreva em uma frase:<br><em>“Meu protagonista quer ____ mais do que tudo, e isso o levará a ____.”</em></p>
+                    <p><strong>Reflexão para quem escreve:</strong><br>Antes de começar a estruturar cenas, diálogos e reviravoltas, escreva em uma frase:<br><em>"Meu protagonista quer ____ mais do que tudo, e isso o levará a ____."</em></p>
                     <p>Esse é o coração do roteiro. O resto — cenas, diálogos, ritmo, estilo — são apenas batimentos que ecoam desse pulso central.</p>
                 </div>
 
@@ -1063,7 +1204,7 @@ document.getElementById('custom-ad-container').addEventListener('click', functio
                     <p><strong>Exemplos de Filmes com o Fantasma Bem Definido:</strong></p>
                     <p><strong>Batman Begins (2005)</strong><br>Fantasma: A morte dos pais, assassinados diante de seus olhos. Esse trauma guia Bruce Wayne a lutar contra o crime, mas também o coloca em conflito interno com a raiva e a sede de vingança.</p>
                     
-                    <p><strong>Reflexão para quem escreve:</strong><br>Antes de planejar o arco do protagonista, responda:<br><em>“Meu personagem é movido por ____ porque no passado sofreu ____.”</em></p>
+                    <p><strong>Reflexão para quem escreve:</strong><br>Antes de planejar o arco do protagonista, responda:<br><em>"Meu personagem é movido por ____ porque no passado sofreu ____."</em></p>
                     <p>O fantasma não é apenas um detalhe de biografia; ele é a ferida emocional que o público reconhece e que dá humanidade ao personagem.</p>
                     <p><strong>Dica:</strong> o fantasma quase sempre se conecta ao desejo (pulso da história). O que o protagonista quer agora é, muitas vezes, uma tentativa de curar ou compensar a dor do passado.</p>
                 </div>
@@ -1076,7 +1217,7 @@ document.getElementById('custom-ad-container').addEventListener('click', functio
                     <p><strong>Exemplos de Filmes com Abismos Memoráveis:</strong></p>
                     <p><strong>O Rei Leão (1994)</strong><br>Abismo: Simba vê seu pai morrer e acredita ser culpado. Expulso do reino, ele foge, carregando culpa e vergonha. É o ponto mais baixo antes de seu retorno como verdadeiro rei.</p>
                     
-                    <p><strong>Reflexão para quem escreve:</strong><br>Antes de escrever o clímax, defina:<br><em>“Qual é o momento em que meu protagonista chega ao fundo do poço, quando tudo parece perdido?”</em></p>
+                    <p><strong>Reflexão para quem escreve:</strong><br>Antes de escrever o clímax, defina:<br><em>"Qual é o momento em que meu protagonista chega ao fundo do poço, quando tudo parece perdido?"</em></p>
                     <p>Sem o Abismo, a vitória final pode soar fácil demais. Com ele, cada conquista se torna merecida — e o público vibra junto.</p>
                     <p><strong>Dica:</strong> O Abismo não é apenas sobre perda. É também o momento em que nasce a força da superação. O renascimento do herói só é possível porque antes ele encarou a escuridão absoluta.</p>
                 </div>
@@ -1087,10 +1228,10 @@ document.getElementById('custom-ad-container').addEventListener('click', functio
                     <p>A narrativa ganha força quando essa máscara começa a rachar. O momento mais poderoso do roteiro é quando ela finalmente cai, revelando a essência do personagem. É nesse instante que o público sente que o herói está nu diante do mundo — e só assim pode se transformar de verdade.</p>
                     
                     <p><strong>Exemplos de Filmes com a Máscara:</strong></p>
-                    <p><strong>Frozen (2013)</strong><br>Máscara: Elsa finge ter controle e esconde seus poderes para não ser rejeitada.<br>Quando cai: Ao se libertar em “Let It Go”, ela abandona a máscara, mas também precisa aprender a integrar sua verdadeira identidade.</p>
-                    <p><strong>Batman: O Cavaleiro das Trevas (2008)</strong><br>Máscara: Bruce Wayne usa a máscara literal de Batman, mas também a máscara emocional de que pode “salvar tudo sozinho”.<br>Quando cai: Ele entende que ser herói significa sacrifício. Ao assumir a culpa pelos crimes de Harvey Dent, mostra seu verdadeiro caráter.</p>
+                    <p><strong>Frozen (2013)</strong><br>Máscara: Elsa finge ter controle e esconde seus poderes para não ser rejeitada.<br>Quando cai: Ao se libertar em "Let It Go", ela abandona a máscara, mas também precisa aprender a integrar sua verdadeira identidade.</p>
+                    <p><strong>Batman: O Cavaleiro das Trevas (2008)</strong><br>Máscara: Bruce Wayne usa a máscara literal de Batman, mas também a máscara emocional de que pode "salvar tudo sozinho".<br>Quando cai: Ele entende que ser herói significa sacrifício. Ao assumir a culpa pelos crimes de Harvey Dent, mostra seu verdadeiro caráter.</p>
                     
-                    <p><strong>Reflexão para quem escreve:</strong><br>Antes do clímax da sua história, pergunte:<br><em>“Qual máscara meu protagonista usa, e o que acontece quando ela cai?”</em></p>
+                    <p><strong>Reflexão para quem escreve:</strong><br>Antes do clímax da sua história, pergunte:<br><em>"Qual máscara meu protagonista usa, e o que acontece quando ela cai?"</em></p>
                     <p>O público não se apaixona pelo personagem pela máscara que ele usa, mas pelo momento em que ele a remove e se mostra inteiro.</p>
                 </div>
 
@@ -1105,10 +1246,10 @@ document.getElementById('custom-ad-container').addEventListener('click', functio
                     </ul>
                     
                     <p><strong>Exemplos de Clímax Poderosos:</strong></p>
-                    <p><strong>O Poderoso Chefão (1972)</strong><br>Michael ordena a execução dos chefes rivais durante o batizado. O clímax mostra sua transformação completa: de filho que rejeitava a máfia, ele se torna o novo “Padrinho”.</p>
+                    <p><strong>O Poderoso Chefão (1972)</strong><br>Michael ordena a execução dos chefes rivais durante o batizado. O clímax mostra sua transformação completa: de filho que rejeitava a máfia, ele se torna o novo "Padrinho".</p>
                     <p><strong>Vingadores: Ultimato (2019)</strong><br>Tony Stark enfrenta Thanos. O clímax mostra a síntese de seu arco: o homem egocêntrico do primeiro filme agora sacrifica a própria vida para salvar todos.</p>
                     
-                    <p><strong>Reflexão para quem escreve:</strong><br>Antes de pensar em tiros, explosões ou discursos grandiosos, responda:<br><em>“Qual escolha final meu protagonista precisa fazer, e o que essa escolha revela sobre quem ele se tornou?”</em></p>
+                    <p><strong>Reflexão para quem escreve:</strong><br>Antes de pensar em tiros, explosões ou discursos grandiosos, responda:<br><em>"Qual escolha final meu protagonista precisa fazer, e o que essa escolha revela sobre quem ele se tornou?"</em></p>
                     <p>O clímax é a resposta dramática à pergunta feita no início da história: o protagonista vai conseguir o que deseja — e a que custo?</p>
                 </div>
 
@@ -1126,7 +1267,7 @@ document.getElementById('custom-ad-container').addEventListener('click', functio
                     <p><strong>O Senhor dos Anéis: O Retorno do Rei (2003)</strong><br>Frodo retorna ao Condado… mas já não pertence mais a ele. O que aprendemos: O herói nunca volta o mesmo. A viagem o muda para sempre.</p>
                     <p><strong>Titanic (1997)</strong><br>Rose, já idosa, lança o colar ao mar. Não era sobre a joia, mas sobre a vida plena que viveu após Jack. O que aprendemos: A verdadeira vitória pode ser a liberdade de viver intensamente.</p>
                     
-                    <p><strong>Reflexão para quem escreve:</strong><br>Pergunte-se:<br><em>“Depois do clímax, como a vida do protagonista — e do mundo ao redor — se transforma?”</em></p>
+                    <p><strong>Reflexão para quem escreve:</strong><br>Pergunte-se:<br><em>"Depois do clímax, como a vida do protagonista — e do mundo ao redor — se transforma?"</em></p>
                     <p>Nunca subestime a resolução. Ela é o rastro de emoção que fica no público quando a tela escurece ou a última página é virada.</p>
                 </div>
 
@@ -1145,7 +1286,7 @@ document.getElementById('custom-ad-container').addEventListener('click', functio
                     <p><strong>Harry Potter e as Relíquias da Morte – Parte 2:</strong> A cena dos filhos na plataforma 9¾ traz continuidade, esperança e um sentimento de legado.</p>
                     <p><strong>Clube da Luta:</strong> O silêncio final ecoa a transformação do protagonista, reforçando o peso de suas escolhas e deixando uma inquietação que persiste.</p>
                     
-                    <p><strong>Dica para escritores:</strong><br>Antes de fechar a última página, pergunte-se:<br><em>“Que sensação quero que meu público carregue?”</em></p>
+                    <p><strong>Dica para escritores:</strong><br>Antes de fechar a última página, pergunte-se:<br><em>"Que sensação quero que meu público carregue?"</em></p>
                 </div>
 
                 <div class="card anatomia-card" style="border-left-color: #34495e; background: #fdfdfd;">
@@ -1162,7 +1303,7 @@ document.getElementById('custom-ad-container').addEventListener('click', functio
                     
                     <p><strong>Exemplo cinematográfico:</strong><br><strong>Forrest Gump:</strong> Ele sentado no banco, o vento brincando com seu cabelo, o cheiro de terra molhada no ar, enquanto flashes de uma vida inteira passam diante dos olhos — encontros, perdas, aventuras. Cada detalhe transforma a simplicidade em poesia viva.</p>
                     
-                    <p><strong>Dica prática para escritores imersivos:</strong><br>Mesmo quando a ação termina, o arco emocional deve ser sentido com todos os sentidos. Pergunte-se:<br><em>“Cada gesto, silêncio, cor e cheiro revela quem ele se tornou?”</em></p>
+                    <p><strong>Dica prática para escritores imersivos:</strong><br>Mesmo quando a ação termina, o arco emocional deve ser sentido com todos os sentidos. Pergunte-se:<br><em>"Cada gesto, silêncio, cor e cheiro revela quem ele se tornou?"</em></p>
                     
                     <p><strong>Toque final cinematográfico, poético e sensorial:</strong><br>Fechar a jornada do protagonista é como a última luz do crepúsculo tingindo o horizonte. O som diminui, os cheiros se dissipam, mas a emoção permanece, pulsando no peito do espectador. É uma cena que diz: esta história não termina aqui; ela respira dentro de quem a viveu, e continuará a ecoar em cada memória.</p>
                 </div>
