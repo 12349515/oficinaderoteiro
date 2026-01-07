@@ -41,6 +41,30 @@
             font-weight: 300;
         }
         
+        /* Espaço para anúncio no topo */
+        .ad-space {
+            background: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 1100px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        
+        .ad-space.header-ad {
+            margin-top: 0;
+            border-radius: 0 0 8px 8px;
+        }
+        
+        .ad-label {
+            font-size: 0.75em;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+        
         nav {
             background-color: #34495e;
             display: flex;
@@ -358,14 +382,39 @@
             opacity: 0.9;
         }
         
+        footer a {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        footer a:hover {
+            color: #3498db;
+        }
+        
         .imagem-roteiro {
             width: 100%;
             max-width: 600px;
-            height: 450PX;
+            height: 450px;
             border-radius: 8px;
             margin: 20px auto;
             display: block;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        /* Anúncio lateral - Sidebar */
+        .sidebar-ad {
+            position: sticky;
+            top: 80px;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-left: 20px;
+        }
+        
+        /* Anúncio in-feed (entre conteúdos) */
+        .ad-space.in-feed {
+            margin: 40px auto;
         }
         
         @media (max-width: 768px) {
@@ -396,10 +445,14 @@
             .roteiro-texto .parentese {
                 margin-left: 30px;
             }
-        }
-
-        #Politica a{
-            color: white;
+            
+            .sidebar-ad {
+                display: none;
+            }
+            
+            .imagem-roteiro {
+                height: auto;
+            }
         }
     </style>
 </head>
@@ -408,6 +461,21 @@
         <h1>Oficina de Roteiro</h1>
         <p>Roteiros profissionais, consultoria e recursos para roteiristas</p>
     </header>
+    
+    <!-- Anúncio Header (Horizontal - 728x90 ou responsivo) -->
+    <div class="ad-space header-ad">
+        <div class="ad-label">Publicidade</div>
+        <!-- Insira aqui o código do AdSense para anúncio horizontal -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-7482420290445582"
+             data-ad-slot="SEU_SLOT_ID_1"
+             data-ad-format="horizontal"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
     
     <nav>
         <a href="#sobre">Sobre</a>
@@ -423,6 +491,20 @@
             <p>Este é um espaço dedicado à criação, desenvolvimento e comercialização de roteiros profissionais. Aqui você encontra roteiros originais disponíveis para leitura e aquisição, além de recursos práticos para aprimorar sua escrita e entender o mercado audiovisual.</p>
             <p>Todos os materiais são desenvolvidos com foco em qualidade narrativa, viabilidade de produção e potencial comercial. Cada projeto é cuidadosamente elaborado para equilibrar criatividade artística com viabilidade técnica e orçamentária.</p>
         </section>
+
+        <!-- Anúncio In-Feed 1 (Entre Sobre e Roteiros) -->
+        <div class="ad-space in-feed">
+            <div class="ad-label">Publicidade</div>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-format="fluid"
+                 data-ad-layout-key="-fb+5w+4e-db+86"
+                 data-ad-client="ca-pub-7482420290445582"
+                 data-ad-slot="SEU_SLOT_ID_2"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
 
         <section id="roteiros">
             <h2>Roteiros Disponíveis</h2>
@@ -535,6 +617,20 @@
                 </div>
             </div>
             
+            <!-- Anúncio In-Feed 2 (Entre roteiros) -->
+            <div class="ad-space in-feed">
+                <div class="ad-label">Publicidade</div>
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-format="fluid"
+                     data-ad-layout-key="-fb+5w+4e-db+86"
+                     data-ad-client="ca-pub-7482420290445582"
+                     data-ad-slot="SEU_SLOT_ID_3"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            
             <div class="card roteiro">
                 <strong>Roteiro 2: "Na Minha Linguagem"</strong>
                 <p>Comédia curta onde dois amigos entram em conflito quando linguagens de programação passam a ser entendidas como idiomas reais. O mal-entendido inicial escala rapidamente quando um deles insiste que "fala Python fluentemente" e o outro não acredita que JavaScript seja "uma língua de verdade".</p>
@@ -565,6 +661,20 @@
             <div class="card dica">
                 <strong>3. Mostre, Não Conte</strong>
                 <p>Ação e diálogo são infinitamente mais poderosos do que longas explicações narrativas. Deixe o espectador deduzir informações através do que vê e ouve, não através de exposição forçada. Confie na inteligência da sua audiência.</p>
+            </div>
+            
+            <!-- Anúncio In-Feed 3 (No meio das dicas) -->
+            <div class="ad-space in-feed">
+                <div class="ad-label">Publicidade</div>
+                <ins class="adsbygoogle"
+                     style="display:block; text-align:center;"
+                     data-ad-layout="in-article"
+                     data-ad-format="fluid"
+                     data-ad-client="ca-pub-7482420290445582"
+                     data-ad-slot="SEU_SLOT_ID_4"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
             </div>
             
             <div class="card dica">
@@ -677,6 +787,19 @@
             </div>
         </section>
 
+        <!-- Anúncio In-Feed 4 (Antes do Contato) -->
+        <div class="ad-space in-feed">
+            <div class="ad-label">Publicidade</div>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-format="autorelaxed"
+                 data-ad-client="ca-pub-7482420290445582"
+                 data-ad-slot="SEU_SLOT_ID_5"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
         <section id="contato">
             <div class="cta">
                 <h3>Vamos Trabalhar Juntos?</h3>
@@ -699,11 +822,11 @@
     </main>
     
     <footer>
-        <p><strong>Oficina de Roteiro </strong> | Roteiros Profissionais e Consultoria Especializada</p>
+        <p><strong>Oficina de Roteiro</strong> | Roteiros Profissionais e Consultoria Especializada</p>
         <p>Todos os roteiros e materiais neste site estão protegidos por direitos autorais.</p>
         <p>Licença Creative Commons CC BY-NC para materiais educacionais selecionados.</p>
-        <p id="Politica"><a href="politica-privacidade.html">Política de Privacidade</a></p>
-
+        <p><a href="politica-privacidade.html">Política de Privacidade</a></p>
+        <p>&copy; 2026 Lelson António - Todos os direitos reservados</p>
     </footer>
 </body>
 </html>
