@@ -66,31 +66,113 @@
             margin-bottom: 10px;
         }
         
+        /* --- NAV PROFISSIONAL E RESPONSIVO --- */
         nav {
             background-color: #34495e;
-            display: flex;
-            justify-content: center;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            height: 60px; /* Altura fixa para consistência */
+        }
+
+        /* Botão Hambúrguer (Mobile) */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.8em;
+            cursor: pointer;
+            padding: 5px;
+            line-height: 1;
         }
         
-        nav a {
+        /* Links de Navegação */
+        .nav-links {
+            display: flex;
+            list-style: none;
+            width: 100%;
+            justify-content: center; /* Centralizado no Desktop */
+            gap: 20px;
+        }
+
+        .nav-links li {
+            flex: 1;
+            text-align: center;
+        }
+
+        .nav-links a {
+            display: block;
             color: white;
             text-decoration: none;
-            padding: 18px 30px;
-            display: block;
-            transition: all 0.3s ease;
+            padding: 18px 15px;
             font-weight: 500;
+            transition: all 0.3s ease;
             border-bottom: 3px solid transparent;
+            text-transform: uppercase;
+            font-size: 0.9em;
+            letter-spacing: 0.5px;
         }
         
-        nav a:hover {
+        .nav-links a:hover {
             background-color: #2c3e50;
             border-bottom: 3px solid #3498db;
         }
         
+        /* Estilos de Mobile */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block; /* Mostra o botão hambúrguer */
+                z-index: 1001;
+            }
+
+            .nav-links {
+                display: none; /* Esconde o menu por padrão no mobile */
+                position: absolute;
+                top: 60px; /* Logo abaixo da navbar */
+                left: 0;
+                width: 100%;
+                background-color: #2c3e50;
+                flex-direction: column;
+                gap: 0;
+                padding-bottom: 20px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            }
+
+            /* Classe ativa quando o menu é aberto (via JS) */
+            .nav-links.active {
+                display: flex;
+                animation: slideDown 0.3s ease-in-out;
+            }
+
+            .nav-links li {
+                width: 100%;
+                text-align: left;
+                border-bottom: 1px solid rgba(255,255,255,0.05);
+            }
+
+            .nav-links a {
+                padding: 15px 20px;
+            }
+        }
+
+        /* Animação do menu */
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* ------------------------------------ */
+
         main {
             max-width: 1100px;
             margin: 50px auto;
@@ -434,17 +516,10 @@
             margin: 40px auto;
         }
         
+        /* Ajustes gerais para mobile */
         @media (max-width: 768px) {
             header h1 {
                 font-size: 2em;
-            }
-            
-            nav {
-                flex-direction: column;
-            }
-            
-            nav a {
-                border-bottom: 1px solid rgba(255,255,255,0.1);
             }
             
             h2 {
@@ -485,12 +560,23 @@
         </script>
     </div>
     
+    <!-- Menu Responsivo -->
     <nav>
-        <a href="#sobre">Sobre</a>
-        <a href="#roteiros">Roteiros</a>
-        <a href="#dicas">Dicas Profissionais</a>
-        <a href="#guias">Guias</a>
-        <a href="#contato">Contato</a>
+        <div class="nav-container">
+            <!-- Botão Hambúrguer (Aparece apenas no celular) -->
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir Menu">
+                ☰
+            </button>
+            
+            <!-- Links de Navegação -->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#sobre" onclick="toggleMenu()">Sobre</a></li>
+                <li><a href="#roteiros" onclick="toggleMenu()">Roteiros</a></li>
+                <li><a href="#dicas" onclick="toggleMenu()">Dicas Profissionais</a></li>
+                <li><a href="#guias" onclick="toggleMenu()">Guias</a></li>
+                <li><a href="#contato" onclick="toggleMenu()">Contato</a></li>
+            </ul>
+        </div>
     </nav>
     
     <main>
@@ -854,7 +940,7 @@
                 </ul>
             </div>
 
-            <!-- Anúncio In-Feed 3.1 (Depois das dicas básicas) -->
+            <!-- Anúncio In-Feed 3.1 -->
             <div class="ad-space in-feed">
                 <div class="ad-label">Publicidade</div>
                 <ins class="adsbygoogle"
@@ -868,7 +954,7 @@
                 </script>
             </div>
 
-            <!-- Nova Seção Organizada: Anatomia Profunda do Roteiro -->
+            <!-- Anatomia Profunda do Roteiro -->
             <div style="margin-top: 60px; border-top: 2px solid #ddd; padding-top: 30px;">
                 <h2 style="color: #8e44ad; border-color: #8e44ad;">🎯 Anatomia Profunda do Roteiro</h2>
                 
@@ -1112,7 +1198,7 @@
             </div>
         </section>
 
-        <!-- Anúncio In-Feed 4 (Antes do Contato) -->
+        <!-- Anúncio In-Feed 4 -->
         <div class="ad-space in-feed">
             <div class="ad-label">Publicidade</div>
             <ins class="adsbygoogle"
@@ -1153,5 +1239,13 @@
         <p><a href="politica-privacidade.html">Política de Privacidade</a></p>
         <p>&copy; 2026 Lelson António - Todos os direitos reservados</p>
     </footer>
+
+    <!-- Script para Menu Mobile -->
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
