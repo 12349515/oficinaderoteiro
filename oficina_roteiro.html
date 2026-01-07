@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oficina de Roteiro | Roteiros e Consultoria Profissional</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        header h1 {
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+        
+        header p {
+            font-size: 1.2em;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+        
+        nav {
+            background-color: #34495e;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 18px 30px;
+            display: block;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            border-bottom: 3px solid transparent;
+        }
+        
+        nav a:hover {
+            background-color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        main {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            margin-bottom: 60px;
+        }
+        
+        h2 {
+            color: #2c3e50;
+            font-size: 2.2em;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        .intro {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 40px;
+        }
+        
+        .intro p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+        }
+        
+        .card {
+            background: white;
+            padding: 30px;
+            margin: 25px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+        }
+        
+        .dica {
+            border-left: 5px solid #3498db;
+        }
+        
+        .roteiro {
+            border-left: 5px solid #27ae60;
+        }
+        
+        .guia {
+            border-left: 5px solid #e67e22;
+        }
+        
+        .card strong {
+            color: #2c3e50;
+            font-size: 1.2em;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .card p, .card em {
+            color: #555;
+            line-height: 1.7;
+        }
+        
+        .card em {
+            display: block;
+            margin-top: 10px;
+            font-style: normal;
+            color: #7f8c8d;
+            font-size: 0.95em;
+        }
+        
+        .roteiro-completo {
+            background: #ecf0f1;
+            padding: 25px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        
+        .roteiro-completo h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .roteiro-completo .meta {
+            display: flex;
+            gap: 20px;
+            margin: 15px 0;
+            flex-wrap: wrap;
+        }
+        
+        .roteiro-completo .meta span {
+            background: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            color: #555;
+        }
+        
+        .checklist {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .checklist h3 {
+            color: #2c3e50;
+            margin: 30px 0 15px 0;
+            font-size: 1.5em;
+        }
+        
+        .checklist ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .checklist li {
+            padding: 12px 0 12px 35px;
+            position: relative;
+            line-height: 1.7;
+        }
+        
+        .checklist li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+        
+        .destaque {
+            background: #fff9e6;
+            border-left: 5px solid #f39c12;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .cta {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            border-radius: 8px;
+            margin: 50px 0;
+        }
+        
+        .cta h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+        
+        .cta p {
+            font-size: 1.1em;
+            margin-bottom: 25px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: white;
+            color: #2980b9;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+        
+        footer p {
+            margin: 10px 0;
+            opacity: 0.9;
+        }
+        
+        /* Suporte para imagens */
+        .imagem-roteiro {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            
+            nav {
+                flex-direction: column;
+            }
+            
+            nav a {
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+            
+            h2 {
+                font-size: 1.8em;
+            }
+            
+            .roteiro-completo .meta {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Oficina de Roteiro</h1>
+        <p>Roteiros profissionais, consultoria e recursos para roteiristas</p>
+    </header>
+    
+    <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#roteiros">Roteiros</a>
+        <a href="#dicas">Dicas Profissionais</a>
+        <a href="#guias">Guias</a>
+        <a href="#contato">Contato</a>
+    </nav>
+    
+    <main>
+        <section id="sobre" class="intro">
+            <h2>Bem-vindo à Oficina de Roteiro</h2>
+            <p>Este é um espaço dedicado à criação, desenvolvimento e comercialização de roteiros profissionais. Aqui você encontra roteiros originais disponíveis para leitura e aquisição, além de recursos práticos para aprimorar sua escrita e entender o mercado audiovisual.</p>
+            <p>Todos os materiais são desenvolvidos com foco em qualidade narrativa, viabilidade de produção e potencial comercial.</p>
+        </section>
+
+        <section id="roteiros">
+            <h2>Roteiros Disponíveis</h2>
+            
+            <div class="card roteiro">
+                <div class="roteiro-completo">
+                    <h3>"A Chamada Silenciosa"</h3>
+                    <p><strong>Episódio 1 da série:</strong> Na Linha — Sem Linha</p>
+                    
+                    <div class="meta">
+                        <span>Duração: 3–5 min</span>
+                        <span>Gênero: Suspense/Terror</span>
+                        <span>Personagens: 2</span>
+                        <span>Cenário: Interior</span>
+                    </div>
+                    
+                    <!-- Para adicionar imagem, use:
+                    <img src="URL_DA_SUA_IMAGEM.jpg" alt="Cena de A Chamada Silenciosa" class="imagem-roteiro">
+                    -->
+                    
+                    <p><strong>Sinopse:</strong></p>
+                    <p>Ethan recebe uma chamada silenciosa de um número desconhecido no meio da noite. Quando atende, não há som do outro lado. Sara, sua namorada, tenta acalmá-lo por mensagem. Uma sombra misteriosa aparece atrás da cortina, e ele sente uma brisa fria inexplicável.</p>
+                    <p>Ao se virar lentamente, a sombra se aproxima. Ele grita, mas acorda assustado — era um pesadelo. Ou não? O telefone mostra uma chamada perdida do mesmo número desconhecido, seguida de uma mensagem aterrorizante: "Da próxima vez você não acordará."</p>
+                    
+                    <em>Roteiro completo disponível mediante solicitação. Projeto de baixo custo, ideal para curta-metragem independente.</em>
+                </div>
+            </div>
+            
+            <div class="card roteiro">
+                <strong>Roteiro 2: "Na Minha Linguagem"</strong>
+                <p>Comédia curta onde dois amigos entram em conflito quando linguagens de programação passam a ser entendidas como idiomas reais. Episódio autônomo com potencial para série de episódios independentes.</p>
+                <em>Leve, filmável e de baixo custo. Disponível para leitura e aquisição.</em>
+            </div>
+            
+            <div class="cta">
+                <h3>Interessado em um roteiro?</h3>
+                <p>Entre em contato para solicitar leitura completa ou discutir oportunidades de colaboração</p>
+                <a href="#contato" class="btn">Solicitar Roteiro</a>
+            </div>
+        </section>
+
+        <section id="dicas">
+            <h2>Dicas Profissionais de Roteiro</h2>
+            
+            <div class="card dica">
+                <strong>1. Comece com Conflito</strong>
+                <p>Histórias sem conflito perdem impacto. O conflito é o motor da narrativa — estabeleça-o desde a primeira cena para capturar a atenção do espectador imediatamente.</p>
+            </div>
+            
+            <div class="card dica">
+                <strong>2. Personagens com Objetivos Claros</strong>
+                <p>Crie personagens com motivações convincentes e objetivos específicos. O que eles querem? O que os impede de conseguir? Essas perguntas guiam toda a narrativa.</p>
+            </div>
+            
+            <div class="card dica">
+                <strong>3. Mostre, Não Conte</strong>
+                <p>Ação e diálogo são mais poderosos do que longas explicações narrativas. Deixe o espectador deduzir informações através do que vê e ouve, não através de exposição forçada.</p>
+            </div>
+            
+            <div class="card dica">
+                <strong>4. Estruture Cada Cena</strong>
+                <p>Trate cada cena como uma mini-história com começo, meio e fim. Toda cena deve avançar a trama ou revelar personagem — se não faz nenhum dos dois, corte.</p>
+            </div>
+            
+            <div class="card dica">
+                <strong>5. Feedback é Essencial</strong>
+                <p>Roteiros melhoram exponencialmente com opiniões externas qualificadas. Busque feedback de profissionais da área e esteja aberto a revisões críticas do seu trabalho.</p>
+            </div>
+        </section>
+
+        <section id="guias">
+            <h2>Guias Profissionais</h2>
+            
+            <div class="card guia">
+                <div class="checklist">
+                    <h3>🎬 Como Vender Seu Roteiro de Curta – Checklist Completo</h3>
+                    
+                    <div class="destaque">
+                        <strong>💡 Princípio Fundamental:</strong> Você não vende o roteiro. Você vende segurança.
+                        <p>Produtores pensam: "Esse roteirista vai facilitar minha vida ou me dar dor de cabeça?"</p>
+                    </div>
+                    
+                    <h3>1. Posicione Seu Curta Corretamente</h3>
+                    <ul>
+                        <li><strong>❌ Jeito errado:</strong> "É uma série de vários curtas que se conectam..."</li>
+                        <li><strong>✅ Jeito certo:</strong> "É um curta autônomo, parte de um conceito maior de episódios independentes."</li>
+                    </ul>
+                    
+                    <p><strong>Exemplos de episódios futuros para mencionar:</strong></p>
+                    <ul>
+                        <li><strong>Na Minha Lógica:</strong> Algoritmo explicado como superstição</li>
+                        <li><strong>Na Minha Rede:</strong> Internet confundida com rede de pesca</li>
+                        <li><strong>Na Minha Nuvem:</strong> Cloud tratada como previsão do tempo</li>
+                    </ul>
+                    
+                    <p><em>Mostre o motor criativo, mas não desenvolva demais no primeiro contato.</em></p>
+                    
+                    <h3>2. Crie uma Logline Matadora (20 segundos)</h3>
+                    <div class="destaque">
+                        <p>"Dois amigos entram em conflito quando linguagens de programação passam a ser entendidas como idiomas reais."</p>
+                    </div>
+                    <p>Se não conseguir vender sua ideia em 20 segundos, você perdeu a atenção do produtor.</p>
+                    
+                    <h3>3. E-mail de Pitch Profissional</h3>
+                    <div class="destaque">
+                        <p><strong>Assunto:</strong> Roteiro de Comédia Curta – "Na Minha Linguagem"</p>
+                        <p>Olá [Nome],</p>
+                        <p>Tenho um roteiro pronto de comédia curta chamado <strong>Na Minha Linguagem</strong>.</p>
+                        <p>O curta é autônomo e faz parte de um conceito maior de episódios independentes. Neste episódio, dois amigos entram em conflito quando linguagens de programação passam a ser entendidas como idiomas reais.</p>
+                        <p>Projeto leve, filmável e de baixo custo.</p>
+                        <p>Posso enviar o roteiro completo?</p>
+                        <p>Atenciosamente,<br>
+                        <strong>Lelson António</strong><br>
+                        Roteirista<br>
+                        [seu site/portfólio]</p>
+                    </div>
+                    <p><em>Não assusta, não se valoriza demais, mostra profissionalismo.</em></p>
+                    
+                    <h3>4. Para Quem Enviar</h3>
+                    <ul>
+                        <li>Produtores de curta-metragem ou produtoras independentes</li>
+                        <li>Diretores especializados em episódios curtos</li>
+                        <li>Plataformas de streaming ou canais digitais de comédia</li>
+                        <li>Festivais de cinema com seções de mercado</li>
+                    </ul>
+                    <p><strong>💡 Dica:</strong> Evite intermediários sem poder de decisão.</p>
+                    
+                    <h3>5. Timing Estratégico</h3>
+                    <ul>
+                        <li><strong>Melhor dia:</strong> Terça ou quarta-feira</li>
+                        <li><strong>Melhor horário:</strong> 09h–11h</li>
+                        <li><strong>Evite:</strong> Segunda-feira, sexta-feira e fins de semana</li>
+                    </ul>
+                    <p>Pequenos ajustes de timing aumentam silenciosamente suas taxas de resposta.</p>
+                    
+                    <h3>6. Frases-Chave que Vendem</h3>
+                    <ul>
+                        <li>"Leve, filmável e de baixo custo"</li>
+                        <li>"Curta autônomo"</li>
+                        <li>"Conceito maior de episódios independentes"</li>
+                        <li>"Projeto pronto para produção"</li>
+                    </ul>
+                    <p><strong>Clareza + Simplicidade + Baixo Risco = Quase Impossível de Ignorar</strong></p>
+                    
+                    <h3>7. Tenha Presença Online Profissional</h3>
+                    <ul>
+                        <li>Site ou portfólio com seus trabalhos</li>
+                        <li>Perfil atualizado em plataformas profissionais</li>
+                        <li>Materiais complementares (sinopse, tratamento, deck visual)</li>
+                    </ul>
+                    <p>Ter trabalhos publicados e presença digital gera confiança e demonstra profissionalismo.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato">
+            <div class="cta">
+                <h3>Vamos Trabalhar Juntos?</h3>
+                <p>Interessado em roteiros, consultoria ou colaboração? Entre em contato:</p>
+                <p><strong>Lelson António</strong><br>
+                Roteirista Profissional<br>
+                Email: [seu-email@exemplo.com]<br>
+                GitHub: [seu-usuario]</p>
+                <a href="mailto:seu-email@exemplo.com" class="btn">Enviar Mensagem</a>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p><strong>Oficina de Roteiro</strong> | Roteiros Profissionais e Consultoria</p>
+        <p>Todos os roteiros e materiais neste site estão protegidos por direitos autorais.</p>
+        <p>Licença Creative Commons CC BY-NC para materiais educacionais.</p>
+        <p>&copy; 2026 Lelson António - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
