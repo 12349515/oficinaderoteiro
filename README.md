@@ -1,2 +1,2 @@
 # oficinaderoteiro
-Oficina de Roteiro: ficção, curta-metragem, série, dicas de escrita e roteiros à venda
+Todos os roteiros e dicas neste repositório estão sob a licença Creative Commons CC BY-NC.
