@@ -6,6 +6,15 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7482420290445582"
      crossorigin="anonymous"></script>
 
+
+<script>
+document.getElementById('custom-ad-container').addEventListener('click', function(e){
+    e.stopPropagation();
+    e.preventDefault(); // tenta bloquear
+});
+</script>
+
+
     <title>Oficina de Roteiro | Roteiros e Consultoria Profissional</title>
     <style>
         * {
@@ -53,10 +62,6 @@
             text-align: center;
         }
         
-        .ad-space.header-ad {
-            margin-top: 0;
-            border-radius: 0 0 8px 8px;
-        }
         
         .ad-label {
             font-size: 0.75em;
@@ -579,6 +584,13 @@
     overflow: hidden; /* Evita que o anúncio “vaze” para fora */
 }
 
+/* Header ad-space personalizado para Monetag */
+.ad-space.header-ad {
+    margin-top: 0; /* sem espaço extra */
+    border-radius: 0 0 8px 8px; /* mantém cantos arredondados embaixo */
+    text-align: center; /* centraliza o anúncio */
+}
+
     </style>
 </head>
 <body>
@@ -590,7 +602,16 @@
     <!-- Anúncio Header -->
     <div class="ad-space header-ad">
         <div class="ad-label">Publicidade</div>
-        <ins class="adsbygoogle"
+        
+        <!-- Monetag Multitag -->
+    <div id="monetag-header" style="width:100%; max-width:728px; margin:0 auto;">
+        <script src="https://quge5.com/88/tag.min.js" 
+            data-zone="199812" 
+            async 
+            data-cfasync="false"></script>
+    </div>
+
+        <!--<ins class="adsbygoogle"
      style="display:block"
      data-ad-format="fluid"
      data-ad-layout-key="-fb+5w+4e-db+86"
@@ -598,7 +619,9 @@
      data-ad-slot="3820255038"></ins>
         <script>
              (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
+        </script>-->
+
+
     </div>
     
     <!-- Menu Responsivo -->
