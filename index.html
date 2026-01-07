@@ -94,6 +94,7 @@
             font-size: 1.1em;
             line-height: 1.8;
             color: #555;
+            margin-bottom: 15px;
         }
         
         .card {
@@ -129,9 +130,10 @@
             margin-bottom: 10px;
         }
         
-        .card p, .card em {
+        .card p {
             color: #555;
             line-height: 1.7;
+            margin-bottom: 12px;
         }
         
         .card em {
@@ -152,6 +154,7 @@
         .roteiro-completo h3 {
             color: #2c3e50;
             margin-bottom: 15px;
+            font-size: 1.8em;
         }
         
         .roteiro-completo .meta {
@@ -169,6 +172,63 @@
             color: #555;
         }
         
+        .roteiro-texto {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 25px 0;
+            border-left: 4px solid #27ae60;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+        }
+        
+        .roteiro-texto h4 {
+            color: #2c3e50;
+            margin: 25px 0 15px 0;
+            font-size: 1.3em;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        
+        .roteiro-texto .cena {
+            font-weight: bold;
+            color: #27ae60;
+            text-transform: uppercase;
+            margin: 20px 0 10px 0;
+            font-size: 1em;
+        }
+        
+        .roteiro-texto .personagem {
+            font-weight: bold;
+            color: #2c3e50;
+            margin: 15px 0 5px 0;
+        }
+        
+        .roteiro-texto .dialogo {
+            margin-left: 40px;
+            color: #444;
+            line-height: 1.6;
+        }
+        
+        .roteiro-texto .acao {
+            color: #444;
+            line-height: 1.8;
+            margin: 10px 0;
+        }
+        
+        .roteiro-texto .parentese {
+            margin-left: 60px;
+            font-style: italic;
+            color: #666;
+        }
+        
+        .roteiro-texto .final {
+            text-align: center;
+            margin-top: 30px;
+            font-style: italic;
+            color: #7f8c8d;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        
         .checklist {
             background: white;
             padding: 30px;
@@ -180,6 +240,11 @@
             color: #2c3e50;
             margin: 30px 0 15px 0;
             font-size: 1.5em;
+        }
+        
+        .checklist p {
+            line-height: 1.7;
+            margin-bottom: 12px;
         }
         
         .checklist ul {
@@ -208,6 +273,10 @@
             padding: 20px;
             margin: 20px 0;
             border-radius: 4px;
+        }
+        
+        .destaque p {
+            margin-bottom: 10px;
         }
         
         .cta {
@@ -246,58 +315,6 @@
             box-shadow: 0 6px 12px rgba(0,0,0,0.15);
         }
         
-        footer {
-            background: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-            margin-top: 60px;
-        }
-        
-        footer p {
-            margin: 10px 0;
-            opacity: 0.9;
-        }
-        
-        /* Suporte para imagens */
-        .imagem-roteiro {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            border-radius: 8px;
-            margin: 20px 0;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        
-        .roteiro-texto {
-            background: #f8f9fa;
-            padding: 30px;
-            border-radius: 8px;
-            margin: 25px 0;
-            border-left: 4px solid #27ae60;
-            font-family: 'Courier New', monospace;
-        }
-        
-        .roteiro-texto h4 {
-            color: #2c3e50;
-            margin: 25px 0 15px 0;
-            font-size: 1.3em;
-            font-family: 'Segoe UI', sans-serif;
-        }
-        
-        .roteiro-texto p {
-            margin: 12px 0;
-            line-height: 1.8;
-            color: #444;
-        }
-        
-        .roteiro-texto .cena {
-            font-weight: bold;
-            color: #27ae60;
-            text-transform: uppercase;
-            margin-top: 20px;
-        }
-        
         .contato-btns {
             display: flex;
             gap: 15px;
@@ -326,6 +343,29 @@
             color: white;
         }
         
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+        
+        footer p {
+            margin: 10px 0;
+            opacity: 0.9;
+        }
+        
+        .imagem-roteiro {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px auto;
+            display: block;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
         @media (max-width: 768px) {
             header h1 {
                 font-size: 2em;
@@ -345,6 +385,14 @@
             
             .roteiro-completo .meta {
                 flex-direction: column;
+            }
+            
+            .roteiro-texto .dialogo {
+                margin-left: 20px;
+            }
+            
+            .roteiro-texto .parentese {
+                margin-left: 30px;
             }
         }
     </style>
@@ -367,7 +415,7 @@
         <section id="sobre" class="intro">
             <h2>Bem-vindo à Oficina de Roteiro</h2>
             <p>Este é um espaço dedicado à criação, desenvolvimento e comercialização de roteiros profissionais. Aqui você encontra roteiros originais disponíveis para leitura e aquisição, além de recursos práticos para aprimorar sua escrita e entender o mercado audiovisual.</p>
-            <p>Todos os materiais são desenvolvidos com foco em qualidade narrativa, viabilidade de produção e potencial comercial.</p>
+            <p>Todos os materiais são desenvolvidos com foco em qualidade narrativa, viabilidade de produção e potencial comercial. Cada projeto é cuidadosamente elaborado para equilibrar criatividade artística com viabilidade técnica e orçamentária.</p>
         </section>
 
         <section id="roteiros">
@@ -385,22 +433,109 @@
                         <span>Cenário: Interior</span>
                     </div>
                     
-                    <!-- Para adicionar imagem, use:
-                    <img src="URL_DA_SUA_IMAGEM.jpg" alt="Cena de A Chamada Silenciosa" class="imagem-roteiro">
+                    <!-- Para adicionar imagem, descomente a linha abaixo e adicione o caminho correto:
+                    <img src="imagens/chamada-silenciosa.png" alt="Cena de A Chamada Silenciosa" class="imagem-roteiro">
                     -->
                     
                     <p><strong>Sinopse:</strong></p>
-                    <p>Ethan recebe uma chamada silenciosa de um número desconhecido no meio da noite. Quando atende, não há som do outro lado. Sara, sua namorada, tenta acalmá-lo por mensagem. Uma sombra misteriosa aparece atrás da cortina, e ele sente uma brisa fria inexplicável.</p>
-                    <p>Ao se virar lentamente, a sombra se aproxima. Ele grita, mas acorda assustado — era um pesadelo. Ou não? O telefone mostra uma chamada perdida do mesmo número desconhecido, seguida de uma mensagem aterrorizante: "Da próxima vez você não acordará."</p>
+                    <p>Ethan recebe uma chamada silenciosa de um número desconhecido no meio da noite. Quando atende, não há som do outro lado. Sara, sua namorada, tenta acalmá-lo por mensagem, mas algo está errado. Uma sombra misteriosa aparece atrás da cortina, e ele sente uma brisa fria inexplicável.</p>
                     
-                    <em>Roteiro completo disponível mediante solicitação. Projeto de baixo custo, ideal para curta-metragem independente.</em>
+                    <p>Ao se virar lentamente, a sombra se aproxima. Ele grita em pânico, mas acorda assustado — era apenas um pesadelo. Ou seria? O telefone mostra uma chamada perdida do mesmo número desconhecido, seguida de uma mensagem aterrorizante que muda tudo: "Da próxima vez você não acordará."</p>
+                    
+                    <div class="roteiro-texto">
+                        <h4>ROTEIRO COMPLETO</h4>
+                        
+                        <p class="cena">INT. QUARTO DE ETHAN - NOITE</p>
+                        
+                        <p class="acao">O quarto está mergulhado em penumbra, apenas uma luminária de cabeceira projeta luz fraca. ETHAN (25 anos) está deitado na cama, rolando distraidamente pelo celular. O silêncio da noite é quebrado apenas pelo som distante do tráfego.</p>
+                        
+                        <p class="acao">De repente, o telefone TOCA com um ringtone estridente. Na tela: NÚMERO DESCONHECIDO. Ethan franze a testa, surpreso.</p>
+                        
+                        <p class="personagem">ETHAN</p>
+                        <p class="parentese">(para si mesmo)</p>
+                        <p class="dialogo">Quem será a esta hora?</p>
+                        
+                        <p class="acao">Ele hesita por um momento, olhando fixamente para o telefone vibrando em sua mão. Finalmente, desliza o dedo pela tela e atende.</p>
+                        
+                        <p class="personagem">ETHAN</p>
+                        <p class="dialogo">Alô?</p>
+                        
+                        <p class="acao">SILÊNCIO ABSOLUTO do outro lado da linha. Nem respiração, nem estática, nem ruído de fundo. Apenas um vazio perturbador.</p>
+                        
+                        <p class="personagem">ETHAN</p>
+                        <p class="parentese">(com leve irritação)</p>
+                        <p class="dialogo">Alô? Tem alguém aí?</p>
+                        
+                        <p class="acao">Nada. O silêncio é opressivo, quase palpável. Ethan está prestes a desligar quando o celular VIBRA. Uma mensagem de SARA ilumina a tela: "Está tudo bem?"</p>
+                        
+                        <p class="acao">Ethan esboça um sorriso leve ao ver o nome dela. Começa a digitar uma resposta, mas para abruptamente. Uma sensação estranha percorre seu corpo.</p>
+                        
+                        <p class="acao">Uma BRISA FRIA varre o quarto, fazendo a cortina se mexer levemente, embora a janela esteja fechada. Os pelos de seus braços se arrepiam.</p>
+                        
+                        <p class="acao">Ethan levanta os olhos lentamente. Seu sangue congela.</p>
+                        
+                        <p class="acao">Atrás da cortina, uma SOMBRA. Uma silhueta humana, completamente imóvel, como se estivesse observando. A forma é nítida demais para ser uma ilusão da luz.</p>
+                        
+                        <p class="acao">O coração de Ethan dispara. Ele se levanta da cama lentamente, sem tirar os olhos da sombra. O telefone ainda está na chamada silenciosa, colado em sua orelha.</p>
+                        
+                        <p class="personagem">ETHAN</p>
+                        <p class="parentese">(voz trêmula)</p>
+                        <p class="dialogo">Quem... quem está aí?</p>
+                        
+                        <p class="acao">A sombra não responde. Não se move. Mas parece estar crescendo, se aproximando sem realmente se mover.</p>
+                        
+                        <p class="acao">Ethan dá um passo hesitante em direção à cortina. A temperatura do quarto parece cair ainda mais. Seu coração bate tão forte que ele pode ouvi-lo.</p>
+                        
+                        <p class="acao">Mais um passo. A sombra CRESCE na cortina, ocupando todo o tecido agora.</p>
+                        
+                        <p class="personagem">ETHAN</p>
+                        <p class="parentese">(gritando em pânico)</p>
+                        <p class="dialogo">NÃO… FIQUE LONGE DE MIM!</p>
+                        
+                        <p class="cena">CORTE BRUSCO PARA:</p>
+                        
+                        <p class="cena">INT. QUARTO DE ETHAN - MANHÃ</p>
+                        
+                        <p class="acao">Ethan ACORDA de sobressalto, ofegante, suando frio. Seus olhos escaneiam o quarto desesperadamente. Luz do sol entra pela janela aberta. A cortina balança suavemente com a brisa matinal. Tudo completamente normal.</p>
+                        
+                        <p class="acao">Ele coloca as mãos no rosto, respirando profundamente, tentando se acalmar.</p>
+                        
+                        <p class="personagem">ETHAN</p>
+                        <p class="parentese">(aliviado, para si mesmo)</p>
+                        <p class="dialogo">Foi só um pesadelo... só um pesadelo...</p>
+                        
+                        <p class="acao">Ainda tremendo, pega o celular da mesa de cabeceira para verificar as horas. A tela acende.</p>
+                        
+                        <p class="acao">Seu rosto empalidece instantaneamente.</p>
+                        
+                        <p class="acao">Na tela: 1 CHAMADA PERDIDA - NÚMERO DESCONHECIDO. Horário: 03:47 AM.</p>
+                        
+                        <p class="acao">O sangue de Ethan congela nas veias. As mãos começam a tremer. Não foi um sonho. Era REAL.</p>
+                        
+                        <p class="acao">Antes que possa processar o que isso significa, o telefone VIBRA em sua mão.</p>
+                        
+                        <p class="acao">Uma NOVA MENSAGEM do número desconhecido aparece lentamente na tela.</p>
+                        
+                        <p class="acao">Ethan lê, os olhos arregalados de puro terror. As palavras parecem queimar na tela:</p>
+                        
+                        <p class="acao" style="text-align: center; font-size: 1.1em; margin: 20px 0;"><strong>"DA PRÓXIMA VEZ VOCÊ NÃO ACORDARÁ."</strong></p>
+                        
+                        <p class="acao">O celular escorrega das mãos de Ethan e cai no chão. Ele fica paralisado, incapaz de se mover, enquanto a realidade da mensagem penetra em sua mente.</p>
+                        
+                        <p class="cena">FADE TO BLACK.</p>
+                        
+                        <p class="final">FIM DO EPISÓDIO 1</p>
+                    </div>
+                    
+                    <em>Projeto de baixo custo e alta viabilidade técnica, ideal para curta-metragem independente. Roteiro completo disponível mediante solicitação formal.</em>
                 </div>
             </div>
             
             <div class="card roteiro">
                 <strong>Roteiro 2: "Na Minha Linguagem"</strong>
-                <p>Comédia curta onde dois amigos entram em conflito quando linguagens de programação passam a ser entendidas como idiomas reais. Episódio autônomo com potencial para série de episódios independentes.</p>
-                <em>Leve, filmável e de baixo custo. Disponível para leitura e aquisição.</em>
+                <p>Comédia curta onde dois amigos entram em conflito quando linguagens de programação passam a ser entendidas como idiomas reais. O mal-entendido inicial escala rapidamente quando um deles insiste que "fala Python fluentemente" e o outro não acredita que JavaScript seja "uma língua de verdade".</p>
+                <p>Episódio autônomo com potencial para série de episódios independentes, cada um explorando diferentes absurdos do mundo tecnológico através de situações cotidianas.</p>
+                <em>Projeto leve, filmável e de baixo custo. Disponível para leitura e aquisição.</em>
             </div>
             
             <div class="cta">
@@ -415,27 +550,27 @@
             
             <div class="card dica">
                 <strong>1. Comece com Conflito</strong>
-                <p>Histórias sem conflito perdem impacto. O conflito é o motor da narrativa — estabeleça-o desde a primeira cena para capturar a atenção do espectador imediatamente.</p>
+                <p>Histórias sem conflito perdem impacto imediatamente. O conflito é o motor da narrativa — estabeleça-o desde a primeira cena para capturar a atenção do espectador de forma instantânea e mantê-la até o final.</p>
             </div>
             
             <div class="card dica">
                 <strong>2. Personagens com Objetivos Claros</strong>
-                <p>Crie personagens com motivações convincentes e objetivos específicos. O que eles querem? O que os impede de conseguir? Essas perguntas guiam toda a narrativa.</p>
+                <p>Crie personagens com motivações convincentes e objetivos específicos. Faça-se sempre estas perguntas: O que eles querem? O que os impede de conseguir? Por que isso é importante para eles? Essas respostas guiam toda a narrativa e criam conexão emocional com o público.</p>
             </div>
             
             <div class="card dica">
                 <strong>3. Mostre, Não Conte</strong>
-                <p>Ação e diálogo são mais poderosos do que longas explicações narrativas. Deixe o espectador deduzir informações através do que vê e ouve, não através de exposição forçada.</p>
+                <p>Ação e diálogo são infinitamente mais poderosos do que longas explicações narrativas. Deixe o espectador deduzir informações através do que vê e ouve, não através de exposição forçada. Confie na inteligência da sua audiência.</p>
             </div>
             
             <div class="card dica">
                 <strong>4. Estruture Cada Cena</strong>
-                <p>Trate cada cena como uma mini-história com começo, meio e fim. Toda cena deve avançar a trama ou revelar personagem — se não faz nenhum dos dois, corte.</p>
+                <p>Trate cada cena como uma mini-história completa com começo, meio e fim. Toda cena deve avançar a trama ou revelar algo importante sobre o personagem. Se não faz nenhum dos dois, corte sem piedade.</p>
             </div>
             
             <div class="card dica">
                 <strong>5. Feedback é Essencial</strong>
-                <p>Roteiros melhoram exponencialmente com opiniões externas qualificadas. Busque feedback de profissionais da área e esteja aberto a revisões críticas do seu trabalho.</p>
+                <p>Roteiros melhoram exponencialmente com opiniões externas qualificadas. Busque feedback de profissionais da área e esteja genuinamente aberto a revisões críticas do seu trabalho. O ego é o maior inimigo do bom roteirista.</p>
             </div>
         </section>
 
@@ -447,30 +582,30 @@
                     <h3>🎬 Como Vender Seu Roteiro de Curta – Checklist Completo</h3>
                     
                     <div class="destaque">
-                        <strong>💡 Princípio Fundamental:</strong> Você não vende o roteiro. Você vende segurança.
-                        <p>Produtores pensam: "Esse roteirista vai facilitar minha vida ou me dar dor de cabeça?"</p>
+                        <p><strong>💡 Princípio Fundamental:</strong> Você não vende o roteiro. Você vende segurança.</p>
+                        <p>Produtores pensam constantemente: "Esse roteirista vai facilitar minha vida ou me dar dor de cabeça?"</p>
                     </div>
                     
                     <h3>1. Posicione Seu Curta Corretamente</h3>
                     <ul>
-                        <li><strong>❌ Jeito errado:</strong> "É uma série de vários curtas que se conectam..."</li>
-                        <li><strong>✅ Jeito certo:</strong> "É um curta autônomo, parte de um conceito maior de episódios independentes."</li>
+                        <li><strong>❌ Jeito errado:</strong> "É uma série de vários curtas que se conectam e formam uma história maior..."</li>
+                        <li><strong>✅ Jeito certo:</strong> "É um curta autônomo, parte de um conceito maior de episódios independentes que podem funcionar sozinhos ou em conjunto."</li>
                     </ul>
                     
                     <p><strong>Exemplos de episódios futuros para mencionar:</strong></p>
                     <ul>
-                        <li><strong>Na Minha Lógica:</strong> Algoritmo explicado como superstição</li>
-                        <li><strong>Na Minha Rede:</strong> Internet confundida com rede de pesca</li>
-                        <li><strong>Na Minha Nuvem:</strong> Cloud tratada como previsão do tempo</li>
+                        <li><strong>Na Minha Lógica:</strong> Um programador tenta explicar algoritmos, mas todos entendem como superstição e misticismo</li>
+                        <li><strong>Na Minha Rede:</strong> Internet é confundida com rede de pesca, gerando situações absurdas sobre "capturar dados"</li>
+                        <li><strong>Na Minha Nuvem:</strong> Cloud computing tratada literalmente como previsão do tempo e meteorologia</li>
                     </ul>
                     
-                    <p><em>Mostre o motor criativo, mas não desenvolva demais no primeiro contato.</em></p>
+                    <p><em>Mostre o motor criativo e o potencial de expansão, mas não desenvolva demais no primeiro contato. Deixe-os querendo saber mais.</em></p>
                     
                     <h3>2. Crie uma Logline Matadora (20 segundos)</h3>
                     <div class="destaque">
-                        <p>"Dois amigos entram em conflito quando linguagens de programação passam a ser entendidas como idiomas reais."</p>
+                        <p><strong>Exemplo perfeito:</strong> "Dois amigos entram em conflito quando linguagens de programação passam a ser entendidas como idiomas reais, criando um mal-entendido absurdo sobre qualificações profissionais."</p>
                     </div>
-                    <p>Se não conseguir vender sua ideia em 20 segundos, você perdeu a atenção do produtor.</p>
+                    <p>Se você não conseguir vender sua ideia em 20 segundos, você já perdeu a atenção do produtor. Pratique até ficar perfeito.</p>
                     
                     <h3>3. E-mail de Pitch Profissional</h3>
                     <div class="destaque">
@@ -478,48 +613,62 @@
                         <p>Olá [Nome],</p>
                         <p>Tenho um roteiro pronto de comédia curta chamado <strong>Na Minha Linguagem</strong>.</p>
                         <p>O curta é autônomo e faz parte de um conceito maior de episódios independentes. Neste episódio, dois amigos entram em conflito quando linguagens de programação passam a ser entendidas como idiomas reais.</p>
-                        <p>Projeto leve, filmável e de baixo custo.</p>
-                        <p>Posso enviar o roteiro completo?</p>
+                        <p>Projeto leve, filmável e de baixo custo, com potencial para festivais e plataformas digitais.</p>
+                        <p>Posso enviar o roteiro completo para sua análise?</p>
                         <p>Atenciosamente,<br>
                         <strong>Lelson António</strong><br>
-                        Roteirista<br>
-                        [seu site/portfólio]</p>
+                        Roteirista Profissional<br>
+                        [link do seu site/portfólio]</p>
                     </div>
-                    <p><em>Não assusta, não se valoriza demais, mostra profissionalismo.</em></p>
+                    <p><em>Este modelo não assusta, não se valoriza demais e mostra profissionalismo. É direto, claro e respeita o tempo do produtor.</em></p>
                     
                     <h3>4. Para Quem Enviar</h3>
                     <ul>
-                        <li>Produtores de curta-metragem ou produtoras independentes</li>
-                        <li>Diretores especializados em episódios curtos</li>
-                        <li>Plataformas de streaming ou canais digitais de comédia</li>
-                        <li>Festivais de cinema com seções de mercado</li>
+                        <li>Produtores especializados em curta-metragem ou produtoras independentes com histórico comprovado</li>
+                        <li>Diretores especializados em episódios curtos e conteúdo digital</li>
+                        <li>Plataformas de streaming regionais ou canais digitais de comédia com audiência estabelecida</li>
+                        <li>Festivais de cinema com seções de mercado e oportunidades de pitch</li>
+                        <li>Programas de desenvolvimento de roteiro e laboratórios criativos</li>
                     </ul>
-                    <p><strong>💡 Dica:</strong> Evite intermediários sem poder de decisão.</p>
+                    <p><strong>💡 Dica crucial:</strong> Evite intermediários sem poder de decisão. Vá direto a quem pode dizer "sim".</p>
                     
                     <h3>5. Timing Estratégico</h3>
                     <ul>
-                        <li><strong>Melhor dia:</strong> Terça ou quarta-feira</li>
-                        <li><strong>Melhor horário:</strong> 09h–11h</li>
-                        <li><strong>Evite:</strong> Segunda-feira, sexta-feira e fins de semana</li>
+                        <li><strong>Melhor dia:</strong> Terça ou quarta-feira (evite início e fim de semana)</li>
+                        <li><strong>Melhor horário:</strong> Entre 09h e 11h da manhã (quando o produtor está mais receptivo)</li>
+                        <li><strong>Evite absolutamente:</strong> Segunda-feira (sobrecarga pós-fim de semana), sexta-feira à tarde (foco no fim de semana) e finais de semana</li>
                     </ul>
-                    <p>Pequenos ajustes de timing aumentam silenciosamente suas taxas de resposta.</p>
+                    <p>Pequenos ajustes estratégicos de timing podem aumentar suas taxas de resposta em até 40%. Não subestime esse detalhe.</p>
                     
                     <h3>6. Frases-Chave que Vendem</h3>
+                    <p>Use estas expressões que reduzem a percepção de risco e aumentam o interesse:</p>
                     <ul>
-                        <li>"Leve, filmável e de baixo custo"</li>
-                        <li>"Curta autônomo"</li>
-                        <li>"Conceito maior de episódios independentes"</li>
-                        <li>"Projeto pronto para produção"</li>
+                        <li>"Leve, filmável e de baixo custo" — música para os ouvidos de qualquer produtor independente</li>
+                        <li>"Curta autônomo" — significa que não precisa de compromisso com uma série inteira</li>
+                        <li>"Conceito maior de episódios independentes" — mostra visão de longo prazo sem pressionar</li>
+                        <li>"Projeto pronto para produção" — elimina preocupações sobre desenvolvimento adicional</li>
+                        <li>"Viabilidade técnica comprovada" — demonstra que você pensou na execução prática</li>
                     </ul>
-                    <p><strong>Clareza + Simplicidade + Baixo Risco = Quase Impossível de Ignorar</strong></p>
+                    <p><strong>A fórmula mágica: Clareza + Simplicidade + Baixo Risco = Quase Impossível de Ignorar</strong></p>
                     
                     <h3>7. Tenha Presença Online Profissional</h3>
                     <ul>
-                        <li>Site ou portfólio com seus trabalhos</li>
-                        <li>Perfil atualizado em plataformas profissionais</li>
-                        <li>Materiais complementares (sinopse, tratamento, deck visual)</li>
+                        <li>Site ou portfólio bem organizado com seus melhores trabalhos em destaque</li>
+                        <li>Perfil profissional atualizado em plataformas do setor (LinkedIn, Stage 32, etc.)</li>
+                        <li>Materiais complementares prontos: sinopse expandida, tratamento visual, mood board</li>
+                        <li>Depoimentos ou referências de colaboradores anteriores (se tiver)</li>
+                        <li>Blog ou seção com insights sobre roteiro e indústria (demonstra expertise)</li>
                     </ul>
-                    <p>Ter trabalhos publicados e presença digital gera confiança e demonstra profissionalismo.</p>
+                    <p>Ter trabalhos publicados e presença digital coerente gera confiança instantânea e demonstra profissionalismo genuíno. Produtores SEMPRE vão procurar você online antes de responder.</p>
+                    
+                    <h3>Bônus: O Que Fazer Após Enviar</h3>
+                    <ul>
+                        <li>Aguarde 7-10 dias úteis antes de fazer follow-up</li>
+                        <li>Se não houver resposta, envie um lembrete educado e breve</li>
+                        <li>Nunca demonstre desespero ou pressione por resposta imediata</li>
+                        <li>Continue enviando para outros contatos simultaneamente</li>
+                        <li>Mantenha um registro organizado de todos os envios e respostas</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -527,20 +676,28 @@
         <section id="contato">
             <div class="cta">
                 <h3>Vamos Trabalhar Juntos?</h3>
-                <p>Interessado em roteiros, consultoria ou colaboração? Entre em contato:</p>
-                <p><strong>Lelson António</strong><br>
-                Roteirista Profissional<br>
-                Email: manueltondama6@gmail.com<br>
-                Whatsapp: +244 940266827</p>
-                <a href="manueltondama6@gmail.com" class="btn">Enviar Mensagem</a>
+                <p>Interessado em roteiros, consultoria ou colaboração profissional?</p>
+                <p>Entre em contato através dos canais abaixo:</p>
+                
+                <div class="contato-btns">
+                    <a href="mailto:manueltondama6@gmail.com?subject=Contato%20via%20Oficina%20de%20Roteiro" class="btn btn-email">📧 Enviar Email</a>
+                    <a href="https://wa.me/244940266827?text=Olá%20Lelson%2C%20vim%20do%20site%20Oficina%20de%20Roteiro%20e%20gostaria%20de%20falar%20sobre%20os%20roteiros." target="_blank" class="btn btn-whatsapp">💬 WhatsApp</a>
+                </div>
+                
+                <p style="margin-top: 25px; font-size: 0.95em; opacity: 0.95; line-height: 1.6;">
+                    <strong>Lelson António</strong><br>
+                    Roteirista Profissional<br>
+                    Email: manueltondama6@gmail.com<br>
+                    WhatsApp: +244 940 266 827
+                </p>
             </div>
         </section>
     </main>
     
     <footer>
-        <p><strong>Oficina de Roteiro</strong> | Roteiros Profissionais e Consultoria</p>
+        <p><strong>Oficina de Roteiro</strong> | Roteiros Profissionais e Consultoria Especializada</p>
         <p>Todos os roteiros e materiais neste site estão protegidos por direitos autorais.</p>
-        <p>Licença Creative Commons CC BY-NC para materiais educacionais.</p>
+        <p>Licença Creative Commons CC BY-NC para materiais educacionais selecionados.</p>
         <p>&copy; 2026 Lelson António - Todos os direitos reservados</p>
     </footer>
 </body>
