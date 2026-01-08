@@ -633,6 +633,189 @@ document.getElementById('custom-ad-container').addEventListener('click', functio
     text-align: center; /* centraliza o anúncio */
 }
 
+/* Sistema de Reações */
+.reactions-container {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 25px 0;
+    border-top: 3px solid #3498db;
+    text-align: center;
+}
+
+.reactions-container h4 {
+    color: #2c3c50;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.reactions-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.reaction-btn {
+    background: white;
+    border: 2px solid #ddd;
+    border-radius: 50px;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.reaction-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    border-color: #3498db;
+}
+
+.reaction-btn.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: #667eea;
+    transform: scale(1.05);
+}
+
+.reaction-emoji {
+    font-size: 1.4em;
+    display: inline-block;
+    animation: none;
+}
+
+.reaction-btn.active .reaction-emoji {
+    animation: bounce 0.5s ease;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+}
+
+.reaction-count {
+    font-weight: 600;
+    font-size: 0.95em;
+    min-width: 20px;
+    color: #555;
+}
+
+.reaction-btn.active .reaction-count {
+    color: white;
+}
+
+.reactions-total {
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+/* Tabela Responsiva para Orçamento */
+.table-wrapper {
+    overflow-x: auto;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    min-width: 600px;
+}
+
+.pricing-table thead tr {
+    background: #2c3e50;
+    color: white;
+}
+
+.pricing-table th,
+.pricing-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.pricing-table tbody tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+.pricing-table tbody tr:hover {
+    background: #f0f0f0;
+    transition: background 0.3s ease;
+}
+
+.pricing-table strong {
+    color: #27ae60;
+    font-size: 1.05em;
+}
+
+/* Mobile responsivo */
+@media (max-width: 768px) {
+    .reaction-btn {
+        padding: 10px 15px;
+        font-size: 1em;
+    }
+    
+    .reaction-emoji {
+        font-size: 1.2em;
+    }
+    
+    /* Tabela em cards no mobile */
+    .pricing-table {
+        min-width: 100%;
+        display: block;
+    }
+    
+    .pricing-table thead {
+        display: none;
+    }
+    
+    .pricing-table tbody {
+        display: block;
+    }
+    
+    .pricing-table tr {
+        display: block;
+        margin-bottom: 20px;
+        border: 2px solid #3498db;
+        border-radius: 8px;
+        padding: 15px;
+        background: white;
+    }
+    
+    .pricing-table td {
+        display: block;
+        text-align: left;
+        border: none;
+        padding: 8px 0;
+        position: relative;
+        padding-left: 50%;
+    }
+    
+    .pricing-table td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 45%;
+        padding-right: 10px;
+        font-weight: bold;
+        color: #2c3e50;
+    }
+    
+    .pricing-table tbody tr:nth-child(even) {
+        background: white;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -823,6 +1006,36 @@ document.getElementById('custom-ad-container').addEventListener('click', functio
                     </div>
                     
                     <em>Projeto de baixo custo e alta viabilidade técnica, ideal para curta-metragem independente. Roteiro completo disponível mediante solicitação formal.</em>
+                    
+                    <!-- Sistema de Reações -->
+                    <div class="reactions-container">
+                        <h4>O que você achou deste roteiro?</h4>
+                        <div class="reactions-buttons">
+                            <button class="reaction-btn" onclick="addReaction('chamada-silenciosa', 'like')" data-reaction="like">
+                                <span class="reaction-emoji">👍</span>
+                                <span class="reaction-count" id="count-chamada-silenciosa-like">0</span>
+                            </button>
+                            <button class="reaction-btn" onclick="addReaction('chamada-silenciosa', 'love')" data-reaction="love">
+                                <span class="reaction-emoji">❤️</span>
+                                <span class="reaction-count" id="count-chamada-silenciosa-love">0</span>
+                            </button>
+                            <button class="reaction-btn" onclick="addReaction('chamada-silenciosa', 'laugh')" data-reaction="laugh">
+                                <span class="reaction-emoji">😂</span>
+                                <span class="reaction-count" id="count-chamada-silenciosa-laugh">0</span>
+                            </button>
+                            <button class="reaction-btn" onclick="addReaction('chamada-silenciosa', 'wow')" data-reaction="wow">
+                                <span class="reaction-emoji">😮</span>
+                                <span class="reaction-count" id="count-chamada-silenciosa-wow">0</span>
+                            </button>
+                            <button class="reaction-btn" onclick="addReaction('chamada-silenciosa', 'scared')" data-reaction="scared">
+                                <span class="reaction-emoji">😱</span>
+                                <span class="reaction-count" id="count-chamada-silenciosa-scared">0</span>
+                            </button>
+                        </div>
+                        <div class="reactions-total" id="total-chamada-silenciosa">
+                            Total de reações: <strong>0</strong>
+                        </div>
+                    </div>
                 </div>
             </div>
             
@@ -926,6 +1139,36 @@ document.getElementById('custom-ad-container').addEventListener('click', functio
                     </div>
                     
                     <em>Projeto leve, filmável e de baixo custo. Disponível para leitura e aquisição.</em>
+                    
+                    <!-- Sistema de Reações -->
+                    <div class="reactions-container">
+                        <h4>O que você achou deste roteiro?</h4>
+                        <div class="reactions-buttons">
+                            <button class="reaction-btn" onclick="addReaction('na-minha-linguagem', 'like')" data-reaction="like">
+                                <span class="reaction-emoji">👍</span>
+                                <span class="reaction-count" id="count-na-minha-linguagem-like">0</span>
+                            </button>
+                            <button class="reaction-btn" onclick="addReaction('na-minha-linguagem', 'love')" data-reaction="love">
+                                <span class="reaction-emoji">❤️</span>
+                                <span class="reaction-count" id="count-na-minha-linguagem-love">0</span>
+                            </button>
+                            <button class="reaction-btn" onclick="addReaction('na-minha-linguagem', 'laugh')" data-reaction="laugh">
+                                <span class="reaction-emoji">😂</span>
+                                <span class="reaction-count" id="count-na-minha-linguagem-laugh">0</span>
+                            </button>
+                            <button class="reaction-btn" onclick="addReaction('na-minha-linguagem', 'wow')" data-reaction="wow">
+                                <span class="reaction-emoji">😮</span>
+                                <span class="reaction-count" id="count-na-minha-linguagem-wow">0</span>
+                            </button>
+                            <button class="reaction-btn" onclick="addReaction('na-minha-linguagem', 'clever')" data-reaction="clever">
+                                <span class="reaction-emoji">🤓</span>
+                                <span class="reaction-count" id="count-na-minha-linguagem-clever">0</span>
+                            </button>
+                        </div>
+                        <div class="reactions-total" id="total-na-minha-linguagem">
+                            Total de reações: <strong>0</strong>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -940,9 +1183,7 @@ document.getElementById('custom-ad-container').addEventListener('click', functio
                         <span>Personagens: 2</span>
                         <span>Cenário: Interior (Casa)</span>
                     </div>
-                    
-                    <img src="imagens/porcaria.png" alt="Imagem conceito Mandioca" class="imagem-roteiro">
-
+                     <img src="imagens/porcaria.png" alt="Imagem conceito Mandioca" class="imagem-roteiro">
                     <p><strong>Sinopse:</strong></p>
                     <p>Um mal-entendido hilarante acontece quando um homem anuncia à sua esposa que "fez uma porcaria". A mulher fica apavorada imaginando o pior, mas descobre que ele estava falando literalmente sobre abrir um negócio relacionado à venda de porcos. Uma comédia sobre equívocos linguísticos e empreendedorismo inesperado.</p>
                     
@@ -1025,6 +1266,36 @@ document.getElementById('custom-ad-container').addEventListener('click', functio
                     </div>
                     
                     <em>Comédia familiar leve, filmável em uma única locação. Perfeita para curta-metragem ou sketch. Disponível para leitura e aquisição.</em>
+                    
+                    <!-- Sistema de Reações -->
+                    <div class="reactions-container">
+                        <h4>O que você achou deste roteiro?</h4>
+                        <div class="reactions-buttons">
+                            <button class="reaction-btn" onclick="addReaction('homem-porcaria', 'like')" data-reaction="like">
+                                <span class="reaction-emoji">👍</span>
+                                <span class="reaction-count" id="count-homem-porcaria-like">0</span>
+                            </button>
+                            <button class="reaction-btn" onclick="addReaction('homem-porcaria', 'love')" data-reaction="love">
+                                <span class="reaction-emoji">❤️</span>
+                                <span class="reaction-count" id="count-homem-porcaria-love">0</span>
+                            </button>
+                            <button class="reaction-btn" onclick="addReaction('homem-porcaria', 'laugh')" data-reaction="laugh">
+                                <span class="reaction-emoji">😂</span>
+                                <span class="reaction-count" id="count-homem-porcaria-laugh">0</span>
+                            </button>
+                            <button class="reaction-btn" onclick="addReaction('homem-porcaria', 'wow')" data-reaction="wow">
+                                <span class="reaction-emoji">😮</span>
+                                <span class="reaction-count" id="count-homem-porcaria-wow">0</span>
+                            </button>
+                            <button class="reaction-btn" onclick="addReaction('homem-porcaria', 'funny')" data-reaction="funny">
+                                <span class="reaction-emoji">🤣</span>
+                                <span class="reaction-count" id="count-homem-porcaria-funny">0</span>
+                            </button>
+                        </div>
+                        <div class="reactions-total" id="total-homem-porcaria">
+                            Total de reações: <strong>0</strong>
+                        </div>
+                    </div>
                 </div>
             </div>
             
@@ -1410,6 +1681,196 @@ document.getElementById('custom-ad-container').addEventListener('click', functio
                     </ul>
                 </div>
             </div>
+            <!-- Guia de Orçamento Profissional -->
+            <div class="card guia" style="margin-top: 60px;">
+                <div class="checklist">
+                    <h3 style="color: #e67e22; font-size: 2em; border-bottom: 2px solid #e67e22; padding-bottom: 10px;">💰 Como Orçar um Roteiro Profissionalmente</h3>
+                    
+                    <p style="font-size: 1.1em; line-height: 1.8; margin: 20px 0;">Este guia não é sobre "quanto cobrar". É sobre <strong>por que cobrar, como justificar, quando variar e como transformar preço em ferramenta estratégica</strong>. Orçamento de roteiro é estratégia, não tabela fixa. Quem domina preço domina narrativa e negociação.</p>
+                    
+                    <h3>1. Como orçar um roteiro, objetivamente?</h3>
+                    <p>Você não começa pelo valor, começa pelo <strong>escopo de responsabilidade</strong>.</p>
+                    <ul style="list-style: disc; padding-left: 40px;">
+                        <li>O roteiro é obra final ou base de desenvolvimento?</li>
+                        <li>O cliente está pagando por: Ideia, Escrita, Reescritas, Adequação à produção, Defesa criativa?</li>
+                        <li>O roteiro será: Produzido, Vendido, Inscrito em edital, Reescrito por outro?</li>
+                    </ul>
+                    <div class="destaque">
+                        <p><strong>Preço = nível de risco criativo + tempo intelectual + impacto comercial.</strong></p>
+                        <p>Quem cobra só por página está fingindo que escrever é datilografar.</p>
+                    </div>
+                    
+                    <h3>2. Por que o preço varia dentro de um único roteiro?</h3>
+                    <p>Nem todas as páginas custam o mesmo para serem escritas.</p>
+                    <ul style="list-style: disc; padding-left: 40px;">
+                        <li>Uma página de diálogo simples ≠ Uma página que introduz universo, resolve conflito estrutural, amarra arco dramático e define final.</li>
+                        <li>Quantidade de pesquisa, complexidade estrutural e número de versões descartadas influenciam o valor.</li>
+                    </ul>
+                    <div class="destaque">
+                        <p><strong>Preço varia porque o esforço cognitivo varia.</strong> Quem cobra tudo igual ou subvaloriza partes críticas ou infla partes simples.</p>
+                    </div>
+                    
+                    <h3>3. O preço de um roteiro determina a qualidade do conteúdo?</h3>
+                    <p>Não automaticamente, mas <strong>define o teto da qualidade possível</strong>. Qualidade exige:</p>
+                    <ul style="list-style: disc; padding-left: 40px;">
+                        <li>Tempo de maturação</li>
+                        <li>Distanciamento crítico</li>
+                        <li>Reescrita consciente</li>
+                        <li>Teste de estrutura</li>
+                        <li>Ajuste fino de personagem</li>
+                    </ul>
+                    
+                    <p><strong>Quando o preço é baixo demais:</strong></p>
+                    <ul style="list-style: disc; padding-left: 40px;">
+                        <li>O roteirista acelera decisões</li>
+                        <li>Evita reescritas profundas</li>
+                        <li>Aceita soluções fáceis</li>
+                        <li>Entrega o "funciona", não o "impacta"</li>
+                    </ul>
+                    <div class="destaque" style="background: #e8f5e9; border-left-color: #27ae60;">
+                        <p><strong>Preço não compra talento. Compra tempo para o talento trabalhar.</strong></p>
+                    </div>
+                    
+                    <h3>4. Quanto cobrar por roteiro: valores profissionais (Brasil, 2026)</h3>
+                    <div class="table-wrapper">
+                        <table class="pricing-table">
+                            <thead>
+                                <tr>
+                                    <th>Tipo de Roteiro</th>
+                                    <th>Páginas</th>
+                                    <th>Faixa de Preço</th>
+                                    <th>Observações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-label="Tipo de Roteiro">Argumento / Ideia Estruturada</td>
+                                    <td data-label="Páginas">2–5</td>
+                                    <td data-label="Faixa de Preço"><strong>R$ 1.500 – R$ 4.000</strong></td>
+                                    <td data-label="Observações">Pesquisa, concepção de universo, originalidade</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Tipo de Roteiro">Tratamento</td>
+                                    <td data-label="Páginas">10–30</td>
+                                    <td data-label="Faixa de Preço"><strong>R$ 4.000 – R$ 12.000</strong></td>
+                                    <td data-label="Observações">Estrutura dramática, arcos definidos, tom, ritmo</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Tipo de Roteiro">Curta-metragem</td>
+                                    <td data-label="Páginas">10–25</td>
+                                    <td data-label="Faixa de Preço"><strong>R$ 6.000 – R$ 15.000</strong></td>
+                                    <td data-label="Observações">Valor fechado, inclui complexidade narrativa e revisões</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Tipo de Roteiro">Longa-metragem</td>
+                                    <td data-label="Páginas">80–120</td>
+                                    <td data-label="Faixa de Preço"><strong>R$ 15.000 – R$ 40.000+</strong></td>
+                                    <td data-label="Observações">Inclui consultoria contínua e participação no desenvolvimento</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Tipo de Roteiro">Roteiro Técnico / TV / Institucional</td>
+                                    <td data-label="Páginas">1 página</td>
+                                    <td data-label="Faixa de Preço"><strong>R$ 150 – R$ 400</strong></td>
+                                    <td data-label="Observações">Definir revisões e limites de novas versões</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <p style="background: #fff3cd; padding: 15px; border-left: 4px solid #f39c12; margin: 15px 0;">📌 <strong>Importante:</strong> Preço por página é ferramenta comercial, não padrão artístico.</p>
+                    
+                    <h3>5. Estratégias avançadas de negociação</h3>
+                    
+                    <h4 style="color: #2c3c50; margin-top: 25px;">5.1 Como negociar participação em vez de desconto</h4>
+                    <ul style="list-style: disc; padding-left: 40px;">
+                        <li>Ofereça percentual sobre lucro, bilheteria ou receita de plataforma.</li>
+                        <li>Co-autoria ou crédito ampliado como forma de valor.</li>
+                        <li>Direitos de adaptação ou merchandising em projetos de sucesso.</li>
+                    </ul>
+                    <div class="destaque" style="background: #e3f2fd; border-left-color: #3498db;">
+                        <p><strong>Vantagens:</strong> Mantém preço justo, alinha interesses do roteirista com o sucesso do projeto e evita desvalorização do trabalho.</p>
+                    </div>
+                    
+                    <h4 style="color: #2c3c50; margin-top: 25px;">5.2 Quando o cliente pede orçamento antes de ler o roteiro</h4>
+                    <ul style="list-style: disc; padding-left: 40px;">
+                        <li><strong>Nunca dê preço sem contexto.</strong></li>
+                        <li>Explique que o valor depende da complexidade e impacto narrativo.</li>
+                        <li>Ofereça faixas de preço com escopo mínimo e máximo.</li>
+                        <li>Proponha reunião para entender as necessidades antes de fechar valor.</li>
+                    </ul>
+                    
+                    <h4 style="color: #2c3c50; margin-top: 25px;">5.3 Por que o produtor respeita quem cobra mais — mesmo dizendo "não"</h4>
+                    <ul style="list-style: disc; padding-left: 40px;">
+                        <li>Preço alto = sinal de profissionalismo e confiança.</li>
+                        <li>Valor reflete tempo, risco e expertise.</li>
+                        <li>Mesmo que não aceite agora, o produtor respeita e retorna em projetos maiores.</li>
+                        <li>Profissionais que se valorizam são lembrados quando há orçamento real.</li>
+                    </ul>
+                    
+                    <h3>6. O que fazer quando o cliente reclama do preço?</h3>
+                    <ul style="list-style: disc; padding-left: 40px;">
+                        <li><strong>Explique o que está incluso:</strong> X versões, Y semanas de trabalho, Z nível de entrega.</li>
+                        <li><strong>Reduzir escopo, não preço, se necessário.</strong> Exemplo: "Por esse valor, posso entregar tratamento, não roteiro completo."</li>
+                        <li><strong>Propor faseamento:</strong> argumento → tratamento → roteiro (pagamento por etapas).</li>
+                        <li><strong>Recusar profissionalmente quando for o caso.</strong> Nem todo projeto compensa.</li>
+                    </ul>
+                    
+                    <h3>7. Por que ser modesto no preço pode ser estratégico?</h3>
+                    <p>Em início de carreira ou projetos específicos, preços modestos podem ser inteligentes:</p>
+                    <ul style="list-style: disc; padding-left: 40px;">
+                        <li>Reduz atrito inicial com novos clientes</li>
+                        <li>Facilita entrada no mercado e geração de portfólio</li>
+                        <li>Gera histórico de trabalhos concluídos</li>
+                        <li>Cria confiança e relacionamento de longo prazo</li>
+                    </ul>
+                    <div class="destaque" style="background: #fff3cd; border-left-color: #f39c12;">
+                        <p>⚠️ <strong>Modesto ≠ barato.</strong> Preço modesto cresce com responsabilidade entregue e qualidade comprovada.</p>
+                    </div>
+                    
+                    <h3>8. Pergunta que poucos fazem</h3>
+                    <div class="destaque" style="background: #f3e5f5; border-left-color: #8e44ad;">
+                        <p style="font-size: 1.15em;"><strong>"Esse roteiro precisa existir neste formato?"</strong></p>
+                        <ul style="list-style: disc; padding-left: 20px; margin-top: 10px;">
+                            <li>Às vezes o problema não é preço, é formato errado.</li>
+                            <li>O cliente pode precisar apenas de argumento, bíblia, tratamento, consultoria ou reescrita pontual.</li>
+                            <li>Redefinir o produto pode facilitar a negociação e aumentar o valor percebido.</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>9. A pergunta mais madura</h3>
+                    <div class="destaque" style="background: #e8f5e9; border-left-color: #27ae60;">
+                        <p style="font-size: 1.15em;"><strong>"Se esse roteiro der certo, fui remunerado de forma justa?"</strong></p>
+                        <p style="margin-top: 10px;">Se a resposta for não: você está financiando o projeto. Não é parceria, é aposta unilateral. Estabeleça termos justos desde o início.</p>
+                    </div>
+                    
+                    <h3>10. Por que não ter preço único</h3>
+                    <p>Cada projeto exige investimento diferente:</p>
+                    <ul style="list-style: disc; padding-left: 40px;">
+                        <li><strong>Energia mental diferente:</strong> Comédia leve ≠ Drama psicológico denso</li>
+                        <li><strong>Risco criativo diferente:</strong> Roteiro original ≠ Adaptação de obra conhecida</li>
+                        <li><strong>Retorno comercial diferente:</strong> Curta independente ≠ Série para streaming</li>
+                        <li><strong>Complexidade técnica diferente:</strong> Diálogos simples ≠ Narrativas não-lineares</li>
+                    </ul>
+                    <div class="destaque">
+                        <p><strong>Preço fixo para tudo é confortável, mas preguiçoso intelectualmente.</strong> Adapte preço ao impacto, não ao medo de perder trabalho.</p>
+                    </div>
+                    
+                    <h3 style="color: #e67e22; font-size: 1.8em; margin-top: 40px; border-top: 2px solid #e67e22; padding-top: 20px;">📝 Conclusão</h3>
+                    <p style="font-size: 1.1em; line-height: 1.8;">Orçar um roteiro não é inflar valor. É <strong>traduzir trabalho invisível em números defensáveis</strong>, transformando preço em ferramenta de negociação, autoridade e controle criativo.</p>
+                    
+                    <p style="font-size: 1.05em; margin-top: 20px;">Quem domina orçamento:</p>
+                    <ul style="list-style: disc; padding-left: 40px; font-size: 1.05em;">
+                        <li>Escreve com mais clareza</li>
+                        <li>Negocia com mais firmeza</li>
+                        <li>Escolhe melhor os projetos</li>
+                        <li>Constrói carreira sustentável</li>
+                    </ul>
+                    
+                    <div class="destaque" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; margin-top: 30px;">
+                        <p style="font-size: 1.15em; color: white;"><strong>💡 No mercado real, isso vale mais do que talento isolado.</strong></p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Anúncio In-Feed 4 -->
@@ -1432,14 +1893,14 @@ document.getElementById('custom-ad-container').addEventListener('click', functio
                 <p>Entre em contato através dos canais abaixo:</p>
                 
                 <div class="contato-btns">
-                    <a href="mailto:manueltondama6@gmail.com?subject=Contato%20via%20Oficina%20de%20Roteiro" class="btn btn-email">📧 Enviar Email</a>
+                    <a href="#" class="btn btn-email">📧 Enviar Email</a>
                     <a href="https://wa.me/244940266827?text=Olá%20Lelson%2C%20vim%20do%20site%20Oficina%20de%20Roteiro%20e%20gostaria%20de%20falar%20sobre%20os%20roteiros." target="_blank" class="btn btn-whatsapp">💬 WhatsApp</a>
                 </div>
                 
                 <p style="margin-top: 25px; font-size: 0.95em; opacity: 0.95; line-height: 1.6;">
                     <strong>Lelson António</strong><br>
                     Roteirista Profissional<br>
-                    Email: manueltondama6@gmail.com<br>
+                    Email: <span id="email-contact"></span><br>
                     WhatsApp: +244 940 266 827
                 </p>
             </div>
@@ -1461,5 +1922,161 @@ document.getElementById('custom-ad-container').addEventListener('click', functio
             navLinks.classList.toggle('active');
         }
     </script>
+
+    <!-- Sistema de Reações com LocalStorage -->
+    <script>
+        // Inicializar reações ao carregar a página
+        document.addEventListener('DOMContentLoaded', function() {
+            loadAllReactions();
+        });
+
+        // Carregar todas as reações do localStorage
+        function loadAllReactions() {
+            const scripts = ['chamada-silenciosa', 'na-minha-linguagem', 'homem-porcaria'];
+            
+            scripts.forEach(scriptId => {
+                loadReactions(scriptId);
+            });
+        }
+
+        // Carregar reações de um roteiro específico
+        function loadReactions(scriptId) {
+            const reactions = ['like', 'love', 'laugh', 'wow', 'scared', 'clever', 'funny'];
+            let total = 0;
+            
+            reactions.forEach(reaction => {
+                const key = `reaction-${scriptId}-${reaction}`;
+                const count = localStorage.getItem(key) || 0;
+                const countElement = document.getElementById(`count-${scriptId}-${reaction}`);
+                
+                if (countElement) {
+                    countElement.textContent = count;
+                    total += parseInt(count);
+                }
+                
+                // Verificar se o usuário já reagiu
+                const userKey = `user-reaction-${scriptId}`;
+                const userReaction = localStorage.getItem(userKey);
+                
+                if (userReaction === reaction) {
+                    const buttons = document.querySelectorAll(`[onclick*="${scriptId}"]`);
+                    buttons.forEach(btn => {
+                        if (btn.getAttribute('data-reaction') === reaction) {
+                            btn.classList.add('active');
+                        }
+                    });
+                }
+            });
+            
+            // Atualizar total
+            const totalElement = document.getElementById(`total-${scriptId}`);
+            if (totalElement) {
+                totalElement.innerHTML = `Total de reações: <strong>${total}</strong>`;
+            }
+        }
+
+        // Adicionar ou remover reação
+        function addReaction(scriptId, reactionType) {
+            const userKey = `user-reaction-${scriptId}`;
+            const currentReaction = localStorage.getItem(userKey);
+            const reactionKey = `reaction-${scriptId}-${reactionType}`;
+            
+            // Se o usuário já tinha reagido com o mesmo tipo, remover
+            if (currentReaction === reactionType) {
+                // Decrementar contador
+                let count = parseInt(localStorage.getItem(reactionKey)) || 0;
+                count = Math.max(0, count - 1);
+                localStorage.setItem(reactionKey, count);
+                
+                // Remover registro da reação do usuário
+                localStorage.removeItem(userKey);
+                
+                // Remover classe active
+                const buttons = document.querySelectorAll(`[onclick*="${scriptId}"]`);
+                buttons.forEach(btn => btn.classList.remove('active'));
+                
+            } else {
+                // Se tinha outra reação, decrementar a anterior
+                if (currentReaction) {
+                    const oldKey = `reaction-${scriptId}-${currentReaction}`;
+                    let oldCount = parseInt(localStorage.getItem(oldKey)) || 0;
+                    oldCount = Math.max(0, oldCount - 1);
+                    localStorage.setItem(oldKey, oldCount);
+                }
+                
+                // Incrementar nova reação
+                let count = parseInt(localStorage.getItem(reactionKey)) || 0;
+                count++;
+                localStorage.setItem(reactionKey, count);
+                
+                // Registrar nova reação do usuário
+                localStorage.setItem(userKey, reactionType);
+                
+                // Atualizar classes active
+                const buttons = document.querySelectorAll(`[onclick*="${scriptId}"]`);
+                buttons.forEach(btn => {
+                    btn.classList.remove('active');
+                    if (btn.getAttribute('data-reaction') === reactionType) {
+                        btn.classList.add('active');
+                    }
+                });
+            }
+            
+            // Recarregar contadores
+            loadReactions(scriptId);
+            
+            // Animação de feedback
+            const clickedButton = event.target.closest('.reaction-btn');
+            if (clickedButton) {
+                clickedButton.style.transform = 'scale(1.2)';
+                setTimeout(() => {
+                    clickedButton.style.transform = '';
+                }, 200);
+            }
+        }
+
+        // Resetar reações (apenas para desenvolvimento - remover em produção)
+        function resetReactions(scriptId) {
+            if (confirm('Tem certeza que deseja resetar todas as reações deste roteiro?')) {
+                const reactions = ['like', 'love', 'laugh', 'wow', 'scared', 'clever', 'funny'];
+                reactions.forEach(reaction => {
+                    localStorage.removeItem(`reaction-${scriptId}-${reaction}`);
+                });
+                localStorage.removeItem(`user-reaction-${scriptId}`);
+                loadReactions(scriptId);
+                alert('Reações resetadas!');
+            }
+        }
+    </script>
+
+    <!-- Proteção Anti-Bot para Email -->
+    <script>
+        // Montar email de forma que bots não consigam ler
+        (function() {
+            const user = 'manueltondama6';
+            const domain = 'gmail';
+            const tld = 'com';
+            const email = user + '@' + domain + '.' + tld;
+            
+            // Inserir no span do rodapé
+            const emailSpan = document.getElementById('email-contact');
+            if (emailSpan) {
+                // Criar link clicável
+                const link = document.createElement('a');
+                link.href = 'mailto:' + email;
+                link.textContent = email;
+                link.style.color = 'white';
+                link.style.textDecoration = 'underline';
+                emailSpan.appendChild(link);
+            }
+            
+            // Inserir nos botões de email (CTA)
+            const emailButtons = document.querySelectorAll('.btn-email');
+            emailButtons.forEach(btn => {
+                btn.href = 'mailto:' + email + '?subject=Contato%20via%20Oficina%20de%20Roteiro';
+            });
+        })();
+    </script>
+
 </body>
 </html>
