@@ -4,16 +4,6 @@ function toggleMenu() {
     navLinks.classList.toggle('active');
 }
 
-// Toggle de Reações
-function toggleReactions(scriptId) {
-    const reactionsContainer = document.getElementById(`reactions-${scriptId}`);
-    if (reactionsContainer.style.display === 'none' || !reactionsContainer.style.display) {
-        reactionsContainer.style.display = 'block';
-    } else {
-        reactionsContainer.style.display = 'none';
-    }
-}
-
 // Sistema de Reações com LocalStorage
 document.addEventListener('DOMContentLoaded', function() {
     loadAllReactions();
@@ -109,8 +99,16 @@ function addReaction(scriptId, reactionType) {
 // Smooth Scroll para links internos
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        
+        // Ignorar links que são apenas "#"
+        if (href === '#') {
+            return;
+        }
+        
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const target = document.querySelector(href);
+        
         if (target) {
             target.scrollIntoView({
                 behavior: 'smooth',
