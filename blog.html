@@ -3,16 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Blog de roteiro: guias completos, técnicas profissionais, anatomia do roteiro, orçamento e recursos para roteiristas.">
-    <title>Blog e Guias | Oficina de Roteiro</title>
+    <meta name="description" content="Blog de roteiro: técnicas de escrita, análise de filmes, dicas profissionais e recursos para roteiristas. Aprenda sobre estrutura narrativa, desenvolvimento de personagens e muito mais.">
+    <title>Blog | Oficina de Roteiro</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .blog-hero {
+            background: linear-gradient(135deg, #8e44ad 0%, #9b59b6 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .blog-hero h1 {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+        
+        .blog-content {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        
+        .categories {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+            justify-content: center;
+        }
+        
+        .category-btn {
+            background: white;
+            color: #2c3e50;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border: 2px solid transparent;
+        }
+        
+        .category-btn:hover,
+        .category-btn.active {
+            background: #2c3e50;
+            color: white;
+            border-color: #2c3e50;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        
+        .blog-posts {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .blog-post {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .blog-post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+        
+        .post-category {
+            background: #3498db;
+            color: white;
+            padding: 8px 15px;
+            font-size: 0.85em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .post-category.tecnicas {
+            background: #3498db;
+        }
+        
+        .post-category.analise {
+            background: #e74c3c;
+        }
+        
+        .post-category.mercado {
+            background: #27ae60;
+        }
+        
+        .post-category.inspiracao {
+            background: #f39c12;
+        }
+        
+        .post-content {
+            padding: 25px;
+        }
+        
+        .post-content h3 {
+            color: #2c3e50;
+            font-size: 1.5em;
+            margin-bottom: 12px;
+        }
+        
+        .post-meta {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+        
+        .post-excerpt {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        
+        .read-more {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .read-more:hover {
+            color: #2980b9;
+            gap: 12px;
+        }
+        
+        .featured-post {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .featured-post .post-content {
+            padding: 40px;
+        }
+        
+        .featured-post h3 {
+            color: white;
+            font-size: 2em;
+        }
+        
+        .featured-post .post-excerpt {
+            color: rgba(255,255,255,0.95);
+            font-size: 1.1em;
+        }
+        
+        .featured-post .post-meta {
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .featured-post .read-more {
+            color: white;
+            background: rgba(255,255,255,0.2);
+            padding: 12px 25px;
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .featured-post .read-more:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        
+        .featured-badge {
+            background: #f39c12;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .blog-hero h1 {
+                font-size: 2em;
+            }
+            
+            .blog-posts {
+                grid-template-columns: 1fr;
+            }
+            
+            .featured-post {
+                grid-template-columns: 1fr;
+            }
+            
+            .featured-post .post-content {
+                padding: 25px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header class="main-header">
-        <div class="header-content">
-            <h1>📚 Blog e Guias Profissionais</h1>
-            <p class="tagline">Conhecimento prático para roteiristas</p>
-        </div>
+    <header class="blog-hero">
+        <h1>Blog da Oficina de Roteiro</h1>
+        <p>Técnicas, Análises e Inspiração para Roteiristas</p>
     </header>
     
     <nav class="main-nav">
@@ -33,228 +229,127 @@
         </div>
     </nav>
     
-    <main class="container" style="max-width: 1200px; margin: 60px auto; padding: 0 20px;">
+    <main class="blog-content">
+        <div class="categories">
+            <a href="#" class="category-btn active">Todos os Artigos</a>
+            <a href="#" class="category-btn">Técnicas de Roteiro</a>
+            <a href="#" class="category-btn">Análise de Filmes</a>
+            <a href="#" class="category-btn">Mercado</a>
+            <a href="#" class="category-btn">Inspiração</a>
+        </div>
         
-        <!-- Navegação Rápida -->
-        <section style="background: white; padding: 30px; border-radius: 12px; margin-bottom: 40px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-            <h2 style="color: #2c3e50; margin-bottom: 20px;">🔍 Navegação Rápida</h2>
-            <div style="display: flex; gap: 15px; flex-wrap: wrap;">
-                <a href="#anatomia" class="btn btn-secondary">Anatomia do Roteiro</a>
-                <a href="#como-vender" class="btn btn-secondary">Como Vender Roteiros</a>
-                <a href="#orcamento" class="btn btn-secondary">Orçamento Profissional</a>
-                <a href="#dicas" class="btn btn-secondary">Dicas de Roteiro</a>
-            </div>
-        </section>
-
-        <!-- ANATOMIA PROFUNDA DO ROTEIRO -->
-        <section id="anatomia" class="script-card">
-            <h2 style="color: #8e44ad; border-color: #8e44ad;">🎯 Anatomia Profunda do Roteiro</h2>
+        <div class="blog-posts">
+            <!-- Post em Destaque -->
+            <article class="blog-post featured-post">
+                <div class="post-content">
+                    <span class="featured-badge">✨ Em Destaque</span>
+                    <h3>A Anatomia Profunda do Roteiro: O Guia Completo</h3>
+                    <p class="post-meta">📅 15 de janeiro de 2026 | ⏱️ Leitura: 25 min</p>
+                    <p class="post-excerpt">Um guia completo e aprofundado sobre os elementos essenciais de um roteiro profissional. Desde o pulso da história até o epílogo, explore os conceitos fundamentais que transformam ideias em narrativas cinematográficas poderosas. Inclui análises de filmes clássicos e dicas práticas para cada elemento estrutural.</p>
+                    <a href="artigo-anatomia-roteiro.html" class="read-more">Ler Artigo Completo →</a>
+                </div>
+                <div class="post-content" style="display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.2);">
+                    <span style="font-size: 5em;">📖</span>
+                </div>
+            </article>
             
-            <div class="card dica" style="border-left-color: #8e44ad;">
-                <strong>🎯 1. Natureza da Curta-Metragem</strong>
-                <p>Antes de analisar a anatomia do roteiro, é fundamental compreender a natureza específica da curta-metragem.</p>
-                <p><strong>👉 Curta-metragem não é um longa reduzido.</strong><br>Ela opera a partir de princípios próprios:</p>
-                <ul>
-                    <li>Uma ideia central forte</li>
-                    <li>Poucos personagens</li>
-                    <li>Um único conflito</li>
-                    <li>Impacto rápido, preciso e concentrado</li>
-                </ul>
-            </div>
-
-            <div class="card dica" style="border-left-color: #8e44ad;">
-                <strong>Capítulo 1 – O Pulso da História</strong>
-                <p>Todo roteiro tem um pulso invisível: o desejo do protagonista. Esse desejo é o que dá vida à trama, o que conecta público e personagem.</p>
-                <p>A pergunta-chave: <em>"O que meu protagonista quer tanto que estaria disposto a perder tudo para conseguir?"</em></p>
-                
-                <p><strong>Exemplos:</strong></p>
-                <p><strong>O Poderoso Chefão:</strong> Michael Corleone deseja proteger a família, mas esse desejo o empurra para se tornar aquilo que ele mais rejeitava.</p>
-                <p><strong>Titanic:</strong> Rose deseja liberdade de uma vida sufocante de convenções sociais.</p>
-            </div>
-
-            <div class="card dica" style="border-left-color: #8e44ad;">
-                <strong>Capítulo 2 – O Fantasma</strong>
-                <p>Todo personagem carrega um fantasma — uma dor, perda ou ferida do passado que ainda não foi resolvida.</p>
-                <p><strong>Exemplo:</strong> Batman Begins - A morte dos pais guia Bruce Wayne a lutar contra o crime.</p>
-            </div>
-
-            <div class="card dica" style="border-left-color: #8e44ad;">
-                <strong>Capítulo 3 – O Abismo</strong>
-                <p>O momento em que o protagonista encara sua maior derrota, sua perda mais dolorosa, sua solidão absoluta.</p>
-                <p><strong>Exemplo:</strong> O Rei Leão - Simba vê seu pai morrer e acredita ser culpado.</p>
-            </div>
-
-            <div class="card dica" style="border-left-color: #8e44ad;">
-                <strong>Capítulo 4 – A Máscara</strong>
-                <p>A narrativa ganha força quando a máscara do personagem começa a rachar, revelando sua essência.</p>
-                <p><strong>Exemplo:</strong> Frozen - Elsa esconde seus poderes até se libertar em "Let It Go".</p>
-            </div>
-
-            <div class="card dica" style="border-left-color: #8e44ad;">
-                <strong>Capítulo 5 – O Clímax</strong>
-                <p>O ponto mais alto da história — o momento em que o protagonista enfrenta seu maior desafio.</p>
-                <p><strong>Exemplo:</strong> Vingadores Ultimato - Tony Stark sacrifica a própria vida para salvar todos.</p>
-            </div>
-
-            <div class="card dica" style="border-left-color: #8e44ad;">
-                <strong>Capítulo 6 – A Resolução</strong>
-                <p>A respiração final da história. O momento em que o público percebe o eco das escolhas do protagonista.</p>
-                <p><strong>Exemplo:</strong> Titanic - Rose lança o colar ao mar, simbolizando a vida plena que viveu.</p>
-            </div>
-
-            <div class="card dica" style="border-left-color: #8e44ad;">
-                <strong>Capítulo 7 – O Epílogo</strong>
-                <p>O suspiro que fica depois que a história termina.</p>
-                <p><strong>Exemplo:</strong> Harry Potter - A cena dos filhos na plataforma 9¾ traz continuidade e legado.</p>
-            </div>
-        </section>
-
-        <!-- COMO VENDER SEU ROTEIRO -->
-        <section id="como-vender" class="script-card" style="margin-top: 60px;">
-            <h2 style="color: #27ae60; border-color: #27ae60;">🎬 Como Vender Seu Roteiro de Curta</h2>
+            <!-- Artigos Regulares -->
+            <article class="blog-post">
+                <div class="post-category tecnicas">Técnicas de Roteiro</div>
+                <div class="post-content">
+                    <h3>Como Criar Diálogos Cinematográficos Memoráveis</h3>
+                    <p class="post-meta">📅 12 de janeiro de 2026 | ⏱️ 8 min</p>
+                    <p class="post-excerpt">Diálogos não são conversas reais — são conversas editadas. Aprenda as técnicas que os grandes roteiristas usam para criar falas que revelam caráter, avançam a trama e permanecem na memória do público.</p>
+                    <a href="#" class="read-more">Ler mais →</a>
+                </div>
+            </article>
             
-            <div class="card guia">
-                <strong>💡 Princípio Fundamental</strong>
-                <p>Você não vende o roteiro. Você vende segurança. Produtores pensam: "Esse roteirista vai facilitar minha vida ou me dar dor de cabeça?"</p>
-            </div>
-
-            <div class="card guia">
-                <strong>1. Posicione Seu Curta Corretamente</strong>
-                <p><strong>❌ Jeito errado:</strong> "É uma série de vários curtas que se conectam..."</p>
-                <p><strong>✅ Jeito certo:</strong> "É um curta autônomo, parte de um conceito maior de episódios independentes."</p>
-            </div>
-
-            <div class="card guia">
-                <strong>2. Crie uma Logline Matadora (20 segundos)</strong>
-                <p><strong>Exemplo:</strong> "Dois amigos entram em conflito quando linguagens de programação passam a ser entendidas como idiomas reais."</p>
-            </div>
-
-            <div class="card guia">
-                <strong>3. E-mail de Pitch Profissional</strong>
-                <p><strong>Assunto:</strong> Roteiro de Comédia Curta – "Na Minha Linguagem"</p>
-                <p>Tenho um roteiro pronto de comédia curta. O curta é autônomo e faz parte de um conceito maior. Projeto leve, filmável e de baixo custo.</p>
-            </div>
-
-            <div class="card guia">
-                <strong>4. Timing Estratégico</strong>
-                <ul>
-                    <li><strong>Melhor dia:</strong> Terça ou quarta-feira</li>
-                    <li><strong>Melhor horário:</strong> Entre 09h e 11h</li>
-                    <li><strong>Evite:</strong> Segunda-feira e sexta à tarde</li>
-                </ul>
-            </div>
-
-            <div class="card guia">
-                <strong>5. Frases-Chave que Vendem</strong>
-                <ul>
-                    <li>"Leve, filmável e de baixo custo"</li>
-                    <li>"Curta autônomo"</li>
-                    <li>"Projeto pronto para produção"</li>
-                    <li>"Viabilidade técnica comprovada"</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- ORÇAMENTO PROFISSIONAL -->
-        <section id="orcamento" class="script-card" style="margin-top: 60px;">
-            <h2 style="color: #e67e22; border-color: #e67e22;">💰 Como Orçar um Roteiro Profissionalmente</h2>
+            <article class="blog-post">
+                <div class="post-category analise">Análise de Filmes</div>
+                <div class="post-content">
+                    <h3>Parasita: A Estrutura Perfeita de Gêneros Híbridos</h3>
+                    <p class="post-meta">📅 10 de janeiro de 2026 | ⏱️ 12 min</p>
+                    <p class="post-excerpt">Uma análise profunda de como Bong Joon-ho construiu um roteiro que transita perfeitamente entre comédia, drama e thriller, mantendo coesão narrativa e impacto emocional do início ao fim.</p>
+                    <a href="#" class="read-more">Ler mais →</a>
+                </div>
+            </article>
             
-            <div class="card guia">
-                <strong>1. Como orçar objetivamente?</strong>
-                <p>Você começa pelo <strong>escopo de responsabilidade</strong>.</p>
-                <p><strong>Preço = nível de risco criativo + tempo intelectual + impacto comercial.</strong></p>
-            </div>
-
-            <div class="card guia">
-                <strong>2. Valores Profissionais (Brasil, 2026)</strong>
-                <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
-                    <thead>
-                        <tr style="background: #2c3e50; color: white;">
-                            <th style="padding: 12px; text-align: left;">Tipo de Roteiro</th>
-                            <th style="padding: 12px; text-align: left;">Faixa de Preço</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr style="border-bottom: 1px solid #ddd;">
-                            <td style="padding: 12px;">Argumento / Ideia</td>
-                            <td style="padding: 12px;"><strong>R$ 1.500 – R$ 4.000</strong></td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #ddd; background: #f9f9f9;">
-                            <td style="padding: 12px;">Tratamento</td>
-                            <td style="padding: 12px;"><strong>R$ 4.000 – R$ 12.000</strong></td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #ddd;">
-                            <td style="padding: 12px;">Curta-metragem</td>
-                            <td style="padding: 12px;"><strong>R$ 6.000 – R$ 15.000</strong></td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #ddd; background: #f9f9f9;">
-                            <td style="padding: 12px;">Longa-metragem</td>
-                            <td style="padding: 12px;"><strong>R$ 15.000 – R$ 40.000+</strong></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="card guia">
-                <strong>3. Estratégias Avançadas</strong>
-                <p><strong>Negociar participação:</strong> Ofereça percentual sobre lucro ou bilheteria.</p>
-                <p><strong>Quando pedirem preço antes:</strong> Nunca dê preço sem contexto.</p>
-                <p><strong>Se reclamarem:</strong> Reduza escopo, não preço.</p>
-            </div>
-        </section>
-
-        <!-- DICAS PROFISSIONAIS -->
-        <section id="dicas" class="script-card" style="margin-top: 60px;">
-            <h2 style="color: #3498db; border-color: #3498db;">✍️ Dicas Profissionais de Roteiro</h2>
+            <article class="blog-post">
+                <div class="post-category mercado">Mercado</div>
+                <div class="post-content">
+                    <h3>Como Vender Seu Roteiro: O Guia Definitivo 2026</h3>
+                    <p class="post-meta">📅 8 de janeiro de 2026 | ⏱️ 15 min</p>
+                    <p class="post-excerpt">Do pitch perfeito aos contratos justos, passando por estratégias de networking e preparação de materiais. Tudo que você precisa saber para transformar seu roteiro em um projeto realizado.</p>
+                    <a href="#" class="read-more">Ler mais →</a>
+                </div>
+            </article>
             
-            <div class="card dica">
-                <strong>1. Comece com Conflito</strong>
-                <p>Histórias sem conflito perdem impacto imediatamente. O conflito é o motor da narrativa.</p>
-            </div>
+            <article class="blog-post">
+                <div class="post-category tecnicas">Técnicas de Roteiro</div>
+                <div class="post-content">
+                    <h3>A Regra dos Três Atos: Além do Básico</h3>
+                    <p class="post-meta">📅 5 de janeiro de 2026 | ⏱️ 10 min</p>
+                    <p class="post-excerpt">A estrutura de três atos não é uma fórmula rígida — é um framework flexível. Descubra como os mestres do roteiro usam e subvertem essa estrutura clássica para criar histórias únicas.</p>
+                    <a href="#" class="read-more">Ler mais →</a>
+                </div>
+            </article>
             
-            <div class="card dica">
-                <strong>2. Personagens com Objetivos Claros</strong>
-                <p>O que eles querem? O que os impede? Por que isso é importante?</p>
-            </div>
+            <article class="blog-post">
+                <div class="post-category inspiracao">Inspiração</div>
+                <div class="post-content">
+                    <h3>7 Exercícios Diários para Roteiristas</h3>
+                    <p class="post-meta">📅 3 de janeiro de 2026 | ⏱️ 6 min</p>
+                    <p class="post-excerpt">Roteiristas precisam exercitar a criatividade como atletas exercitam o corpo. Descubra exercícios práticos para desenvolver sua voz autoral e manter o fluxo criativo constante.</p>
+                    <a href="#" class="read-more">Ler mais →</a>
+                </div>
+            </article>
             
-            <div class="card dica">
-                <strong>3. Mostre, Não Conte</strong>
-                <p>Ação e diálogo são mais poderosos que exposição forçada.</p>
-            </div>
+            <article class="blog-post">
+                <div class="post-category mercado">Mercado</div>
+                <div class="post-content">
+                    <h3>Quanto Cobrar por um Roteiro? Guia de Precificação</h3>
+                    <p class="post-meta">📅 30 de dezembro de 2025 | ⏱️ 18 min</p>
+                    <p class="post-excerpt">Preço não é sobre páginas escritas — é sobre valor entregue. Um guia completo e realista sobre como precificar seus roteiros profissionalmente, desde curtas até longas-metragens.</p>
+                    <a href="#" class="read-more">Ler mais →</a>
+                </div>
+            </article>
             
-            <div class="card dica">
-                <strong>4. Estruture Cada Cena</strong>
-                <p>Toda cena deve avançar a trama ou revelar algo importante sobre o personagem.</p>
-            </div>
+            <article class="blog-post">
+                <div class="post-category analise">Análise de Filmes</div>
+                <div class="post-content">
+                    <h3>Como Oppenheimer Usa o Tempo Narrativo</h3>
+                    <p class="post-meta">📅 27 de dezembro de 2025 | ⏱️ 14 min</p>
+                    <p class="post-excerpt">Christopher Nolan é mestre em manipular o tempo narrativo. Uma análise detalhada de como Oppenheimer entrelaça três linhas temporais distintas mantendo clareza e impacto emocional.</p>
+                    <a href="#" class="read-more">Ler mais →</a>
+                </div>
+            </article>
             
-            <div class="card dica">
-                <strong>5. Feedback é Essencial</strong>
-                <p>Roteiros melhoram com opiniões externas qualificadas. O ego é o maior inimigo do roteirista.</p>
-            </div>
-
-            <div class="card dica">
-                <strong>6. Como Se Organiza um Roteiro de Filme</strong>
-                <p><strong>Estrutura Clássica (3 Atos):</strong></p>
-                <p><strong>Ato 1 (25%):</strong> Apresentação, incidente incitante, ponto de virada</p>
-                <p><strong>Ato 2 (50%):</strong> Conflito, desenvolvimento, ponto médio</p>
-                <p><strong>Ato 3 (25%):</strong> Clímax, resolução, conclusão</p>
-                
-                <p><strong>Formato Técnico:</strong></p>
-                <ul>
-                    <li>Cabeçalhos de Cena (Sluglines)</li>
-                    <li>Descrição da ação</li>
-                    <li>Diálogos com nome do personagem</li>
-                    <li>Parênteses para tom ou ação</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- CTA Final -->
-        <section style="text-align: center; margin-top: 80px; padding: 50px; background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); color: white; border-radius: 12px;">
-            <h3 style="font-size: 2em; margin-bottom: 15px; color: white;">💡 Quer Aprender Mais?</h3>
-            <p style="font-size: 1.2em; margin-bottom: 30px;">Entre em contato para consultoria personalizada ou discussão de projetos</p>
-            <a href="index.html#contato" class="btn" style="background: white; color: #2980b9;">Entrar em Contato</a>
-        </section>
+            <article class="blog-post">
+                <div class="post-category tecnicas">Técnicas de Roteiro</div>
+                <div class="post-content">
+                    <h3>Show, Don't Tell: Além do Clichê</h3>
+                    <p class="post-meta">📅 24 de dezembro de 2025 | ⏱️ 9 min</p>
+                    <p class="post-excerpt">"Mostre, não conte" é o conselho mais repetido — e mal compreendido — do roteiro. Descubra quando mostrar, quando contar, e como equilibrar ambos para máximo impacto narrativo.</p>
+                    <a href="#" class="read-more">Ler mais →</a>
+                </div>
+            </article>
+            
+            <article class="blog-post">
+                <div class="post-category inspiracao">Inspiração</div>
+                <div class="post-content">
+                    <h3>Bloqueio Criativo: Causas e Soluções Reais</h3>
+                    <p class="post-meta">📅 21 de dezembro de 2025 | ⏱️ 11 min</p>
+                    <p class="post-excerpt">Bloqueio criativo não é falta de ideias — é geralmente sintoma de algo mais profundo. Identifique as causas reais e aplique soluções práticas que realmente funcionam.</p>
+                    <a href="#" class="read-more">Ler mais →</a>
+                </div>
+            </article>
+        </div>
+        
+        <div style="text-align: center; margin-top: 60px; padding: 40px; background: white; border-radius: 12px;">
+            <h3 style="color: #2c3e50; font-size: 2em; margin-bottom: 15px;">📬 Receba Novos Artigos</h3>
+            <p style="color: #555; font-size: 1.1em; margin-bottom: 25px;">Inscreva-se para receber notificações sobre novos artigos, dicas exclusivas e recursos gratuitos.</p>
+            <a href="index.html#contato" class="btn btn-primary">Entrar em Contato</a>
+        </div>
     </main>
     
     <footer class="main-footer">
@@ -270,13 +365,14 @@
                         <li><a href="index.html">Início</a></li>
                         <li><a href="sobre.html">Sobre</a></li>
                         <li><a href="servicos.html">Serviços</a></li>
+                        <li><a href="blog.html">Blog</a></li>
                         <li><a href="politica-privacidade.html">Política de Privacidade</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Contato</h4>
                     <p>Email: <a href="mailto:manueltondama6@gmail.com">manueltondama6@gmail.com</a></p>
-                    <p>WhatsApp: <a href="https://wa.me/244940266827">+244 940 266 827</a></p>
+                    <p>WhatsApp: <a href="https://wa.me/244940266827" target="_blank">+244 940 266 827</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
