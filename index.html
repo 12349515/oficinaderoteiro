@@ -3,69 +3,1013 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Oficina de Roteiro - Roteiros profissionais, consultoria criativa e recursos para roteiristas. Escrita de roteiros para cinema, TV e plataformas digitais.">
-    <meta name="keywords" content="roteiro, roteirista, consultoria, escrita criativa, cinema, audiovisual, Angola, Lelson António">
-    <meta name="author" content="Lelson António">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7482420290445582"
+     crossorigin="anonymous"></script>
+
+
+<script>
+document.getElementById('custom-ad-container').addEventListener('click', function(e){
+    e.stopPropagation();
+    e.preventDefault(); // tenta bloquear
+});
+</script>
+
+
     <title>Oficina de Roteiro | Roteiros e Consultoria Profissional</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        header h1 {
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+        
+        header p {
+            font-size: 1.2em;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+        
+        /* Espaço para anúncio no topo */
+        .ad-space {
+            background: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 1100px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        
+        
+        .ad-label {
+            font-size: 0.75em;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        /* Estilo para embed do YouTube */
+        .video-embed {
+            background: white;
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-left: 5px solid #FF0000;
+        }
+
+        .video-embed h3 {
+            color: #2c3c50;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .video-embed p {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        /* --- NAV PROFISSIONAL E RESPONSIVO --- */
+        nav {
+            background-color: #34495e;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            height: 60px;
+        }
+
+        /* Botão Hambúrguer (Mobile) */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.8em;
+            cursor: pointer;
+            padding: 5px;
+            line-height: 1;
+        }
+        
+        /* Links de Navegação */
+        .nav-links {
+            display: flex;
+            list-style: none;
+            width: 100%;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .nav-links li {
+            flex: 1;
+            text-align: center;
+        }
+
+        .nav-links a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 18px 15px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+            text-transform: uppercase;
+            font-size: 0.9em;
+            letter-spacing: 0.5px;
+        }
+        
+        .nav-links a:hover {
+            background-color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        /* Estilos de Mobile para Nav */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+                z-index: 1001;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: #2c3e50;
+                flex-direction: column;
+                gap: 0;
+                padding-bottom: 20px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            }
+
+            .nav-links.active {
+                display: flex;
+                animation: slideDown 0.3s ease-in-out;
+            }
+
+            .nav-links li {
+                width: 100%;
+                text-align: left;
+                border-bottom: 1px solid rgba(255,255,255,0.05);
+            }
+
+            .nav-links a {
+                padding: 15px 20px;
+            }
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* ------------------------------------ */
+
+        main {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            margin-bottom: 60px;
+        }
+        
+        h2 {
+            color: #2c3c50;
+            font-size: 2.2em;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        .intro {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 40px;
+        }
+        
+        .intro p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 15px;
+        }
+        
+        .card {
+            background: white;
+            padding: 30px;
+            margin: 25px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+        }
+        
+        .dica {
+            border-left: 5px solid #3498db;
+        }
+        
+        .roteiro {
+            border-left: 5px solid #27ae60;
+        }
+        
+        .guia {
+            border-left: 5px solid #e67e22;
+        }
+        
+        /* Estilo específico para Anatomia do Roteiro */
+        .anatomia-card {
+            border-left: 5px solid #8e44ad;
+            background: #fff;
+        }
+        
+        .anatomia-card h3 {
+            color: #8e44ad;
+            font-size: 1.6em;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        
+        .anatomia-card strong {
+            color: #2c3c50;
+        }
+        
+        .card strong {
+            color: #2c3c50;
+            font-size: 1.2em;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .card p {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+        
+        .card ul {
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+        
+        .card li {
+            margin-bottom: 8px;
+        }
+        
+        .card em {
+            display: block;
+            margin-top: 10px;
+            font-style: normal;
+            color: #7f8c8d;
+            font-size: 0.95em;
+        }
+        
+        .roteiro-completo {
+            background: #ecf0f1;
+            padding: 25px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        
+        .roteiro-completo h3 {
+            color: #2c3c50;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+        
+        .roteiro-completo .meta {
+            display: flex;
+            gap: 20px;
+            margin: 15px 0;
+            flex-wrap: wrap;
+        }
+        
+        .roteiro-completo .meta span {
+            background: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            color: #555;
+        }
+        
+        /* --- CORREÇÃO RESPONSIVA DO ROTEIRO --- */
+        .roteiro-texto {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 25px 0;
+            border-left: 4px solid #27ae60;
+            font-family: 'Courier New', monospace; /* Desktop mantém monospace */
+            font-size: 0.95em;
+        }
+        
+        .roteiro-texto h4 {
+            color: #2c3c50;
+            margin: 25px 0 15px 0;
+            font-size: 1.3em;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        
+        .roteiro-texto .cena {
+            font-weight: bold;
+            color: #27ae60;
+            text-transform: uppercase;
+            margin: 20px 0 10px 0;
+            font-size: 1em;
+            line-height: 1.4;
+        }
+        
+        .roteiro-texto .personagem {
+            font-weight: bold;
+            color: #2c3c50;
+            margin: 15px 0 5px 0;
+        }
+        
+        /* Diálogos com margem relativa para mobile */
+        .roteiro-texto .dialogo {
+            margin-left: 40px; /* Desktop */
+            color: #444;
+            line-height: 1.6;
+        }
+        
+        .roteiro-texto .acao {
+            color: #444;
+            line-height: 1.8;
+            margin: 10px 0;
+        }
+        
+        .roteiro-texto .parentese {
+            margin-left: 60px; /* Desktop */
+            font-style: italic;
+            color: #666;
+        }
+        
+        .roteiro-texto .final {
+            text-align: center;
+            margin-top: 30px;
+            font-style: italic;
+            color: #7f8c8d;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        
+        /* Imagem responsiva */
+        .imagem-roteiro {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px auto;
+            display: block;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        /* --- MEDIA QUERIES (MOBILE) --- */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            
+            h2 {
+                font-size: 1.8em;
+            }
+            
+            /* Melhorar padding dos cards no mobile */
+            .card, .roteiro-completo {
+                padding: 20px 15px;
+            }
+
+            .roteiro-completo .meta {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            /* CORREÇÃO: Fonte legível no mobile para roteiro */
+            .roteiro-texto {
+                font-family: 'Segoe UI', sans-serif; /* Troca para sans-serif no mobile */
+                padding: 20px 15px;
+                font-size: 1em;
+                line-height: 1.6;
+            }
+
+            .roteiro-texto h4 {
+                font-size: 1.2em;
+                margin-top: 20px;
+            }
+
+            .roteiro-texto .cena {
+                font-size: 0.95em;
+                margin-top: 25px;
+            }
+
+            /* Margens relativas para não quebrar layout */
+            .roteiro-texto .dialogo {
+                margin-left: 20px;
+                margin-right: 10px;
+            }
+            
+            .roteiro-texto .parentese {
+                margin-left: 20px; /* Reduz drasticamente a margem */
+                margin-bottom: 10px;
+                display: block; /* Garante que fique em bloco */
+                font-style: italic;
+                color: #555;
+            }
+        }
+        
+        .checklist {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .checklist h3 {
+            color: #2c3c50;
+            margin: 30px 0 15px 0;
+            font-size: 1.5em;
+        }
+        
+        .checklist p {
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+        
+        .checklist ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .checklist li {
+            padding: 12px 0 12px 35px;
+            position: relative;
+            line-height: 1.7;
+        }
+        
+        .checklist li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+        
+        .destaque {
+            background: #fff9e6;
+            border-left: 5px solid #f39c12;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .destaque p {
+            margin-bottom: 10px;
+        }
+        
+        .cta {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            border-radius: 8px;
+            margin: 50px 0;
+        }
+        
+        .cta h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+        
+        .cta p {
+            font-size: 1.1em;
+            margin-bottom: 25px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: white;
+            color: #2980b9;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        .contato-btns {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        
+        .btn-email {
+            background: #e74c3c;
+            color: white;
+        }
+        
+        .btn-email:hover {
+            background: #c0392b;
+            color: white;
+        }
+        
+        .btn-whatsapp {
+            background: #25d366;
+            color: white;
+        }
+        
+        .btn-whatsapp:hover {
+            background: #128c7e;
+            color: white;
+        }
+        
+        footer {
+            background: #2c3c50;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+        
+        footer p {
+            margin: 10px 0;
+            opacity: 0.9;
+        }
+        
+        footer a {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        footer a:hover {
+            color: #3498db;
+        }
+        
+        /* Anúncio in-feed (entre conteúdos) */
+        .ad-space.in-feed {
+            margin: 40px auto;
+        }
+
+        .custom-ad-container {
+    width: 100%;      /* Largura do seu header */
+    max-width: 728px; /* Ou 100% para mobile */
+    height: 90px;     /* Altura do header ad */
+    margin: 0 auto;   /* Centraliza horizontalmente */
+    overflow: hidden; /* Evita que o anúncio "vaze" para fora */
+}
+
+/* Header ad-space personalizado para Monetag */
+.ad-space.header-ad {
+    margin-top: 0; /* sem espaço extra */
+    border-radius: 0 0 8px 8px; /* mantém cantos arredondados embaixo */
+    text-align: center; /* centraliza o anúncio */
+}
+
+/* Sistema de Reações */
+.reactions-container {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 25px 0;
+    border-top: 3px solid #3498db;
+    text-align: center;
+}
+
+.reactions-container h4 {
+    color: #2c3c50;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.reactions-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.reaction-btn {
+    background: white;
+    border: 2px solid #ddd;
+    border-radius: 50px;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.reaction-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    border-color: #3498db;
+}
+
+.reaction-btn.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: #667eea;
+    transform: scale(1.05);
+}
+
+.reaction-emoji {
+    font-size: 1.4em;
+    display: inline-block;
+    animation: none;
+}
+
+.reaction-btn.active .reaction-emoji {
+    animation: bounce 0.5s ease;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+}
+
+.reaction-count {
+    font-weight: 600;
+    font-size: 0.95em;
+    min-width: 20px;
+    color: #555;
+}
+
+.reaction-btn.active .reaction-count {
+    color: white;
+}
+
+.reactions-total {
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+/* Tabela Responsiva para Orçamento */
+.table-wrapper {
+    overflow-x: auto;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    min-width: 600px;
+}
+
+.pricing-table thead tr {
+    background: #2c3e50;
+    color: white;
+}
+
+.pricing-table th,
+.pricing-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.pricing-table tbody tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+.pricing-table tbody tr:hover {
+    background: #f0f0f0;
+    transition: background 0.3s ease;
+}
+
+.pricing-table strong {
+    color: #27ae60;
+    font-size: 1.05em;
+}
+
+/* Mobile responsivo */
+@media (max-width: 768px) {
+    .reaction-btn {
+        padding: 10px 15px;
+        font-size: 1em;
+    }
+    
+    .reaction-emoji {
+        font-size: 1.2em;
+    }
+    
+    /* Tabela em cards no mobile */
+    .pricing-table {
+        min-width: 100%;
+        display: block;
+    }
+    
+    .pricing-table thead {
+        display: none;
+    }
+    
+    .pricing-table tbody {
+        display: block;
+    }
+    
+    .pricing-table tr {
+        display: block;
+        margin-bottom: 20px;
+        border: 2px solid #3498db;
+        border-radius: 8px;
+        padding: 15px;
+        background: white;
+    }
+    
+    .pricing-table td {
+        display: block;
+        text-align: left;
+        border: none;
+        padding: 8px 0;
+        position: relative;
+        padding-left: 50%;
+    }
+    
+    .pricing-table td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 45%;
+        padding-right: 10px;
+        font-weight: bold;
+        color: #2c3e50;
+    }
+    
+    .pricing-table tbody tr:nth-child(even) {
+        background: white;
+    }
+}
+
+    </style>
 </head>
 <body>
-    <header class="main-header">
-        <div class="header-content">
-            <h1>Oficina de Roteiro</h1>
-            <p class="tagline">Transformando ideias em histórias que conectam</p>
-        </div>
+    <header>
+        <h1>Oficina de Roteiro</h1>
+        <p>Roteiros profissionais, consultoria e recursos para roteiristas</p>
     </header>
     
-    <nav class="main-nav">
+    <!-- Anúncio Header -->
+    <div class="ad-space header-ad">
+        <div class="ad-label">Publicidade</div>
+        
+        <!-- Monetag Multitag -->
+    <div id="monetag-header" style="width:100%; max-width:728px; margin:0 auto;">
+        <script src="https://quge5.com/88/tag.min.js" 
+            data-zone="199812" 
+            async 
+            data-cfasync="false"></script>
+    </div>
+    </div>
+    
+    <!-- Menu Responsivo -->
+    <nav>
         <div class="nav-container">
+            <!-- Botão Hambúrguer -->
             <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir Menu">
-                <span></span>
-                <span></span>
-                <span></span>
+                ☰
             </button>
             
+            <!-- Links de Navegação -->
             <ul class="nav-links" id="navLinks">
-                <li><a href="index.html">Início</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="servicos.html">Serviços</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="#sobre" onclick="toggleMenu()">Sobre</a></li>
+                <li><a href="#recursos" onclick="toggleMenu()">Recursos</a></li>
+                <li><a href="#roteiros" onclick="toggleMenu()">Roteiros</a></li>
+                <li><a href="#dicas" onclick="toggleMenu()">Dicas Profissionais</a></li>
+                <li><a href="#guias" onclick="toggleMenu()">Guias</a></li>
+                <li><a href="#contato" onclick="toggleMenu()">Contato</a></li>
             </ul>
         </div>
     </nav>
     
     <main>
-        <section class="hero">
-            <div class="container">
-                <h2>Bem-vindo à Oficina de Roteiro</h2>
-                <p class="intro-text">Este é um espaço dedicado à criação, desenvolvimento e comercialização de roteiros profissionais. Aqui você encontra roteiros originais disponíveis para leitura e aquisição, além de recursos práticos para aprimorar sua escrita e entender o mercado audiovisual.</p>
-                <p class="intro-text">Todos os materiais são desenvolvidos com foco em qualidade narrativa, viabilidade de produção e potencial comercial. Cada projeto é cuidadosamente elaborado para equilibrar criatividade artística com viabilidade técnica e orçamentária.</p>
+        <section id="sobre" class="intro">
+            <h2>Bem-vindo à Oficina de Roteiro</h2>
+            <p>Este é um espaço dedicado à criação, desenvolvimento e comercialização de roteiros profissionais. Aqui você encontra roteiros originais disponíveis para leitura e aquisição, além de recursos práticos para aprimorar sua escrita e entender o mercado audiovisual.</p>
+            <p>Todos os materiais são desenvolvidos com foco em qualidade narrativa, viabilidade de produção e potencial comercial. Cada projeto é cuidadosamente elaborado para equilibrar criatividade artística com viabilidade técnica e orçamentária.</p>
+        </section>
+
+        <!-- Anúncio In-Feed 1 -->
+        <div class="ad-space in-feed">
+            <div class="ad-label">Publicidade</div>
+
+            <div class="custom-ad-container">
+        <script src="https://quge5.com/88/tag.min.js" 
+            data-zone="199812" 
+            async 
+            data-cfasync="false"></script>
+    </div>
+        </div>
+
+        <!-- Seção de Recursos com Vídeo do YouTube -->
+        <section id="recursos">
+            <h2>📚 Recursos para Roteiristas</h2>
+
+            <!-- Embed do YouTube -->
+            <div class="video-embed">
+                <h3>🎬 Como Velozes e Furiosos Faturou US$ 700 Mi (e Seu Roteiro Não)</h3>
+                <p><strong>Descrição:</strong></p>
+                <p>Velozes e Furiosos DEZ faturou setecentos milhões de dólares. O SEU roteiro... provavelmente, não. E se eu te disser que não é sobre ter mais talento, nem fazer mais ação, mas sobre um ÚNICO SEGREDO que a Universal Pictures dominou? Um segredo que você, como roteirista, pode aplicar HOJE para deixar de escrever para o seu bairro e começar a escrever para o mundo. Fica comigo que eu vou te entregar essa estratégia agora.</p>
+                
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/kcqCvkotV-Y" 
+                            title="Como Velozes e Furiosos Faturou US$ 700 Mi (e Seu Roteiro Não)" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
             </div>
         </section>
 
-        <section id="destaques" class="featured-scripts">
-            <div class="container">
-                <h2>Roteiros em Destaque</h2>
-                
-                <article class="script-card">
-                    <div class="script-header">
-                        <h3>"A Chamada Silenciosa"</h3>
-                        <span class="script-tag suspense">Suspense/Terror</span>
+        <section id="roteiros">
+            <h2>Roteiros Disponíveis</h2>
+            
+            <!-- Roteiro 1: A Chamada Silenciosa -->
+            <div class="card roteiro">
+                <div class="roteiro-completo">
+                    <h3>"A Chamada Silenciosa"</h3>
+                    <p><strong>Episódio 1 da série:</strong> Na Linha — Sem Linha</p>
+                    
+                    <div class="meta">
+                        <span>Duração: 3–5 min</span>
+                        <span>Gênero: Suspense/Terror</span>
+                        <span>Personagens: 2</span>
+                        <span>Cenário: Interior</span>
                     </div>
-                    <div class="script-meta">
-                        <span>📽️ Episódio 1 - Na Linha, Sem Linha</span>
-                        <span>⏱️ 3-5 min</span>
-                        <span>👥 2 personagens</span>
-                        <span>🏠 Interior</span>
+                    
+                    <img src="imagens/chamada-silenciosa.png" alt="Cena de A Chamada Silenciosa" class="imagem-roteiro">
+                    
+                    <p><strong>Sinopse:</strong></p>
+                    <p>João recebe uma chamada silenciosa de um número desconhecido no meio da noite. Quando atende, não há som do outro lado. Sara, sua namorada, tenta acalmá-lo por mensagem, mas algo está errado. Uma sombra misteriosa aparece atrás da cortina, e ele sente uma brisa fria inexplicável.</p>
+                    
+                    <p>Ao se virar lentamente, a sombra se aproxima. Ele grita em pânico, mas acorda assustado — era apenas um pesadelo. Ou seria? O telefone mostra uma chamada perdida do mesmo número desconhecido, seguida de uma mensagem aterrorizante que muda tudo: "Da próxima vez você não acordará."</p>
+                    
+                    <div class="roteiro-texto">
+                        <h4>ROTEIRO COMPLETO</h4>
+                        
+                        <p class="cena">INT. QUARTO DE JOÃO - NOITE</p>
+                        
+                        <p class="acao">O quarto está mergulhado em penumbra, apenas uma luminária de cabeceira projeta luz fraca. JOÃO (25 anos) está deitado na cama, rolando distraidamente pelo celular. O silêncio da noite é quebrado apenas pelo som distante do tráfego.</p>
+                        
+                        <p class="acao">De repente, o telefone TOCA com um ringtone estridente. Na tela: NÚMERO DESCONHECIDO. João franze a testa, surpreso.</p>
+                        
+                        <p class="personagem">JOÃO</p>
+                        <p class="parentese">(para si mesmo)</p>
+                        <p class="dialogo">Quem será a esta hora?</p>
+                        
+                        <p class="acao">Ele hesita por um momento, olhando fixamente para o telefone vibrando em sua mão. Finalmente, desliza o dedo pela tela e atende.</p>
+                        
+                        <p class="personagem">JOÃO</p>
+                        <p class="dialogo">Alô?</p>
+                        
+                        <p class="acao">SILÊNCIO ABSOLUTO do outro lado da linha. Nem respiração, nem estática, nem ruído de fundo. Apenas um vazio perturbador.</p>
+                        
+                        <p class="personagem">JOÃO</p>
+                        <p class="parentese">(com leve irritação)</p>
+                        <p class="dialogo">Alô? Tem alguém aí?</p>
+                        
+                        <p class="acao">Nada. O silêncio é opressivo, quase palpável. João está prestes a desligar quando o celular VIBRA. Uma mensagem de HELENA ilumina a tela: "Está tudo bem?"</p>
+                        
+                        <p class="acao">João esboça um sorriso leve ao ver o nome dela. Começa a digitar uma resposta, mas para abruptamente. Uma sensação estranha percorre seu corpo.</p>
+                        
+                        <p class="acao">Uma BRISA FRIA varre o quarto, fazendo a cortina se mexer levemente, embora a janela esteja fechada. Os pelos de seus braços se arrepiam.</p>
+                        
+                        <p class="acao">João levanta os olhos lentamente. Seu sangue congela.</p>
+                        
+                        <p class="acao">Atrás da cortina, uma SOMBRA. Uma silhueta humana, completamente imóvel, como se estivesse observando. A forma é nítida demais para ser uma ilusão da luz.</p>
+                        
+                        <p class="acao">O coração de João dispara. Ele se levanta da cama lentamente, sem tirar os olhos da sombra. O telefone ainda está na chamada silenciosa, colado em sua orelha.</p>
+                        
+                        <p class="personagem">JOÃO</p>
+                        <p class="parentese">(voz trêmula)</p>
+                        <p class="dialogo">Quem... quem está aí?</p>
+                        
+                        <p class="acao">A sombra não responde. Não se move. Mas parece estar crescendo, se aproximando sem realmente se mover.</p>
+                        
+                        <p class="acao">João dá um passo hesitante em direção à cortina. A temperatura do quarto parece cair ainda mais. Seu coração bate tão forte que ele pode ouvi-lo.</p>
+                        
+                        <p class="acao">Mais um passo. A sombra CRESCE na cortina, ocupando todo o tecido agora.</p>
+                        
+                        <p class="personagem">JOÃO</p>
+                        <p class="parentese">(gritando em pânico)</p>
+                        <p class="dialogo">NÃO… FIQUE LONGE DE MIM!</p>
+                        
+                        <p class="cena">CORTE BRUSCO PARA:</p>
+                        
+                        <p class="cena">INT. QUARTO DE JOÃO - MANHÃ</p>
+                        
+                        <p class="acao">João ACORDA de sobressalto, ofegante, suando frio. Seus olhos escaneiam o quarto desesperadamente. Luz do sol entra pela janela aberta. A cortina balança suavemente com a brisa matinal. Tudo completamente normal.</p>
+                        
+                        <p class="acao">Ele coloca as mãos no rosto, respirando profundamente, tentando se acalmar.</p>
+                        
+                        <p class="personagem">JOÃO</p>
+                        <p class="parentese">(aliviado, para si mesmo)</p>
+                        <p class="dialogo">Foi só um pesadelo... só um pesadelo...</p>
+                        
+                        <p class="acao">Ainda tremendo, pega o celular da mesa de cabeceira para verificar as horas. A tela acende.</p>
+                        
+                        <p class="acao">Seu rosto empalidece instantaneamente.</p>
+                        
+                        <p class="acao">Na tela: 1 CHAMADA PERDIDA - NÚMERO DESCONHECIDO. Horário: 03:47 AM.</p>
+                        
+                        <p class="acao">O sangue de João congela nas veias. As mãos começam a tremer. Não foi um sonho. Era REAL.</p>
+                        
+                        <p class="acao">Antes que possa processar o que isso significa, o telefone VIBRA em sua mão.</p>
+                        
+                        <p class="acao">Uma NOVA MENSAGEM do número desconhecido aparece lentamente na tela.</p>
+                        
+                        <p class="acao">João lê, os olhos arregalados de puro terror. As palavras parecem queimar na tela:</p>
+                        
+                        <p class="acao" style="text-align: center; font-size: 1.1em; margin: 20px 0;"><strong>"DA PRÓXIMA VEZ VOCÊ NÃO ACORDARÁ."</strong></p>
+                        
+                        <p class="acao">O celular escorrega das mãos de João e cai no chão. Ele fica paralisado, incapaz de se mover, enquanto a realidade da mensagem penetra em sua mente.</p>
+                        
+                        <p class="cena">FADE TO BLACK.</p>
+                        
+                        <p class="final">FIM DO EPISÓDIO 1</p>
                     </div>
-                    <p class="script-synopsis"><strong>Sinopse:</strong> João recebe uma chamada silenciosa de um número desconhecido no meio da noite. Quando acorda, descobre que não foi apenas um pesadelo. Uma mensagem aterrorizante muda tudo: "Da próxima vez você não acordará."</p>
-                    <div class="script-actions">
-                        <a href="#contato" class="btn btn-primary">Solicitar Roteiro Completo</a>
-                        <button class="btn btn-secondary" onclick="toggleReactions('chamada-silenciosa')">❤️ Reagir</button>
-                    </div>
-                    <div id="reactions-chamada-silenciosa" class="reactions-container" style="display:none;">
-                        <h4>O que você achou?</h4>
+                    
+                    <em>Projeto de baixo custo e alta viabilidade técnica, ideal para curta-metragem independente. Roteiro completo disponível mediante solicitação formal.</em>
+                    
+                    <!-- Sistema de Reações -->
+                    <div class="reactions-container">
+                        <h4>O que você achou deste roteiro?</h4>
                         <div class="reactions-buttons">
                             <button class="reaction-btn" onclick="addReaction('chamada-silenciosa', 'like')" data-reaction="like">
                                 <span class="reaction-emoji">👍</span>
@@ -74,6 +1018,10 @@
                             <button class="reaction-btn" onclick="addReaction('chamada-silenciosa', 'love')" data-reaction="love">
                                 <span class="reaction-emoji">❤️</span>
                                 <span class="reaction-count" id="count-chamada-silenciosa-love">0</span>
+                            </button>
+                            <button class="reaction-btn" onclick="addReaction('chamada-silenciosa', 'laugh')" data-reaction="laugh">
+                                <span class="reaction-emoji">😂</span>
+                                <span class="reaction-count" id="count-chamada-silenciosa-laugh">0</span>
                             </button>
                             <button class="reaction-btn" onclick="addReaction('chamada-silenciosa', 'wow')" data-reaction="wow">
                                 <span class="reaction-emoji">😮</span>
@@ -84,28 +1032,117 @@
                                 <span class="reaction-count" id="count-chamada-silenciosa-scared">0</span>
                             </button>
                         </div>
-                        <div class="reactions-total" id="total-chamada-silenciosa">Total de reações: <strong>0</strong></div>
+                        <div class="reactions-total" id="total-chamada-silenciosa">
+                            Total de reações: <strong>0</strong>
+                        </div>
                     </div>
-                </article>
+                </div>
+            </div>
+            
+            <!-- Anúncio In-Feed 2 -->
+            <div class="ad-space in-feed">
+                <div class="ad-label">Publicidade</div>
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-format="fluid"
+                     data-ad-layout-key="-fb+5w+4e-db+86"
+                     data-ad-client="ca-pub-7482420290445582"
+                     data-ad-slot="7794642146"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
 
-                <article class="script-card">
-                    <div class="script-header">
-                        <h3>"Na Minha Linguagem!"</h3>
-                        <span class="script-tag comedy">Comédia</span>
+            <!-- Roteiro 2: Na minha Linguagem! -->
+            <div class="card roteiro">
+                <div class="roteiro-completo">
+                    <h3>"Na Minha Linguagem!"</h3>
+                    <p><strong>Série:</strong> Dev Vida</p>
+                    
+                    <div class="meta">
+                        <span>Duração: 1–2 min</span>
+                        <span>Gênero: Comédia</span>
+                        <span>Personagens: 2</span>
+                        <span>Cenário: Interior (Escritório/Sala)</span>
                     </div>
-                    <div class="script-meta">
-                        <span>📽️ Série Dev Vida</span>
-                        <span>⏱️ 1-2 min</span>
-                        <span>👥 2 personagens</span>
-                        <span>🏠 Interior</span>
+                    
+                    <img src="imagens/mandioca.png" alt="Imagem conceito Mandioca" class="imagem-roteiro">
+                    
+                    <p><strong>Sinopse:</strong></p>
+                    <p>Uma comédia curta onde dois amigos entram em um dilema cultural absurdo quando linguagens de programação são confundidas com idiomas estrangeiros. O mal-entendido atinge o auge quando Paulo pergunta como dizer "mandioca" em PHP, resultando em uma revelação cômica sobre comandos de código.</p>
+                    
+                    <div class="roteiro-texto">
+                        <h4>ROTEIRO COMPLETO</h4>
+                        
+                        <p class="cena">INT. SALA DE ESTAR - DIA</p>
+                        
+                        <p class="acao">PAULO está sentado no sofá, olhando curiosamente para a tela do notebook de CARLOS, que está debruçado sobre a mesa.</p>
+                        
+                        <p class="personagem">PAULO</p>
+                        <p class="parentese">(Olha curioso para a tela)</p>
+                        <p class="dialogo">— Que coisa é essa aí?</p>
+                        
+                        <p class="acao">Carlos para de digitar por um instante e vira o rosto, sorrindo.</p>
+                        
+                        <p class="personagem">CARLOS</p>
+                        <p class="parentese">(Sorri)</p>
+                        <p class="dialogo">— Na minha linguagem, a gente chama isso de bug.</p>
+                        
+                        <p class="acao">Paulo franze a testa, fazendo cara de quem não entendeu nada.</p>
+                        
+                        <p class="personagem">PAULO</p>
+                        <p class="parentese">(Faz cara de quem não entendeu nada)</p>
+                        <p class="dialogo">— Que língua é essa?</p>
+                        
+                        <p class="acao">Carlos volta a atenção para a tela, enquanto responde casualmente.</p>
+                        
+                        <p class="personagem">CARLOS</p>
+                        <p class="dialogo">— PHP, JavaScript, Python… alguma dessas.</p>
+                        
+                        <p class="acao">Paulo se afasta levemente, confuso e admirado com a estranheza dos nomes.</p>
+                        
+                        <p class="personagem">PAULO</p>
+                        <p class="parentese">(Confuso, admirado)</p>
+                        <p class="dialogo">— Estranho… nunca ouvi falar.</p>
+                        
+                        <p class="acao">Paulo faz uma pausa, pensando, enquanto Carlos continua digitando.</p>
+                        
+                        <p class="personagem">PAULO</p>
+                        <p class="dialogo">— E… como é que se diz "mandioca" nesse tal de PHP?</p>
+                        
+                        <p class="acao">Carlos solta uma risada baixa e começa a digitar rápido no teclado.</p>
+                        
+                        <p class="personagem">CARLOS</p>
+                        <p class="parentese">(Ri enquanto digita)</p>
+                        <p class="dialogo">— Assim, ó: echo "mandioca";</p>
+                        
+                        <p class="acao">Paulo dá um passo para trás, espantado, como se tivesse visto um fantasma.</p>
+                        
+                        <p class="personagem">PAULO</p>
+                        <p class="parentese">(Dá um passo para trás, espantado)</p>
+                        <p class="dialogo">— Que estranho!</p>
+                        
+                        <p class="acao">Ele gesticula, tentando processar a informação.</p>
+                        
+                        <p class="personagem">PAULO</p>
+                        <p class="dialogo">— Primeiro fala "echo" e depois joga uma palavra de outro idioma? Nem árabe nem chinês falam assim… Isso é de que país afinal?</p>
+                        
+                        <p class="acao">Carlos para de digitar, olha para o amigo e sorri, divertido com a confusão.</p>
+                        
+                        <p class="personagem">CARLOS</p>
+                        <p class="parentese">(Sorri, divertido)</p>
+                        <p class="dialogo">...</p>
+                        
+                        <p class="cena">CORTA PARA:</p>
+                        
+                        <p class="final">FIM</p>
                     </div>
-                    <p class="script-synopsis"><strong>Sinopse:</strong> Uma comédia curta onde dois amigos entram em um dilema cultural absurdo quando linguagens de programação são confundidas com idiomas estrangeiros. O mal-entendido atinge o auge quando Paulo pergunta como dizer "mandioca" em PHP.</p>
-                    <div class="script-actions">
-                        <a href="#contato" class="btn btn-primary">Solicitar Roteiro Completo</a>
-                        <button class="btn btn-secondary" onclick="toggleReactions('na-minha-linguagem')">❤️ Reagir</button>
-                    </div>
-                    <div id="reactions-na-minha-linguagem" class="reactions-container" style="display:none;">
-                        <h4>O que você achou?</h4>
+                    
+                    <em>Projeto leve, filmável e de baixo custo. Disponível para leitura e aquisição.</em>
+                    
+                    <!-- Sistema de Reações -->
+                    <div class="reactions-container">
+                        <h4>O que você achou deste roteiro?</h4>
                         <div class="reactions-buttons">
                             <button class="reaction-btn" onclick="addReaction('na-minha-linguagem', 'like')" data-reaction="like">
                                 <span class="reaction-emoji">👍</span>
@@ -119,32 +1156,120 @@
                                 <span class="reaction-emoji">😂</span>
                                 <span class="reaction-count" id="count-na-minha-linguagem-laugh">0</span>
                             </button>
+                            <button class="reaction-btn" onclick="addReaction('na-minha-linguagem', 'wow')" data-reaction="wow">
+                                <span class="reaction-emoji">😮</span>
+                                <span class="reaction-count" id="count-na-minha-linguagem-wow">0</span>
+                            </button>
                             <button class="reaction-btn" onclick="addReaction('na-minha-linguagem', 'clever')" data-reaction="clever">
                                 <span class="reaction-emoji">🤓</span>
                                 <span class="reaction-count" id="count-na-minha-linguagem-clever">0</span>
                             </button>
                         </div>
-                        <div class="reactions-total" id="total-na-minha-linguagem">Total de reações: <strong>0</strong></div>
+                        <div class="reactions-total" id="total-na-minha-linguagem">
+                            Total de reações: <strong>0</strong>
+                        </div>
                     </div>
-                </article>
+                </div>
+            </div>
 
-                <article class="script-card">
-                    <div class="script-header">
-                        <h3>"Homem que fez porcaria!"</h3>
-                        <span class="script-tag comedy">Comédia</span>
+            <!-- Roteiro 3: Homem que fez porcaria! -->
+            <div class="card roteiro">
+                <div class="roteiro-completo">
+                    <h3>"Homem que fez porcaria!"</h3>
+                    
+                    <div class="meta">
+                        <span>Duração: 2–3 min</span>
+                        <span>Gênero: Comédia</span>
+                        <span>Personagens: 2</span>
+                        <span>Cenário: Interior (Casa)</span>
                     </div>
-                    <div class="script-meta">
-                        <span>⏱️ 2-3 min</span>
-                        <span>👥 2 personagens</span>
-                        <span>🏠 Interior</span>
+                     <img src="imagens/porcaria.png" alt="Imagem conceito Mandioca" class="imagem-roteiro">
+                    <p><strong>Sinopse:</strong></p>
+                    <p>Um mal-entendido hilarante acontece quando um homem anuncia à sua esposa que "fez uma porcaria". A mulher fica apavorada imaginando o pior, mas descobre que ele estava falando literalmente sobre abrir um negócio relacionado à venda de porcos. Uma comédia sobre equívocos linguísticos e empreendedorismo inesperado.</p>
+                    
+                    <div class="roteiro-texto">
+                        <h4>ROTEIRO COMPLETO</h4>
+                        
+                        <p class="cena">INT. SALA DE ESTAR - DIA</p>
+                        
+                        <p class="acao">JOÃO (30 anos) está em pé na sala, nervoso, segurando um envelope com dinheiro. Sua esposa, MARIA (28 anos), está sentada no sofá, tranquila.</p>
+                        
+                        <p class="personagem">JOÃO</p>
+                        <p class="dialogo">Amor, preciso te contar uma coisa...</p>
+                        
+                        <p class="acao">Maria olha para ele com naturalidade.</p>
+                        
+                        <p class="personagem">MARIA</p>
+                        <p class="dialogo">Fala, amor. Pode falar à vontade.</p>
+                        
+                        <p class="acao">João suspira fundo, como se estivesse prestes a confessar algo grave.</p>
+                        
+                        <p class="personagem">JOÃO</p>
+                        <p class="parentese">(Suspira fundo)</p>
+                        <p class="dialogo">Então... eu fiz uma porcaria.</p>
+                        
+                        <p class="acao">Maria se levanta assustada, os olhos arregalados.</p>
+                        
+                        <p class="personagem">MARIA</p>
+                        <p class="parentese">(Assustada)</p>
+                        <p class="dialogo">Como assim? Porcaria? Que porcaria?</p>
+                        
+                        <p class="personagem">JOÃO</p>
+                        <p class="dialogo">Calma, calma! Não é o que você tá pensando. Olha só isso.</p>
+                        
+                        <p class="acao">João mostra o envelope cheio de dinheiro. Maria fica ainda mais chocada.</p>
+                        
+                        <p class="personagem">MARIA</p>
+                        <p class="dialogo">Você fez merda pra conseguir isso e ainda vem me mostrar o dinheiro?</p>
+                        
+                        <p class="personagem">JOÃO</p>
+                        <p class="dialogo">Não, não. Eu não fiz merda. Eu fiz... porcaria!</p>
+                        
+                        <p class="acao">Maria está completamente confusa, andando de um lado para o outro.</p>
+                        
+                        <p class="personagem">MARIA</p>
+                        <p class="dialogo">Não entendo, o que é que você fez? Olha João, porque? Você quer nos sustentar com o dinheiro de merda? Que exemplo você quer dar pros nossos filhos?</p>
+                        
+                        <p class="acao">João tenta acalmá-la, segurando suas mãos.</p>
+                        
+                        <p class="personagem">JOÃO</p>
+                        <p class="dialogo">Eu não sei se você está entendendo como. Mas afinal, como se chama o lugar onde é vendido hamburger?</p>
+                        
+                        <p class="acao">Maria para, confusa com a mudança de assunto.</p>
+                        
+                        <p class="personagem">MARIA</p>
+                        <p class="dialogo">Hamburgueria.</p>
+                        
+                        <p class="personagem">JOÃO</p>
+                        <p class="dialogo">E como se chama o lugar onde se vende porco?</p>
+                        
+                        <p class="acao">Maria para para pensar, a ficha começando a cair.</p>
+                        
+                        <p class="personagem">MARIA</p>
+                        <p class="dialogo">Porcaria.</p>
+                        
+                        <p class="acao">Ela arregala os olhos, finalmente entendendo.</p>
+                        
+                        <p class="personagem">MARIA</p>
+                        <p class="dialogo">Hamm então você fez porcaria?</p>
+                        
+                        <p class="acao">João sorri aliviado, abrindo os braços.</p>
+                        
+                        <p class="personagem">JOÃO</p>
+                        <p class="dialogo">Exatamente isso amor!</p>
+                        
+                        <p class="acao">Maria suspira, aliviada, e começa a rir do mal-entendido. João se junta à risada.</p>
+                        
+                        <p class="cena">FADE OUT.</p>
+                        
+                        <p class="final">FIM</p>
                     </div>
-                    <p class="script-synopsis"><strong>Sinopse:</strong> Um mal-entendido hilarante acontece quando um homem anuncia à sua esposa que "fez uma porcaria". A mulher fica apavorada imaginando o pior, mas descobre que ele estava falando literalmente sobre abrir um negócio relacionado à venda de porcos.</p>
-                    <div class="script-actions">
-                        <a href="#contato" class="btn btn-primary">Solicitar Roteiro Completo</a>
-                        <button class="btn btn-secondary" onclick="toggleReactions('homem-porcaria')">❤️ Reagir</button>
-                    </div>
-                    <div id="reactions-homem-porcaria" class="reactions-container" style="display:none;">
-                        <h4>O que você achou?</h4>
+                    
+                    <em>Comédia familiar leve, filmável em uma única locação. Perfeita para curta-metragem ou sketch. Disponível para leitura e aquisição.</em>
+                    
+                    <!-- Sistema de Reações -->
+                    <div class="reactions-container">
+                        <h4>O que você achou deste roteiro?</h4>
                         <div class="reactions-buttons">
                             <button class="reaction-btn" onclick="addReaction('homem-porcaria', 'like')" data-reaction="like">
                                 <span class="reaction-emoji">👍</span>
@@ -158,73 +1283,863 @@
                                 <span class="reaction-emoji">😂</span>
                                 <span class="reaction-count" id="count-homem-porcaria-laugh">0</span>
                             </button>
+                            <button class="reaction-btn" onclick="addReaction('homem-porcaria', 'wow')" data-reaction="wow">
+                                <span class="reaction-emoji">😮</span>
+                                <span class="reaction-count" id="count-homem-porcaria-wow">0</span>
+                            </button>
                             <button class="reaction-btn" onclick="addReaction('homem-porcaria', 'funny')" data-reaction="funny">
                                 <span class="reaction-emoji">🤣</span>
                                 <span class="reaction-count" id="count-homem-porcaria-funny">0</span>
                             </button>
                         </div>
-                        <div class="reactions-total" id="total-homem-porcaria">Total de reações: <strong>0</strong></div>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <section id="recursos" class="resources">
-            <div class="container">
-                <h2>📚 Recursos Educacionais</h2>
-                <p>Acesse conteúdos gratuitos sobre técnicas de roteiro, análise de filmes e desenvolvimento de projetos audiovisuais.</p>
-                <a href="blog.html" class="btn btn-primary">Ver todos os recursos</a>
-            </div>
-        </section>
-
-        <section id="contato" class="contact">
-            <div class="container">
-                <h2>Entre em Contato</h2>
-                <p>Interessado em roteiros, consultoria ou colaboração profissional?</p>
-                <div class="contact-info">
-                    <div class="contact-card">
-                        <h3>📧 Email</h3>
-                        <p><a href="mailto:manueltondama6@gmail.com">manueltondama6@gmail.com</a></p>
-                    </div>
-                    <div class="contact-card">
-                        <h3>💬 WhatsApp</h3>
-                        <p><a href="https://wa.me/244940266827?text=Olá%20Lelson%2C%20vim%20do%20site%20Oficina%20de%20Roteiro" target="_blank">+244 940 266 827</a></p>
+                        <div class="reactions-total" id="total-homem-porcaria">
+                            Total de reações: <strong>0</strong>
+                        </div>
                     </div>
                 </div>
-                <p class="contact-subtitle"><strong>Lelson António</strong> | Roteirista Profissional</p>
+            </div>
+            
+            <div class="cta">
+                <h3>Interessado em um roteiro?</h3>
+                <p>Entre em contato para solicitar leitura completa ou discutir oportunidades de colaboração</p>
+                <a href="#contato" class="btn">Solicitar Roteiro</a>
+            </div>
+        </section>
+
+        <section id="dicas">
+            <h2>Dicas Profissionais de Roteiro</h2>
+            
+            <div class="card dica">
+                <strong>1. Comece com Conflito</strong>
+                <p>Histórias sem conflito perdem impacto imediatamente. O conflito é o motor da narrativa — estabeleça-o desde a primeira cena para capturar a atenção do espectador de forma instantânea e mantê-la até o final.</p>
+            </div>
+            
+            <div class="card dica">
+                <strong>2. Personagens com Objetivos Claros</strong>
+                <p>Crie personagens com motivações convincentes e objetivos específicos. Faça-se sempre estas perguntas: O que eles querem? O que os impede de conseguir? Por que isso é importante para eles? Essas respostas guiam toda a narrativa e criam conexão emocional com o público.</p>
+            </div>
+            
+            <div class="card dica">
+                <strong>3. Mostre, Não Conte</strong>
+                <p>Ação e diálogo são infinitamente mais poderosos do que longas explicações narrativas. Deixe o espectador deduzir informações através do que vê e ouve, não através de exposição forçada. Confie na inteligência da sua audiência.</p>
+            </div>
+            
+            <!-- Anúncio In-Feed 3 -->
+            <div class="ad-space in-feed">
+                <div class="ad-label">Publicidade</div>
+                <ins class="adsbygoogle"
+                     style="display:block; text-align:center;"
+                     data-ad-layout="in-article"
+                     data-ad-format="fluid"
+                     data-ad-client="ca-pub-7482420290445582"
+                     data-ad-slot="5168478809"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            
+            <div class="card dica">
+                <strong>4. Estruture Cada Cena</strong>
+                <p>Trate cada cena como uma mini-história completa com começo, meio e fim. Toda cena deve avançar a trama ou revelar algo importante sobre o personagem. Se não faz nenhum dos dois, corte sem piedade.</p>
+            </div>
+            
+            <div class="card dica">
+                <strong>5. Feedback é Essencial</strong>
+                <p>Roteiros melhoram exponencialmente com opiniões externas qualificadas. Busque feedback de profissionais da área e esteja genuinamente aberto a revisões críticas do seu trabalho. O ego é o maior inimigo do bom roteirista.</p>
+            </div>
+
+            <div class="card dica">
+                <strong>6. Como Se Organiza um Roteiro de Filme</strong>
+                
+                <p><strong>1. Premissa / Ideia Central</strong></p>
+                <p>Antes de tudo, defina:</p>
+                <ul>
+                    <li>Qual é a história?</li>
+                    <li>Quem é o protagonista?</li>
+                    <li>O que ele(a) quer?</li>
+                    <li>O que está em jogo?</li>
+                </ul>
+
+                <p><strong>2. Estrutura Clássica (3 Atos)</strong></p>
+                <p><strong>Ato 1 – Apresentação (25%)</strong></p>
+                <ul>
+                    <li>Introdução do protagonista e seu mundo.</li>
+                    <li>Incidente Incitante: algo muda ou surge um problema.</li>
+                    <li>Ponto de virada 1: protagonista toma uma decisão que o leva a uma nova jornada.</li>
+                </ul>
+
+                <p><strong>Ato 2 – Conflito e Desenvolvimento (50%)</strong></p>
+                <ul>
+                    <li>Subidas e descidas: o protagonista enfrenta obstáculos.</li>
+                    <li>Ponto médio: reviravolta que muda a direção da história.</li>
+                    <li>Ponto de virada 2: momento em que tudo parece perdido ou acontece algo decisivo.</li>
+                </ul>
+
+                <p><strong>Ato 3 – Clímax e Resolução (25%)</strong></p>
+                <ul>
+                    <li>Clímax: confronto final ou resolução do conflito principal.</li>
+                    <li>Conclusão: destino do protagonista, lições aprendidas, e fim da jornada.</li>
+                </ul>
+
+                <p><strong>3. Estrutura do Roteiro (Formato Técnico)</strong></p>
+                <ul>
+                    <li><strong>Capa:</strong> título do filme, nome do roteirista.</li>
+                    <li><strong>Cabeçalhos de Cena (Sluglines):</strong> indicam onde e quando a cena acontece.</li>
+                    <li><strong>Descrição da ação:</strong> descreve o que está acontecendo visualmente.</li>
+                    <li><strong>Diálogos:</strong> nome do personagem centralizado e sua fala abaixo.</li>
+                    <li><strong>Parênteses:</strong> indicam tom ou ação breve junto ao diálogo.</li>
+                </ul>
+                
+                <p><em>Exemplo prático ("Na Minha Linguagem!"):</em></p>
+                
+                <div style="background: #f0f0f0; padding: 15px; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 0.9em; border-left: 3px solid #3498db; margin-bottom: 15px;">
+                    <strong>INT. SALA DE ESTAR – DIA</strong><br><br>
+                    Paulo está sentado no sofá, olhando curiosamente para a tela do notebook de Carlos.<br><br>
+                    <strong>PAULO</strong><br>
+                    <em>(Olha curioso para a tela)</em><br>
+                    — Que coisa é essa aí?<br><br>
+                    <strong>CARLOS</strong><br>
+                    <em>(Sorri)</em><br>
+                    — Na minha linguagem, a gente chama isso de bug.
+                </div>
+
+                <p><strong>4. Etapas de Escrita</strong></p>
+                <ol>
+                    <li><strong>Sinopse</strong> – resumo de 1 parágrafo da história.</li>
+                    <li><strong>Tratamento</strong> – narrativa da história em prosa (3–10 páginas).</li>
+                    <li><strong>Escaleta (Outline)</strong> – divisão cena a cena, descrevendo ações principais.</li>
+                    <li><strong>Roteiro (Script)</strong> – versão completa, formatada para produção (90–120 páginas).</li>
+                </ol>
+
+                <p><strong>5. Revisões e Feedback</strong></p>
+                <ul>
+                    <li>Releia, revise e mostre para leitores críticos ou profissionais.</li>
+                    <li>Faça ajustes no ritmo, personagens, falas e cenas.</li>
+                </ul>
+
+                <p><strong>Dicas Adicionais</strong></p>
+                <ul>
+                    <li>Um minuto de roteiro equivale a cerca de um minuto de filme.</li>
+                    <li>Use softwares como Final Draft, Celtx, WriterDuet ou o gratuito Trelby.</li>
+                    <li>Mantenha o foco no conflito e na evolução emocional do protagonista.</li>
+                </ul>
+            </div>
+
+            <!-- Anúncio In-Feed 3.1 -->
+            <div class="ad-space in-feed">
+                <div class="ad-label">Publicidade</div>
+                <ins class="adsbygoogle"
+                     style="display:block; text-align:center;"
+                     data-ad-layout="in-article"
+                     data-ad-format="fluid"
+                     data-ad-client="ca-pub-7482420290445582"
+                     data-ad-slot="5168478809"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+
+            <!-- Anatomia Profunda do Roteiro -->
+            <div style="margin-top: 60px; border-top: 2px solid #ddd; padding-top: 30px;">
+                <h2 style="color: #8e44ad; border-color: #8e44ad;">🎯 Anatomia Profunda do Roteiro</h2>
+                
+                <div class="card anatomia-card">
+                    <strong>🎯 1. Natureza da Curta-Metragem</strong>
+                    <p>Antes de analisar a anatomia do roteiro, é fundamental compreender a natureza específica da curta-metragem.</p>
+                    <p><strong>👉 Curta-metragem não é um longa reduzido.</strong><br>Ela opera a partir de princípios próprios:</p>
+                    <ul>
+                        <li>Uma ideia central forte</li>
+                        <li>Poucos personagens</li>
+                        <li>Um único conflito</li>
+                        <li>Impacto rápido, preciso e concentrado</li>
+                    </ul>
+                    <p>"Na Minha Linguagem!" é uma curta de conceito, sustentada pelo contraste cultural e pela linguagem como elemento dramático. O filme não depende de grandes ações, mas de significado.</p>
+                </div>
+
+                <div class="card anatomia-card">
+                    <strong>Capítulo 1 – O Pulso da História</strong>
+                    <p>Todo roteiro tem um pulso invisível: o desejo do protagonista. Esse desejo é o que dá vida à trama, o que conecta público e personagem. Sem ele, a narrativa parece morta — não importa o quanto de ação, efeitos visuais ou reviravoltas existam.</p>
+                    <p>A pergunta-chave que guia esse pulso é:<br><em>"O que meu protagonista quer tanto que estaria disposto a perder tudo para conseguir?"</em></p>
+                    
+                    <p><strong>Exemplos de Filmes com o Pulso Bem Enquadrado:</strong></p>
+                    <p><strong>O Poderoso Chefão (1972)</strong><br>Pulso: Michael Corleone deseja proteger a família, mas esse desejo o empurra para se tornar aquilo que ele mais rejeitava: o novo chefão da máfia. A cada decisão, vemos o preço de manter esse desejo — até que Michael perde justamente o que queria preservar: a pureza e a união familiar.</p>
+                    <p><strong>Titanic (1997)</strong><br>Pulso: Rose deseja liberdade de uma vida sufocante de convenções sociais. O romance com Jack é apenas a forma visível desse desejo, mas o coração da história é a luta de Rose para se libertar e viver intensamente, mesmo diante da tragédia.</p>
+                    
+                    <p><strong>Reflexão para quem escreve:</strong><br>Antes de começar a estruturar cenas, diálogos e reviravoltas, escreva em uma frase:<br><em>"Meu protagonista quer ____ mais do que tudo, e isso o levará a ____."</em></p>
+                    <p>Esse é o coração do roteiro. O resto — cenas, diálogos, ritmo, estilo — são apenas batimentos que ecoam desse pulso central.</p>
+                </div>
+
+                <div class="card anatomia-card">
+                    <strong>Capítulo 2 – O Fantasma</strong>
+                    <p>Todo personagem carrega um fantasma — uma dor, perda ou ferida do passado que ainda não foi resolvida. Esse fantasma o persegue, molda suas escolhas, limitações e até seus medos. O fantasma não precisa ser explicitado logo no início, mas é a força silenciosa que guia o arco do protagonista. Ele é a sombra da história: quanto mais o personagem tenta fugir dela, mais ela o persegue.</p>
+                    <p><strong>Pergunta-chave:</strong> Qual é o fantasma do teu protagonista e como ele influencia suas decisões na trama?</p>
+                    
+                    <p><strong>Exemplos de Filmes com o Fantasma Bem Definido:</strong></p>
+                    <p><strong>Batman Begins (2005)</strong><br>Fantasma: A morte dos pais, assassinados diante de seus olhos. Esse trauma guia Bruce Wayne a lutar contra o crime, mas também o coloca em conflito interno com a raiva e a sede de vingança.</p>
+                    
+                    <p><strong>Reflexão para quem escreve:</strong><br>Antes de planejar o arco do protagonista, responda:<br><em>"Meu personagem é movido por ____ porque no passado sofreu ____."</em></p>
+                    <p>O fantasma não é apenas um detalhe de biografia; ele é a ferida emocional que o público reconhece e que dá humanidade ao personagem.</p>
+                    <p><strong>Dica:</strong> o fantasma quase sempre se conecta ao desejo (pulso da história). O que o protagonista quer agora é, muitas vezes, uma tentativa de curar ou compensar a dor do passado.</p>
+                </div>
+
+                <div class="card anatomia-card">
+                    <strong>Capítulo 3 – O Abismo</strong>
+                    <p>Toda jornada tem um ponto mais escuro, quando tudo parece perdido. Chamamos isso de o <strong>Abismo</strong>. É o momento em que o protagonista encara sua maior derrota, sua perda mais dolorosa, sua solidão absoluta.</p>
+                    <p>Às vezes é físico (perder uma batalha, ver um aliado morrer). Outras vezes, é emocional (traição, fracasso, desistência). O Abismo é necessário porque nele o público sente a humanidade do personagem. É nesse instante que nos identificamos, porque todos já passamos por momentos em que a esperança parecia impossível.</p>
+                    
+                    <p><strong>Exemplos de Filmes com Abismos Memoráveis:</strong></p>
+                    <p><strong>O Rei Leão (1994)</strong><br>Abismo: Simba vê seu pai morrer e acredita ser culpado. Expulso do reino, ele foge, carregando culpa e vergonha. É o ponto mais baixo antes de seu retorno como verdadeiro rei.</p>
+                    
+                    <p><strong>Reflexão para quem escreve:</strong><br>Antes de escrever o clímax, defina:<br><em>"Qual é o momento em que meu protagonista chega ao fundo do poço, quando tudo parece perdido?"</em></p>
+                    <p>Sem o Abismo, a vitória final pode soar fácil demais. Com ele, cada conquista se torna merecida — e o público vibra junto.</p>
+                    <p><strong>Dica:</strong> O Abismo não é apenas sobre perda. É também o momento em que nasce a força da superação. O renascimento do herói só é possível porque antes ele encarou a escuridão absoluta.</p>
+                </div>
+
+                <div class="card anatomia-card">
+                    <strong>Capítulo 4 – A Máscara</strong>
+                    <p>Muitos protagonistas iniciam a jornada usando uma máscara — fingindo ser algo que não são. Essa máscara pode ser uma persona social (um papel que assumem para serem aceitos), uma mentira que contam a si mesmos ou até uma ilusão que os protege da dor.</p>
+                    <p>A narrativa ganha força quando essa máscara começa a rachar. O momento mais poderoso do roteiro é quando ela finalmente cai, revelando a essência do personagem. É nesse instante que o público sente que o herói está nu diante do mundo — e só assim pode se transformar de verdade.</p>
+                    
+                    <p><strong>Exemplos de Filmes com a Máscara:</strong></p>
+                    <p><strong>Frozen (2013)</strong><br>Máscara: Elsa finge ter controle e esconde seus poderes para não ser rejeitada.<br>Quando cai: Ao se libertar em "Let It Go", ela abandona a máscara, mas também precisa aprender a integrar sua verdadeira identidade.</p>
+                    <p><strong>Batman: O Cavaleiro das Trevas (2008)</strong><br>Máscara: Bruce Wayne usa a máscara literal de Batman, mas também a máscara emocional de que pode "salvar tudo sozinho".<br>Quando cai: Ele entende que ser herói significa sacrifício. Ao assumir a culpa pelos crimes de Harvey Dent, mostra seu verdadeiro caráter.</p>
+                    
+                    <p><strong>Reflexão para quem escreve:</strong><br>Antes do clímax da sua história, pergunte:<br><em>"Qual máscara meu protagonista usa, e o que acontece quando ela cai?"</em></p>
+                    <p>O público não se apaixona pelo personagem pela máscara que ele usa, mas pelo momento em que ele a remove e se mostra inteiro.</p>
+                </div>
+
+                <div class="card anatomia-card">
+                    <strong>Capítulo 5 – O Clímax</strong>
+                    <p>O clímax é o ponto mais alto da história — o momento em que o protagonista enfrenta seu maior desafio e precisa decidir se será transformado ou se permanecerá o mesmo. É a síntese de tudo o que vimos até aqui:</p>
+                    <ul>
+                        <li>O Pulso (desejo) é colocado à prova.</li>
+                        <li>O Fantasma (ferida do passado) precisa ser encarado.</li>
+                        <li>O Abismo (queda) já foi vivido.</li>
+                        <li>A Máscara (fingimento) está prestes a cair.</li>
+                    </ul>
+                    
+                    <p><strong>Exemplos de Clímax Poderosos:</strong></p>
+                    <p><strong>O Poderoso Chefão (1972)</strong><br>Michael ordena a execução dos chefes rivais durante o batizado. O clímax mostra sua transformação completa: de filho que rejeitava a máfia, ele se torna o novo "Padrinho".</p>
+                    <p><strong>Vingadores: Ultimato (2019)</strong><br>Tony Stark enfrenta Thanos. O clímax mostra a síntese de seu arco: o homem egocêntrico do primeiro filme agora sacrifica a própria vida para salvar todos.</p>
+                    
+                    <p><strong>Reflexão para quem escreve:</strong><br>Antes de pensar em tiros, explosões ou discursos grandiosos, responda:<br><em>"Qual escolha final meu protagonista precisa fazer, e o que essa escolha revela sobre quem ele se tornou?"</em></p>
+                    <p>O clímax é a resposta dramática à pergunta feita no início da história: o protagonista vai conseguir o que deseja — e a que custo?</p>
+                </div>
+
+                <div class="card anatomia-card">
+                    <strong>Capítulo 6 – A Resolução</strong>
+                    <p>Depois do clímax, vem a respiração final da história. É o momento em que o público percebe o eco das escolhas do protagonista. Não precisa ser longo, mas deve ser verdadeiro — como o último acorde que encerra uma canção e ainda vibra no silêncio.</p>
+                    <p>A resolução responde a três perguntas essenciais:</p>
+                    <ul>
+                        <li>O protagonista conseguiu ou não o que queria?</li>
+                        <li>O fantasma que o assombrava foi vencido, aceito ou ainda o persegue?</li>
+                        <li>O mundo ao redor mudou junto com ele — ou ficou igual?</li>
+                    </ul>
+                    
+                    <p><strong>Resoluções que Marcaram o Cinema:</strong></p>
+                    <p><strong>O Senhor dos Anéis: O Retorno do Rei (2003)</strong><br>Frodo retorna ao Condado… mas já não pertence mais a ele. O que aprendemos: O herói nunca volta o mesmo. A viagem o muda para sempre.</p>
+                    <p><strong>Titanic (1997)</strong><br>Rose, já idosa, lança o colar ao mar. Não era sobre a joia, mas sobre a vida plena que viveu após Jack. O que aprendemos: A verdadeira vitória pode ser a liberdade de viver intensamente.</p>
+                    
+                    <p><strong>Reflexão para quem escreve:</strong><br>Pergunte-se:<br><em>"Depois do clímax, como a vida do protagonista — e do mundo ao redor — se transforma?"</em></p>
+                    <p>Nunca subestime a resolução. Ela é o rastro de emoção que fica no público quando a tela escurece ou a última página é virada.</p>
+                </div>
+
+                <div class="card anatomia-card">
+                    <strong>Capítulo 7 – O Epílogo e a Reflexão Final</strong>
+                    <p>O epílogo é o suspiro que fica depois que a história termina — aquele instante em que o silêncio fala mais alto que qualquer diálogo. Ele não precisa se estender; às vezes, uma cena curta ou uma única frase é suficiente para gravar na mente do público a essência da jornada.</p>
+                    
+                    <p><strong>Funções do Epílogo:</strong></p>
+                    <ul>
+                        <li>Revelar as consequências a longo prazo das ações do protagonista.</li>
+                        <li>Reforçar o tema central da história.</li>
+                        <li>Deixar uma última emoção, reflexão ou pergunta.</li>
+                    </ul>
+                    
+                    <p><strong>Exemplos marcantes:</strong></p>
+                    <p><strong>Harry Potter e as Relíquias da Morte – Parte 2:</strong> A cena dos filhos na plataforma 9¾ traz continuidade, esperança e um sentimento de legado.</p>
+                    <p><strong>Clube da Luta:</strong> O silêncio final ecoa a transformação do protagonista, reforçando o peso de suas escolhas e deixando uma inquietação que persiste.</p>
+                    
+                    <p><strong>Dica para escritores:</strong><br>Antes de fechar a última página, pergunte-se:<br><em>"Que sensação quero que meu público carregue?"</em></p>
+                </div>
+
+                <div class="card anatomia-card" style="border-left-color: #34495e; background: #fdfdfd;">
+                    <strong>Capítulo 8 – Fechando a Jornada do Personagem</strong>
+                    <p>O mundo ao redor do protagonista respira com ele. O céu tem tons de laranja queimado, o vento carrega o cheiro de chuva distante, e cada sombra dança ao ritmo de suas escolhas passadas. O tempo parece suspenso: cada passo reverbera como um eco de todas as histórias vividas.</p>
+                    <p>Ele mudou? Não só no corpo, mas na profundidade do olhar, no silêncio entre as palavras, no peso leve de cada gesto. O que aprendeu sobre si mesmo, sobre os outros, sobre o amor, a coragem e o fracasso?</p>
+                    
+                    <p><strong>Checklist sensorial do fechamento:</strong></p>
+                    <ul>
+                        <li>O protagonista carrega cicatrizes e vitórias que se manifestam em cada sorriso contido e respiração.</li>
+                        <li>Cada ato deixou rastros visíveis e invisíveis, como sombras que se estendem na parede da memória do público.</li>
+                        <li>O espectador sente na pele o peso das decisões — cada lágrima e triunfo, como se fossem suas próprias experiências.</li>
+                    </ul>
+                    
+                    <p><strong>Exemplo cinematográfico:</strong><br><strong>Forrest Gump:</strong> Ele sentado no banco, o vento brincando com seu cabelo, o cheiro de terra molhada no ar, enquanto flashes de uma vida inteira passam diante dos olhos — encontros, perdas, aventuras. Cada detalhe transforma a simplicidade em poesia viva.</p>
+                    
+                    <p><strong>Dica prática para escritores imersivos:</strong><br>Mesmo quando a ação termina, o arco emocional deve ser sentido com todos os sentidos. Pergunte-se:<br><em>"Cada gesto, silêncio, cor e cheiro revela quem ele se tornou?"</em></p>
+                    
+                    <p><strong>Toque final cinematográfico, poético e sensorial:</strong><br>Fechar a jornada do protagonista é como a última luz do crepúsculo tingindo o horizonte. O som diminui, os cheiros se dissipam, mas a emoção permanece, pulsando no peito do espectador. É uma cena que diz: esta história não termina aqui; ela respira dentro de quem a viveu, e continuará a ecoar em cada memória.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="guias">
+            <h2>Guias Profissionais</h2>
+            
+            <div class="card guia">
+                <div class="checklist">
+                    <h3>🎬 Como Vender Seu Roteiro de Curta – Checklist Completo</h3>
+                    
+                    <div class="destaque">
+                        <p><strong>💡 Princípio Fundamental:</strong> Você não vende o roteiro. Você vende segurança.</p>
+                        <p>Produtores pensam constantemente: "Esse roteirista vai facilitar minha vida ou me dar dor de cabeça?"</p>
+                    </div>
+                    
+                    <h3>1. Posicione Seu Curta Corretamente</h3>
+                    <ul>
+                        <li><strong>❌ Jeito errado:</strong> "É uma série de vários curtas que se conectam e formam uma história maior..."</li>
+                        <li><strong>✅ Jeito certo:</strong> "É um curta autônomo, parte de um conceito maior de episódios independentes que podem funcionar sozinhos ou em conjunto."</li>
+                    </ul>
+                    
+                    <p><strong>Exemplos de episódios futuros para mencionar:</strong></p>
+                    <ul>
+                        <li><strong>Na Minha Lógica:</strong> Um programador tenta explicar algoritmos, mas todos entendem como superstição e misticismo</li>
+                        <li><strong>Na Minha Rede:</strong> Internet é confundida com rede de pesca, gerando situações absurdas sobre "capturar dados"</li>
+                        <li><strong>Na Minha Nuvem:</strong> Cloud computing tratada literalmente como previsão do tempo e meteorologia</li>
+                    </ul>
+                    
+                    <p><em>Mostre o motor criativo e o potencial de expansão, mas não desenvolva demais no primeiro contato. Deixe-os querendo saber mais.</em></p>
+                    
+                    <h3>2. Crie uma Logline Matadora (20 segundos)</h3>
+                    <div class="destaque">
+                        <p><strong>Exemplo perfeito:</strong> "Dois amigos entram em conflito quando linguagens de programação passam a ser entendidas como idiomas reais, criando um mal-entendido absurdo sobre qualificações profissionais."</p>
+                    </div>
+                    <p>Se você não conseguir vender sua ideia em 20 segundos, você já perdeu a atenção do produtor. Pratique até ficar perfeito.</p>
+                    
+                    <h3>3. E-mail de Pitch Profissional</h3>
+                    <div class="destaque">
+                        <p><strong>Assunto:</strong> Roteiro de Comédia Curta – "Na Minha Linguagem"</p>
+                        <p>Olá [Nome],</p>
+                        <p>Tenho um roteiro pronto de comédia curta chamado <strong>Na Minha Linguagem</strong>.</p>
+                        <p>O curta é autônomo e faz parte de um conceito maior de episódios independentes. Neste episódio, dois amigos entram em conflito quando linguagens de programação passam a ser entendidas como idiomas reais.</p>
+                        <p>Projeto leve, filmável e de baixo custo, com potencial para festivais e plataformas digitais.</p>
+                        <p>Posso enviar o roteiro completo para sua análise?</p>
+                        <p>Atenciosamente,<br>
+                        <strong>Lelson António</strong><br>
+                        Roteirista Profissional<br>
+                        [link do seu site/portfólio]</p>
+                    </div>
+                    <p><em>Este modelo não assusta, não se valoriza demais e mostra profissionalismo. É direto, claro e respeita o tempo do produtor.</em></p>
+                    
+                    <h3>4. Para Quem Enviar</h3>
+                    <ul>
+                        <li>Produtores especializados em curta-metragem ou produtoras independentes com histórico comprovado</li>
+                        <li>Diretores especializados em episódios curtos e conteúdo digital</li>
+                        <li>Plataformas de streaming regionais ou canais digitais de comédia com audiência estabelecida</li>
+                        <li>Festivais de cinema com seções de mercado e oportunidades de pitch</li>
+                        <li>Programas de desenvolvimento de roteiro e laboratórios criativos</li>
+                    </ul>
+                    <p><strong>💡 Dica crucial:</strong> Evite intermediários sem poder de decisão. Vá direto a quem pode dizer "sim".</p>
+                    
+                    <h3>5. Timing Estratégico</h3>
+                    <ul>
+                        <li><strong>Melhor dia:</strong> Terça ou quarta-feira (evite início e fim de semana)</li>
+                        <li><strong>Melhor horário:</strong> Entre 09h e 11h da manhã (quando o produtor está mais receptivo)</li>
+                        <li><strong>Evite absolutamente:</strong> Segunda-feira (sobrecarga pós-fim de semana), sexta-feira à tarde (foco no fim de semana) e finais de semana</li>
+                    </ul>
+                    <p>Pequenos ajustes estratégicos de timing podem aumentar suas taxas de resposta em até 40%. Não subestime esse detalhe.</p>
+                    
+                    <h3>6. Frases-Chave que Vendem</h3>
+                    <p>Use estas expressões que reduzem a percepção de risco e aumentam o interesse:</p>
+                    <ul>
+                        <li>"Leve, filmável e de baixo custo" — música para os ouvidos de qualquer produtor independente</li>
+                        <li>"Curta autônomo" — significa que não precisa de compromisso com uma série inteira</li>
+                        <li>"Conceito maior de episódios independentes" — mostra visão de longo prazo sem pressionar</li>
+                        <li>"Projeto pronto para produção" — elimina preocupações sobre desenvolvimento adicional</li>
+                        <li>"Viabilidade técnica comprovada" — demonstra que você pensou na execução prática</li>
+                    </ul>
+                    <p><strong>A fórmula mágica: Clareza + Simplicidade + Baixo Risco = Quase Impossível de Ignorar</strong></p>
+                    
+                    <h3>7. Tenha Presença Online Profissional</h3>
+                    <ul>
+                        <li>Site ou portfólio bem organizado com seus melhores trabalhos em destaque</li>
+                        <li>Perfil profissional atualizado em plataformas do setor (LinkedIn, Stage 32, etc.)</li>
+                        <li>Materiais complementares prontos: sinopse expandida, tratamento visual, mood board</li>
+                        <li>Depoimentos ou referências de colaboradores anteriores (se tiver)</li>
+                        <li>Blog ou seção com insights sobre roteiro e indústria (demonstra expertise)</li>
+                    </ul>
+                    <p>Ter trabalhos publicados e presença digital coerente gera confiança instantânea e demonstra profissionalismo genuíno. Produtores SEMPRE vão procurar você online antes de responder.</p>
+                    
+                    <h3>Bônus: O Que Fazer Após Enviar</h3>
+                    <ul>
+                        <li>Aguarde 7-10 dias úteis antes de fazer follow-up</li>
+                        <li>Se não houver resposta, envie um lembrete educado e breve</li>
+                        <li>Nunca demonstre desespero ou pressione por resposta imediata</li>
+                        <li>Continue enviando para outros contatos simultaneamente</li>
+                        <li>Mantenha um registro organizado de todos os envios e respostas</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Guia de Orçamento Profissional -->
+            <div class="card guia" style="margin-top: 60px;">
+                <div class="checklist">
+                    <h3 style="color: #e67e22; font-size: 2em; border-bottom: 2px solid #e67e22; padding-bottom: 10px;">💰 Como Orçar um Roteiro Profissionalmente</h3>
+                    
+                    <p style="font-size: 1.1em; line-height: 1.8; margin: 20px 0;">Este guia não é sobre "quanto cobrar". É sobre <strong>por que cobrar, como justificar, quando variar e como transformar preço em ferramenta estratégica</strong>. Orçamento de roteiro é estratégia, não tabela fixa. Quem domina preço domina narrativa e negociação.</p>
+                    
+                    <h3>1. Como orçar um roteiro, objetivamente?</h3>
+                    <p>Você não começa pelo valor, começa pelo <strong>escopo de responsabilidade</strong>.</p>
+                    <ul style="list-style: disc; padding-left: 40px;">
+                        <li>O roteiro é obra final ou base de desenvolvimento?</li>
+                        <li>O cliente está pagando por: Ideia, Escrita, Reescritas, Adequação à produção, Defesa criativa?</li>
+                        <li>O roteiro será: Produzido, Vendido, Inscrito em edital, Reescrito por outro?</li>
+                    </ul>
+                    <div class="destaque">
+                        <p><strong>Preço = nível de risco criativo + tempo intelectual + impacto comercial.</strong></p>
+                        <p>Quem cobra só por página está fingindo que escrever é datilografar.</p>
+                    </div>
+                    
+                    <h3>2. Por que o preço varia dentro de um único roteiro?</h3>
+                    <p>Nem todas as páginas custam o mesmo para serem escritas.</p>
+                    <ul style="list-style: disc; padding-left: 40px;">
+                        <li>Uma página de diálogo simples ≠ Uma página que introduz universo, resolve conflito estrutural, amarra arco dramático e define final.</li>
+                        <li>Quantidade de pesquisa, complexidade estrutural e número de versões descartadas influenciam o valor.</li>
+                    </ul>
+                    <div class="destaque">
+                        <p><strong>Preço varia porque o esforço cognitivo varia.</strong> Quem cobra tudo igual ou subvaloriza partes críticas ou infla partes simples.</p>
+                    </div>
+                    
+                    <h3>3. O preço de um roteiro determina a qualidade do conteúdo?</h3>
+                    <p>Não automaticamente, mas <strong>define o teto da qualidade possível</strong>. Qualidade exige:</p>
+                    <ul style="list-style: disc; padding-left: 40px;">
+                        <li>Tempo de maturação</li>
+                        <li>Distanciamento crítico</li>
+                        <li>Reescrita consciente</li>
+                        <li>Teste de estrutura</li>
+                        <li>Ajuste fino de personagem</li>
+                    </ul>
+                    
+                    <p><strong>Quando o preço é baixo demais:</strong></p>
+                    <ul style="list-style: disc; padding-left: 40px;">
+                        <li>O roteirista acelera decisões</li>
+                        <li>Evita reescritas profundas</li>
+                        <li>Aceita soluções fáceis</li>
+                        <li>Entrega o "funciona", não o "impacta"</li>
+                    </ul>
+                    <div class="destaque" style="background: #e8f5e9; border-left-color: #27ae60;">
+                        <p><strong>Preço não compra talento. Compra tempo para o talento trabalhar.</strong></p>
+                    </div>
+                    
+                    <h3>4. Quanto cobrar por roteiro: valores profissionais (Brasil, 2026)</h3>
+                    <div class="table-wrapper">
+                        <table class="pricing-table">
+                            <thead>
+                                <tr>
+                                    <th>Tipo de Roteiro</th>
+                                    <th>Páginas</th>
+                                    <th>Faixa de Preço</th>
+                                    <th>Observações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-label="Tipo de Roteiro">Argumento / Ideia Estruturada</td>
+                                    <td data-label="Páginas">2–5</td>
+                                    <td data-label="Faixa de Preço"><strong>R$ 1.500 – R$ 4.000</strong></td>
+                                    <td data-label="Observações">Pesquisa, concepção de universo, originalidade</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Tipo de Roteiro">Tratamento</td>
+                                    <td data-label="Páginas">10–30</td>
+                                    <td data-label="Faixa de Preço"><strong>R$ 4.000 – R$ 12.000</strong></td>
+                                    <td data-label="Observações">Estrutura dramática, arcos definidos, tom, ritmo</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Tipo de Roteiro">Curta-metragem</td>
+                                    <td data-label="Páginas">10–25</td>
+                                    <td data-label="Faixa de Preço"><strong>R$ 6.000 – R$ 15.000</strong></td>
+                                    <td data-label="Observações">Valor fechado, inclui complexidade narrativa e revisões</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Tipo de Roteiro">Longa-metragem</td>
+                                    <td data-label="Páginas">80–120</td>
+                                    <td data-label="Faixa de Preço"><strong>R$ 15.000 – R$ 40.000+</strong></td>
+                                    <td data-label="Observações">Inclui consultoria contínua e participação no desenvolvimento</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Tipo de Roteiro">Roteiro Técnico / TV / Institucional</td>
+                                    <td data-label="Páginas">1 página</td>
+                                    <td data-label="Faixa de Preço"><strong>R$ 150 – R$ 400</strong></td>
+                                    <td data-label="Observações">Definir revisões e limites de novas versões</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <p style="background: #fff3cd; padding: 15px; border-left: 4px solid #f39c12; margin: 15px 0;">📌 <strong>Importante:</strong> Preço por página é ferramenta comercial, não padrão artístico.</p>
+                    
+                    <h3>5. Estratégias avançadas de negociação</h3>
+                    
+                    <h4 style="color: #2c3c50; margin-top: 25px;">5.1 Como negociar participação em vez de desconto</h4>
+                    <ul style="list-style: disc; padding-left: 40px;">
+                        <li>Ofereça percentual sobre lucro, bilheteria ou receita de plataforma.</li>
+                        <li>Co-autoria ou crédito ampliado como forma de valor.</li>
+                        <li>Direitos de adaptação ou merchandising em projetos de sucesso.</li>
+                    </ul>
+                    <div class="destaque" style="background: #e3f2fd; border-left-color: #3498db;">
+                        <p><strong>Vantagens:</strong> Mantém preço justo, alinha interesses do roteirista com o sucesso do projeto e evita desvalorização do trabalho.</p>
+                    </div>
+                    
+                    <h4 style="color: #2c3c50; margin-top: 25px;">5.2 Quando o cliente pede orçamento antes de ler o roteiro</h4>
+                    <ul style="list-style: disc; padding-left: 40px;">
+                        <li><strong>Nunca dê preço sem contexto.</strong></li>
+                        <li>Explique que o valor depende da complexidade e impacto narrativo.</li>
+                        <li>Ofereça faixas de preço com escopo mínimo e máximo.</li>
+                        <li>Proponha reunião para entender as necessidades antes de fechar valor.</li>
+                    </ul>
+                    
+                    <h4 style="color: #2c3c50; margin-top: 25px;">5.3 Por que o produtor respeita quem cobra mais — mesmo dizendo "não"</h4>
+                    <ul style="list-style: disc; padding-left: 40px;">
+                        <li>Preço alto = sinal de profissionalismo e confiança.</li>
+                        <li>Valor reflete tempo, risco e expertise.</li>
+                        <li>Mesmo que não aceite agora, o produtor respeita e retorna em projetos maiores.</li>
+                        <li>Profissionais que se valorizam são lembrados quando há orçamento real.</li>
+                    </ul>
+                    
+                    <h3>6. O que fazer quando o cliente reclama do preço?</h3>
+                    <ul style="list-style: disc; padding-left: 40px;">
+                        <li><strong>Explique o que está incluso:</strong> X versões, Y semanas de trabalho, Z nível de entrega.</li>
+                        <li><strong>Reduzir escopo, não preço, se necessário.</strong> Exemplo: "Por esse valor, posso entregar tratamento, não roteiro completo."</li>
+                        <li><strong>Propor faseamento:</strong> argumento → tratamento → roteiro (pagamento por etapas).</li>
+                        <li><strong>Recusar profissionalmente quando for o caso.</strong> Nem todo projeto compensa.</li>
+                    </ul>
+                    
+                    <h3>7. Por que ser modesto no preço pode ser estratégico?</h3>
+                    <p>Em início de carreira ou projetos específicos, preços modestos podem ser inteligentes:</p>
+                    <ul style="list-style: disc; padding-left: 40px;">
+                        <li>Reduz atrito inicial com novos clientes</li>
+                        <li>Facilita entrada no mercado e geração de portfólio</li>
+                        <li>Gera histórico de trabalhos concluídos</li>
+                        <li>Cria confiança e relacionamento de longo prazo</li>
+                    </ul>
+                    <div class="destaque" style="background: #fff3cd; border-left-color: #f39c12;">
+                        <p>⚠️ <strong>Modesto ≠ barato.</strong> Preço modesto cresce com responsabilidade entregue e qualidade comprovada.</p>
+                    </div>
+                    
+                    <h3>8. Pergunta que poucos fazem</h3>
+                    <div class="destaque" style="background: #f3e5f5; border-left-color: #8e44ad;">
+                        <p style="font-size: 1.15em;"><strong>"Esse roteiro precisa existir neste formato?"</strong></p>
+                        <ul style="list-style: disc; padding-left: 20px; margin-top: 10px;">
+                            <li>Às vezes o problema não é preço, é formato errado.</li>
+                            <li>O cliente pode precisar apenas de argumento, bíblia, tratamento, consultoria ou reescrita pontual.</li>
+                            <li>Redefinir o produto pode facilitar a negociação e aumentar o valor percebido.</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>9. A pergunta mais madura</h3>
+                    <div class="destaque" style="background: #e8f5e9; border-left-color: #27ae60;">
+                        <p style="font-size: 1.15em;"><strong>"Se esse roteiro der certo, fui remunerado de forma justa?"</strong></p>
+                        <p style="margin-top: 10px;">Se a resposta for não: você está financiando o projeto. Não é parceria, é aposta unilateral. Estabeleça termos justos desde o início.</p>
+                    </div>
+                    
+                    <h3>10. Por que não ter preço único</h3>
+                    <p>Cada projeto exige investimento diferente:</p>
+                    <ul style="list-style: disc; padding-left: 40px;">
+                        <li><strong>Energia mental diferente:</strong> Comédia leve ≠ Drama psicológico denso</li>
+                        <li><strong>Risco criativo diferente:</strong> Roteiro original ≠ Adaptação de obra conhecida</li>
+                        <li><strong>Retorno comercial diferente:</strong> Curta independente ≠ Série para streaming</li>
+                        <li><strong>Complexidade técnica diferente:</strong> Diálogos simples ≠ Narrativas não-lineares</li>
+                    </ul>
+                    <div class="destaque">
+                        <p><strong>Preço fixo para tudo é confortável, mas preguiçoso intelectualmente.</strong> Adapte preço ao impacto, não ao medo de perder trabalho.</p>
+                    </div>
+                    
+                    <h3 style="color: #e67e22; font-size: 1.8em; margin-top: 40px; border-top: 2px solid #e67e22; padding-top: 20px;">📝 Conclusão</h3>
+                    <p style="font-size: 1.1em; line-height: 1.8;">Orçar um roteiro não é inflar valor. É <strong>traduzir trabalho invisível em números defensáveis</strong>, transformando preço em ferramenta de negociação, autoridade e controle criativo.</p>
+                    
+                    <p style="font-size: 1.05em; margin-top: 20px;">Quem domina orçamento:</p>
+                    <ul style="list-style: disc; padding-left: 40px; font-size: 1.05em;">
+                        <li>Escreve com mais clareza</li>
+                        <li>Negocia com mais firmeza</li>
+                        <li>Escolhe melhor os projetos</li>
+                        <li>Constrói carreira sustentável</li>
+                    </ul>
+                    
+                    <div class="destaque" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; margin-top: 30px;">
+                        <p style="font-size: 1.15em; color: white;"><strong>💡 No mercado real, isso vale mais do que talento isolado.</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Anúncio In-Feed 4 -->
+        <div class="ad-space in-feed">
+            <div class="ad-label">Publicidade</div>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-format="autorelaxed"
+                 data-ad-client="ca-pub-7482420290445582"
+                 data-ad-slot="7603070452"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <section id="contato">
+            <div class="cta">
+                <h3>Vamos Trabalhar Juntos?</h3>
+                <p>Interessado em roteiros, consultoria ou colaboração profissional?</p>
+                <p>Entre em contato através dos canais abaixo:</p>
+                
+                <div class="contato-btns">
+                    <a href="#" class="btn btn-email">📧 Enviar Email</a>
+                    <a href="https://wa.me/244940266827?text=Olá%20Lelson%2C%20vim%20do%20site%20Oficina%20de%20Roteiro%20e%20gostaria%20de%20falar%20sobre%20os%20roteiros." target="_blank" class="btn btn-whatsapp">💬 WhatsApp</a>
+                </div>
+                
+                <p style="margin-top: 25px; font-size: 0.95em; opacity: 0.95; line-height: 1.6;">
+                    <strong>Lelson António</strong><br>
+                    Roteirista Profissional<br>
+                    Email: <span id="email-contact"></span><br>
+                    WhatsApp: +244 940 266 827
+                </p>
             </div>
         </section>
     </main>
     
-    <footer class="main-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Oficina de Roteiro</h4>
-                    <p>Roteiros profissionais e consultoria especializada</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Links Rápidos</h4>
-                    <ul>
-                        <li><a href="sobre.html">Sobre</a></li>
-                        <li><a href="servicos.html">Serviços</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="politica-privacidade.html">Política de Privacidade</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contato</h4>
-                    <p>Email: <a href="mailto:manueltondama6@gmail.com">manueltondama6@gmail.com</a></p>
-                    <p>WhatsApp: <a href="https://wa.me/244940266827" target="_blank">+244 940 266 827</a></p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Lelson António - Oficina de Roteiro. Todos os direitos reservados.</p>
-                <p>Todos os roteiros e materiais estão protegidos por direitos autorais.</p>
-            </div>
-        </div>
+    <footer>
+        <p><strong>Oficina de Roteiro</strong> | Roteiros Profissionais e Consultoria Especializada</p>
+        <p>Todos os roteiros e materiais neste site estão protegidos por direitos autorais.</p>
+        <p>Licença Creative Commons CC BY-NC para materiais educacionais selecionados.</p>
+        <p><a href="politica-privacidade.html">Política de Privacidade</a></p>
+        <p>&copy; 2026 Lelson António - Todos os direitos reservados</p>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Script para Menu Mobile -->
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+
+    <!-- Sistema de Reações com LocalStorage -->
+    <script>
+        // Inicializar reações ao carregar a página
+        document.addEventListener('DOMContentLoaded', function() {
+            loadAllReactions();
+        });
+
+        // Carregar todas as reações do localStorage
+        function loadAllReactions() {
+            const scripts = ['chamada-silenciosa', 'na-minha-linguagem', 'homem-porcaria'];
+            
+            scripts.forEach(scriptId => {
+                loadReactions(scriptId);
+            });
+        }
+
+        // Carregar reações de um roteiro específico
+        function loadReactions(scriptId) {
+            const reactions = ['like', 'love', 'laugh', 'wow', 'scared', 'clever', 'funny'];
+            let total = 0;
+            
+            reactions.forEach(reaction => {
+                const key = `reaction-${scriptId}-${reaction}`;
+                const count = localStorage.getItem(key) || 0;
+                const countElement = document.getElementById(`count-${scriptId}-${reaction}`);
+                
+                if (countElement) {
+                    countElement.textContent = count;
+                    total += parseInt(count);
+                }
+                
+                // Verificar se o usuário já reagiu
+                const userKey = `user-reaction-${scriptId}`;
+                const userReaction = localStorage.getItem(userKey);
+                
+                if (userReaction === reaction) {
+                    const buttons = document.querySelectorAll(`[onclick*="${scriptId}"]`);
+                    buttons.forEach(btn => {
+                        if (btn.getAttribute('data-reaction') === reaction) {
+                            btn.classList.add('active');
+                        }
+                    });
+                }
+            });
+            
+            // Atualizar total
+            const totalElement = document.getElementById(`total-${scriptId}`);
+            if (totalElement) {
+                totalElement.innerHTML = `Total de reações: <strong>${total}</strong>`;
+            }
+        }
+
+        // Adicionar ou remover reação
+        function addReaction(scriptId, reactionType) {
+            const userKey = `user-reaction-${scriptId}`;
+            const currentReaction = localStorage.getItem(userKey);
+            const reactionKey = `reaction-${scriptId}-${reactionType}`;
+            
+            // Se o usuário já tinha reagido com o mesmo tipo, remover
+            if (currentReaction === reactionType) {
+                // Decrementar contador
+                let count = parseInt(localStorage.getItem(reactionKey)) || 0;
+                count = Math.max(0, count - 1);
+                localStorage.setItem(reactionKey, count);
+                
+                // Remover registro da reação do usuário
+                localStorage.removeItem(userKey);
+                
+                // Remover classe active
+                const buttons = document.querySelectorAll(`[onclick*="${scriptId}"]`);
+                buttons.forEach(btn => btn.classList.remove('active'));
+                
+            } else {
+                // Se tinha outra reação, decrementar a anterior
+                if (currentReaction) {
+                    const oldKey = `reaction-${scriptId}-${currentReaction}`;
+                    let oldCount = parseInt(localStorage.getItem(oldKey)) || 0;
+                    oldCount = Math.max(0, oldCount - 1);
+                    localStorage.setItem(oldKey, oldCount);
+                }
+                
+                // Incrementar nova reação
+                let count = parseInt(localStorage.getItem(reactionKey)) || 0;
+                count++;
+                localStorage.setItem(reactionKey, count);
+                
+                // Registrar nova reação do usuário
+                localStorage.setItem(userKey, reactionType);
+                
+                // Atualizar classes active
+                const buttons = document.querySelectorAll(`[onclick*="${scriptId}"]`);
+                buttons.forEach(btn => {
+                    btn.classList.remove('active');
+                    if (btn.getAttribute('data-reaction') === reactionType) {
+                        btn.classList.add('active');
+                    }
+                });
+            }
+            
+            // Recarregar contadores
+            loadReactions(scriptId);
+            
+            // Animação de feedback
+            const clickedButton = event.target.closest('.reaction-btn');
+            if (clickedButton) {
+                clickedButton.style.transform = 'scale(1.2)';
+                setTimeout(() => {
+                    clickedButton.style.transform = '';
+                }, 200);
+            }
+        }
+
+        // Resetar reações (apenas para desenvolvimento - remover em produção)
+        function resetReactions(scriptId) {
+            if (confirm('Tem certeza que deseja resetar todas as reações deste roteiro?')) {
+                const reactions = ['like', 'love', 'laugh', 'wow', 'scared', 'clever', 'funny'];
+                reactions.forEach(reaction => {
+                    localStorage.removeItem(`reaction-${scriptId}-${reaction}`);
+                });
+                localStorage.removeItem(`user-reaction-${scriptId}`);
+                loadReactions(scriptId);
+                alert('Reações resetadas!');
+            }
+        }
+    </script>
+
+    <!-- Proteção Anti-Bot para Email -->
+    <script>
+        // Montar email de forma que bots não consigam ler
+        (function() {
+            const user = 'manueltondama6';
+            const domain = 'gmail';
+            const tld = 'com';
+            const email = user + '@' + domain + '.' + tld;
+            
+            // Inserir no span do rodapé
+            const emailSpan = document.getElementById('email-contact');
+            if (emailSpan) {
+                // Criar link clicável
+                const link = document.createElement('a');
+                link.href = 'mailto:' + email;
+                link.textContent = email;
+                link.style.color = 'white';
+                link.style.textDecoration = 'underline';
+                emailSpan.appendChild(link);
+            }
+            
+            // Inserir nos botões de email (CTA)
+            const emailButtons = document.querySelectorAll('.btn-email');
+            emailButtons.forEach(btn => {
+                btn.href = 'mailto:' + email + '?subject=Contato%20via%20Oficina%20de%20Roteiro';
+            });
+        })();
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade | Oficina de Roteiro</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: auto;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        a {
+            color: #3498db;
+        }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Política de Privacidade</h1>
+    
+    <p>Bem-vindo ao site <strong>Oficina de Roteiro</strong>. Sua privacidade é muito importante para nós. Esta política explica como coletamos, usamos e protegemos suas informações.</p>
+
+    <h2>Informações Coletadas</h2>
+    <p>Podemos coletar informações quando você interage com nosso site, como endereço de e-mail ao enviar mensagens de contato. Não coletamos dados sensíveis sem consentimento explícito.</p>
+
+    <h2>Uso das Informações</h2>
+    <p>As informações coletadas são utilizadas apenas para responder às suas solicitações, melhorar a experiência do site e fornecer conteúdos relevantes. Não compartilhamos seus dados com terceiros sem autorização.</p>
+
+    <h2>Cookies e Tecnologias Semelhantes</h2>
+    <p>O site pode usar cookies para melhorar a navegação e análise de tráfego. Você pode desativar os cookies no seu navegador, mas algumas funcionalidades podem ser afetadas.</p>
+
+    <h2>Publicidade e AdSense</h2>
+    <p>Este site usa o Google AdSense, que pode exibir anúncios com base no seu histórico de navegação. O Google pode usar cookies para personalizar anúncios. Para mais informações, veja a <a href="https://policies.google.com/technologies/ads" target="_blank">Política de Privacidade do Google</a>.</p>
+
+    <h2>Segurança</h2>
+    <p>Tomamos medidas razoáveis para proteger suas informações. No entanto, nenhum método de transmissão ou armazenamento eletrônico é 100% seguro.</p>
+
+    <h2>Alterações na Política</h2>
+    <p>Podemos atualizar esta política periodicamente. Recomendamos verificar esta página regularmente para se manter informado.</p>
+
+    <footer>
+        &copy; 2026 Oficina de Roteiro. Todos os direitos reservados.
+    </footer>
 </body>
 </html>
