@@ -95,8 +95,16 @@
             background: #27ae60;
         }
         
+        .post-category.guias {
+            background: #e67e22;
+        }
+        
         .post-category.inspiracao {
             background: #f39c12;
+        }
+        
+        .post-category.anatomia {
+            background: #8e44ad;
         }
         
         .post-content {
@@ -221,9 +229,8 @@
             
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Início</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="servicos.html">Serviços</a></li>
-                <li><a href="blog.html">Blog</a></li>
+                <li><a href="#guias">Guias</a></li>
+                <li><a href="#anatomia">Anatomia</a></li>
                 <li><a href="index.html#contato">Contato</a></li>
             </ul>
         </div>
@@ -232,10 +239,8 @@
     <main class="blog-content">
         <div class="categories">
             <a href="#" class="category-btn active">Todos os Artigos</a>
-            <a href="#" class="category-btn">Técnicas de Roteiro</a>
-            <a href="#" class="category-btn">Análise de Filmes</a>
-            <a href="#" class="category-btn">Mercado</a>
-            <a href="#" class="category-btn">Inspiração</a>
+            <a href="#guias" class="category-btn">Guias Profissionais</a>
+            <a href="#anatomia" class="category-btn">Anatomia do Roteiro</a>
         </div>
         
         <div class="blog-posts">
@@ -246,10 +251,42 @@
                     <h3>A Anatomia Profunda do Roteiro: O Guia Completo</h3>
                     <p class="post-meta">📅 15 de janeiro de 2026 | ⏱️ Leitura: 25 min</p>
                     <p class="post-excerpt">Um guia completo e aprofundado sobre os elementos essenciais de um roteiro profissional. Desde o pulso da história até o epílogo, explore os conceitos fundamentais que transformam ideias em narrativas cinematográficas poderosas. Inclui análises de filmes clássicos e dicas práticas para cada elemento estrutural.</p>
-                    <a href="artigo-anatomia-roteiro.html" class="read-more">Ler Artigo Completo →</a>
+                    <a href="anatomia-roteiro.html" class="read-more">Ler Artigo Completo →</a>
                 </div>
                 <div class="post-content" style="display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.2);">
                     <span style="font-size: 5em;">📖</span>
+                </div>
+            </article>
+            
+            <!-- Guias Profissionais -->
+            <article class="blog-post" id="guias">
+                <div class="post-category guias">Guias Profissionais</div>
+                <div class="post-content">
+                    <h3>🎬 Como Vender Seu Roteiro de Curta</h3>
+                    <p class="post-meta">📅 12 de janeiro de 2026 | ⏱️ 20 min</p>
+                    <p class="post-excerpt">Checklist completo e profissional. Aprenda o princípio fundamental: você não vende o roteiro, vende segurança. Posicionamento correto, logline matadora, templates de e-mail, timing estratégico e muito mais.</p>
+                    <a href="guia-vender-roteiro.html" class="read-more">Ler Guia Completo →</a>
+                </div>
+            </article>
+            
+            <article class="blog-post">
+                <div class="post-category guias">Guias Profissionais</div>
+                <div class="post-content">
+                    <h3>💰 Como Orçar um Roteiro Profissionalmente</h3>
+                    <p class="post-meta">📅 10 de janeiro de 2026 | ⏱️ 25 min</p>
+                    <p class="post-excerpt">Guia completo de precificação estratégica. Valores profissionais 2026 atualizados, tabela completa de preços, estratégias avançadas de negociação e como transformar preço em ferramenta de poder.</p>
+                    <a href="guia-orcamento-roteiro.html" class="read-more">Ler Guia Completo →</a>
+                </div>
+            </article>
+            
+            <!-- Anatomia do Roteiro -->
+            <article class="blog-post" id="anatomia">
+                <div class="post-category anatomia">Anatomia do Roteiro</div>
+                <div class="post-content">
+                    <h3>🎯 Anatomia Profunda: Os 8 Elementos</h3>
+                    <p class="post-meta">📅 8 de janeiro de 2026 | ⏱️ 30 min</p>
+                    <p class="post-excerpt">Explore os 8 elementos essenciais da narrativa cinematográfica: Pulso da História, Fantasma, Abismo, Máscara, Clímax, Resolução, Epílogo e Fechamento da Jornada. Com exemplos de filmes clássicos.</p>
+                    <a href="anatomia-roteiro.html" class="read-more">Ver Todos os Capítulos →</a>
                 </div>
             </article>
             
@@ -258,7 +295,7 @@
                 <div class="post-category tecnicas">Técnicas de Roteiro</div>
                 <div class="post-content">
                     <h3>Como Criar Diálogos Cinematográficos Memoráveis</h3>
-                    <p class="post-meta">📅 12 de janeiro de 2026 | ⏱️ 8 min</p>
+                    <p class="post-meta">📅 5 de janeiro de 2026 | ⏱️ 8 min</p>
                     <p class="post-excerpt">Diálogos não são conversas reais — são conversas editadas. Aprenda as técnicas que os grandes roteiristas usam para criar falas que revelam caráter, avançam a trama e permanecem na memória do público.</p>
                     <a href="#" class="read-more">Ler mais →</a>
                 </div>
@@ -268,18 +305,8 @@
                 <div class="post-category analise">Análise de Filmes</div>
                 <div class="post-content">
                     <h3>Parasita: A Estrutura Perfeita de Gêneros Híbridos</h3>
-                    <p class="post-meta">📅 10 de janeiro de 2026 | ⏱️ 12 min</p>
+                    <p class="post-meta">📅 3 de janeiro de 2026 | ⏱️ 12 min</p>
                     <p class="post-excerpt">Uma análise profunda de como Bong Joon-ho construiu um roteiro que transita perfeitamente entre comédia, drama e thriller, mantendo coesão narrativa e impacto emocional do início ao fim.</p>
-                    <a href="#" class="read-more">Ler mais →</a>
-                </div>
-            </article>
-            
-            <article class="blog-post">
-                <div class="post-category mercado">Mercado</div>
-                <div class="post-content">
-                    <h3>Como Vender Seu Roteiro: O Guia Definitivo 2026</h3>
-                    <p class="post-meta">📅 8 de janeiro de 2026 | ⏱️ 15 min</p>
-                    <p class="post-excerpt">Do pitch perfeito aos contratos justos, passando por estratégias de networking e preparação de materiais. Tudo que você precisa saber para transformar seu roteiro em um projeto realizado.</p>
                     <a href="#" class="read-more">Ler mais →</a>
                 </div>
             </article>
@@ -288,7 +315,7 @@
                 <div class="post-category tecnicas">Técnicas de Roteiro</div>
                 <div class="post-content">
                     <h3>A Regra dos Três Atos: Além do Básico</h3>
-                    <p class="post-meta">📅 5 de janeiro de 2026 | ⏱️ 10 min</p>
+                    <p class="post-meta">📅 30 de dezembro de 2025 | ⏱️ 10 min</p>
                     <p class="post-excerpt">A estrutura de três atos não é uma fórmula rígida — é um framework flexível. Descubra como os mestres do roteiro usam e subvertem essa estrutura clássica para criar histórias únicas.</p>
                     <a href="#" class="read-more">Ler mais →</a>
                 </div>
@@ -298,18 +325,8 @@
                 <div class="post-category inspiracao">Inspiração</div>
                 <div class="post-content">
                     <h3>7 Exercícios Diários para Roteiristas</h3>
-                    <p class="post-meta">📅 3 de janeiro de 2026 | ⏱️ 6 min</p>
+                    <p class="post-meta">📅 28 de dezembro de 2025 | ⏱️ 6 min</p>
                     <p class="post-excerpt">Roteiristas precisam exercitar a criatividade como atletas exercitam o corpo. Descubra exercícios práticos para desenvolver sua voz autoral e manter o fluxo criativo constante.</p>
-                    <a href="#" class="read-more">Ler mais →</a>
-                </div>
-            </article>
-            
-            <article class="blog-post">
-                <div class="post-category mercado">Mercado</div>
-                <div class="post-content">
-                    <h3>Quanto Cobrar por um Roteiro? Guia de Precificação</h3>
-                    <p class="post-meta">📅 30 de dezembro de 2025 | ⏱️ 18 min</p>
-                    <p class="post-excerpt">Preço não é sobre páginas escritas — é sobre valor entregue. Um guia completo e realista sobre como precificar seus roteiros profissionalmente, desde curtas até longas-metragens.</p>
                     <a href="#" class="read-more">Ler mais →</a>
                 </div>
             </article>
@@ -318,7 +335,7 @@
                 <div class="post-category analise">Análise de Filmes</div>
                 <div class="post-content">
                     <h3>Como Oppenheimer Usa o Tempo Narrativo</h3>
-                    <p class="post-meta">📅 27 de dezembro de 2025 | ⏱️ 14 min</p>
+                    <p class="post-meta">📅 25 de dezembro de 2025 | ⏱️ 14 min</p>
                     <p class="post-excerpt">Christopher Nolan é mestre em manipular o tempo narrativo. Uma análise detalhada de como Oppenheimer entrelaça três linhas temporais distintas mantendo clareza e impacto emocional.</p>
                     <a href="#" class="read-more">Ler mais →</a>
                 </div>
@@ -328,7 +345,7 @@
                 <div class="post-category tecnicas">Técnicas de Roteiro</div>
                 <div class="post-content">
                     <h3>Show, Don't Tell: Além do Clichê</h3>
-                    <p class="post-meta">📅 24 de dezembro de 2025 | ⏱️ 9 min</p>
+                    <p class="post-meta">📅 22 de dezembro de 2025 | ⏱️ 9 min</p>
                     <p class="post-excerpt">"Mostre, não conte" é o conselho mais repetido — e mal compreendido — do roteiro. Descubra quando mostrar, quando contar, e como equilibrar ambos para máximo impacto narrativo.</p>
                     <a href="#" class="read-more">Ler mais →</a>
                 </div>
@@ -338,7 +355,7 @@
                 <div class="post-category inspiracao">Inspiração</div>
                 <div class="post-content">
                     <h3>Bloqueio Criativo: Causas e Soluções Reais</h3>
-                    <p class="post-meta">📅 21 de dezembro de 2025 | ⏱️ 11 min</p>
+                    <p class="post-meta">📅 20 de dezembro de 2025 | ⏱️ 11 min</p>
                     <p class="post-excerpt">Bloqueio criativo não é falta de ideias — é geralmente sintoma de algo mais profundo. Identifique as causas reais e aplique soluções práticas que realmente funcionam.</p>
                     <a href="#" class="read-more">Ler mais →</a>
                 </div>
@@ -363,9 +380,8 @@
                     <h4>Links Rápidos</h4>
                     <ul>
                         <li><a href="index.html">Início</a></li>
-                        <li><a href="sobre.html">Sobre</a></li>
-                        <li><a href="servicos.html">Serviços</a></li>
-                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="#guias">Guias</a></li>
+                        <li><a href="#anatomia">Anatomia</a></li>
                         <li><a href="politica-privacidade.html">Política de Privacidade</a></li>
                     </ul>
                 </div>
