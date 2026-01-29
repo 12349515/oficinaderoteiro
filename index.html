@@ -3,22 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7482420290445582"
-     crossorigin="anonymous"></script>
-
-
-<script>
-document.getElementById('custom-ad-container').addEventListener('click', function(e){
-    e.stopPropagation();
-    e.preventDefault(); // tenta bloquear
-});
-</script>
     
+    <!-- Preconnect para recursos externos -->
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+    <link rel="preconnect" href="https://quge5.com">
+    
+    <!-- Meta tags essenciais -->
     <meta name="description" content="Oficina de Roteiro - Roteiros profissionais, consultoria criativa e recursos para roteiristas. Escrita de roteiros para cinema, TV e plataformas digitais.">
     <meta name="keywords" content="roteiro, roteirista, consultoria, escrita criativa, cinema, audiovisual, Angola, Lelson António">
     <meta name="author" content="Lelson António">
+    <meta name="theme-color" content="#1e3c72">
+    
     <title>Oficina de Roteiro | Roteiros e Consultoria Profissional</title>
-    <link rel="stylesheet" href="styles.css">
+    
+    <!-- CSS Inline Crítico -->
+    <style>
+        /* Critical CSS - Above the fold */
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Inter','Segoe UI',sans-serif;line-height:1.6;color:#333;background-color:#f8f9fa}
+        .main-header{background:linear-gradient(135deg,#1e3c72 0%,#2a5298 100%);color:#fff;padding:80px 20px;text-align:center}
+        .header-content h1{font-size:3em;margin-bottom:15px;font-weight:700}
+        .main-nav{background-color:#2c3e50;position:sticky;top:0;z-index:1000}
+        .nav-container{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:0 20px;height:60px}
+        .container{max-width:1200px;margin:0 auto;padding:0 20px}
+    </style>
+    
+    <!-- CSS Principal (defer) -->
+    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="styles.css"></noscript>
+    
+    <!-- Google AdSense - Async -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7482420290445582"
+     crossorigin="anonymous"></script>
 </head>
 <body>
     <header class="main-header">
@@ -46,15 +62,14 @@ document.getElementById('custom-ad-container').addEventListener('click', functio
         </div>
     </nav>
 
-    <div class="ad-space header-ad">
-        
-        <!-- Monetag Multitag -->
-    <div id="monetag-header" style="width:100%; max-width:728px; margin:0 auto;">
-        <script src="https://quge5.com/88/tag.min.js" 
-            data-zone="199812" 
-            async 
-            data-cfasync="false"></script>
-    </div>
+    <!-- Ad Space Otimizado -->
+    <div class="ad-space header-ad" style="min-height:90px">
+        <div id="monetag-header" style="width:100%;max-width:728px;margin:0 auto">
+            <script src="https://quge5.com/88/tag.min.js" 
+                data-zone="199812" 
+                async 
+                data-cfasync="false"></script>
+        </div>
     </div>
     
     <main>
@@ -72,14 +87,14 @@ document.getElementById('custom-ad-container').addEventListener('click', functio
                 
                 <div class="video-embed">
                     <h3>🎬 Como Velozes e Furiosos Faturou US$ 700 Mi (e Seu Roteiro Não)</h3>
-                    <p><strong>Descrição:</strong></p>
-                    <p>Velozes e Furiosos DEZ faturou setecentos milhões de dólares. O SEU roteiro... provavelmente, não. E se eu te disser que não é sobre ter mais talento, nem fazer mais ação, mas sobre um ÚNICO SEGREDO que a Universal Pictures dominou? Um segredo que você, como roteirista, pode aplicar HOJE para deixar de escrever para o seu bairro e começar a escrever para o mundo. Fica comigo que eu vou te entregar essa estratégia agora.</p>
+                    <p><strong>Descrição:</strong> Velozes e Furiosos DEZ faturou setecentos milhões de dólares. O SEU roteiro... provavelmente, não. E se eu te disser que não é sobre ter mais talento, nem fazer mais ação, mas sobre um ÚNICO SEGREDO que a Universal Pictures dominou?</p>
                     
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/kcqCvkotV-Y" 
-                                title="Como Velozes e Furiosos Faturou US$ 700 Mi (e Seu Roteiro Não)" 
+                    <!-- Lazy loading do YouTube -->
+                    <div class="video-container" style="background:#000">
+                        <iframe loading="lazy" src="https://www.youtube.com/embed/kcqCvkotV-Y" 
+                                title="Como Velozes e Furiosos Faturou US$ 700 Mi" 
                                 frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                                 allowfullscreen>
                         </iframe>
                     </div>
@@ -97,133 +112,52 @@ document.getElementById('custom-ad-container').addEventListener('click', functio
                         <span class="script-tag suspense">Suspense/Terror</span>
                     </div>
                     <div class="script-meta">
-                        <span>📽️ Episódio 1 - Na Linha, Sem Linha</span>
+                        <span>📽️ Episódio 1</span>
                         <span>⏱️ 3-5 min</span>
                         <span>👥 2 personagens</span>
                         <span>🏠 Interior</span>
                     </div>
                     
-                    <img src="imagens/chamada-silenciosa.png" alt="Cena de A Chamada Silenciosa" class="imagem-roteiro" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; margin: 20px auto; display: block; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <!-- Imagem otimizada com lazy loading -->
+                    <img src="imagens/chamada-silenciosa.png" 
+                         alt="Cena de A Chamada Silenciosa" 
+                         width="600" 
+                         height="400"
+                         loading="lazy"
+                         class="imagem-roteiro">
                     
-                    <p class="script-synopsis"><strong>Sinopse:</strong> João recebe uma chamada silenciosa de um número desconhecido no meio da noite. Quando atende, não há som do outro lado. Sara, sua namorada, tenta acalmá-lo por mensagem, mas algo está errado. Uma sombra misteriosa aparece atrás da cortina, e ele sente uma brisa fria inexplicável.</p>
-                    
-                    <p class="script-synopsis">Ao se virar lentamente, a sombra se aproxima. Ele grita em pânico, mas acorda assustado — era apenas um pesadelo. Ou seria? O telefone mostra uma chamada perdida do mesmo número desconhecido, seguida de uma mensagem aterrorizante que muda tudo: "Da próxima vez você não acordará."</p>
-                    
-                    <div class="roteiro-texto" style="background: #f8f9fa; padding: 30px; border-radius: 8px; margin: 25px 0; border-left: 4px solid #27ae60; font-family: 'Courier New', monospace; font-size: 0.95em;">
-                        <h4 style="color: #2c3c50; margin: 25px 0 15px 0; font-size: 1.3em; font-family: 'Segoe UI', sans-serif;">ROTEIRO COMPLETO</h4>
-                        
-                        <p style="font-weight: bold; color: #27ae60; text-transform: uppercase; margin: 20px 0 10px 0;">INT. QUARTO DE JOÃO - NOITE</p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">O quarto está mergulhado em penumbra, apenas uma luminária de cabeceira projeta luz fraca. JOÃO (25 anos) está deitado na cama, rolando distraidamente pelo celular. O silêncio da noite é quebrado apenas pelo som distante do tráfego.</p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">De repente, o telefone TOCA com um ringtone estridente. Na tela: NÚMERO DESCONHECIDO. João franze a testa, surpreso.</p>
-                        
-                        <p style="font-weight: bold; color: #2c3c50; margin: 15px 0 5px 0;">JOÃO</p>
-                        <p style="margin-left: 60px; font-style: italic; color: #666;">(para si mesmo)</p>
-                        <p style="margin-left: 40px; color: #444; line-height: 1.6;">Quem será a esta hora?</p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">Ele hesita por um momento, olhando fixamente para o telefone vibrando em sua mão. Finalmente, desliza o dedo pela tela e atende.</p>
-                        
-                        <p style="font-weight: bold; color: #2c3c50; margin: 15px 0 5px 0;">JOÃO</p>
-                        <p style="margin-left: 40px; color: #444; line-height: 1.6;">Alô?</p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">SILÊNCIO ABSOLUTO do outro lado da linha. Nem respiração, nem estática, nem ruído de fundo. Apenas um vazio perturbador.</p>
-                        
-                        <p style="font-weight: bold; color: #2c3c50; margin: 15px 0 5px 0;">JOÃO</p>
-                        <p style="margin-left: 60px; font-style: italic; color: #666;">(com leve irritação)</p>
-                        <p style="margin-left: 40px; color: #444; line-height: 1.6;">Alô? Tem alguém aí?</p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">Nada. O silêncio é opressivo, quase palpável. João está prestes a desligar quando o celular VIBRA. Uma mensagem de HELENA ilumina a tela: "Está tudo bem?"</p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">João esboça um sorriso leve ao ver o nome dela. Começa a digitar uma resposta, mas para abruptamente. Uma sensação estranha percorre seu corpo.</p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">Uma BRISA FRIA varre o quarto, fazendo a cortina se mexer levemente, embora a janela esteja fechada. Os pelos de seus braços se arrepiam.</p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">João levanta os olhos lentamente. Seu sangue congela.</p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">Atrás da cortina, uma SOMBRA. Uma silhueta humana, completamente imóvel, como se estivesse observando. A forma é nítida demais para ser uma ilusão da luz.</p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">O coração de João dispara. Ele se levanta da cama lentamente, sem tirar os olhos da sombra. O telefone ainda está na chamada silenciosa, colado em sua orelha.</p>
-                        
-                        <p style="font-weight: bold; color: #2c3c50; margin: 15px 0 5px 0;">JOÃO</p>
-                        <p style="margin-left: 60px; font-style: italic; color: #666;">(voz trêmula)</p>
-                        <p style="margin-left: 40px; color: #444; line-height: 1.6;">Quem... quem está aí?</p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">A sombra não responde. Não se move. Mas parece estar crescendo, se aproximando sem realmente se mover.</p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">João dá um passo hesitante em direção à cortina. A temperatura do quarto parece cair ainda mais. Seu coração bate tão forte que ele pode ouvi-lo.</p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">Mais um passo. A sombra CRESCE na cortina, ocupando todo o tecido agora.</p>
-                        
-                        <p style="font-weight: bold; color: #2c3c50; margin: 15px 0 5px 0;">JOÃO</p>
-                        <p style="margin-left: 60px; font-style: italic; color: #666;">(gritando em pânico)</p>
-                        <p style="margin-left: 40px; color: #444; line-height: 1.6;">NÃO… FIQUE LONGE DE MIM!</p>
-                        
-                        <p style="font-weight: bold; color: #27ae60; text-transform: uppercase; margin: 20px 0 10px 0;">CORTE BRUSCO PARA:</p>
-                        
-                        <p style="font-weight: bold; color: #27ae60; text-transform: uppercase; margin: 20px 0 10px 0;">INT. QUARTO DE JOÃO - MANHÃ</p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">João ACORDA de sobressalto, ofegante, suando frio. Seus olhos escaneiam o quarto desesperadamente. Luz do sol entra pela janela aberta. A cortina balança suavemente com a brisa matinal. Tudo completamente normal.</p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">Ele coloca as mãos no rosto, respirando profundamente, tentando se acalmar.</p>
-                        
-                        <p style="font-weight: bold; color: #2c3c50; margin: 15px 0 5px 0;">JOÃO</p>
-                        <p style="margin-left: 60px; font-style: italic; color: #666;">(aliviado, para si mesmo)</p>
-                        <p style="margin-left: 40px; color: #444; line-height: 1.6;">Foi só um pesadelo... só um pesadelo...</p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">Ainda tremendo, pega o celular da mesa de cabeceira para verificar as horas. A tela acende.</p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">Seu rosto empalidece instantaneamente.</p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">Na tela: 1 CHAMADA PERDIDA - NÚMERO DESCONHECIDO. Horário: 03:47 AM.</p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">O sangue de João congela nas veias. As mãos começam a tremer. Não foi um sonho. Era REAL.</p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">Antes que possa processar o que isso significa, o telefone VIBRA em sua mão.</p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">Uma NOVA MENSAGEM do número desconhecido aparece lentamente na tela.</p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">João lê, os olhos arregalados de puro terror. As palavras parecem queimar na tela:</p>
-                        
-                        <p style="text-align: center; font-size: 1.1em; margin: 20px 0; color: #444;"><strong>"DA PRÓXIMA VEZ VOCÊ NÃO ACORDARÁ."</strong></p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">O celular escorrega das mãos de João e cai no chão. Ele fica paralisado, incapaz de se mover, enquanto a realidade da mensagem penetra em sua mente.</p>
-                        
-                        <p style="font-weight: bold; color: #27ae60; text-transform: uppercase; margin: 20px 0 10px 0;">FADE TO BLACK.</p>
-                        
-                        <p style="text-align: center; margin-top: 30px; font-style: italic; color: #7f8c8d; font-family: 'Segoe UI', sans-serif;">FIM DO EPISÓDIO 1</p>
-                    </div>
-                    
-                    <p style="font-style: italic; color: #7f8c8d; margin-top: 15px;">Projeto de baixo custo e alta viabilidade técnica, ideal para curta-metragem independente. Roteiro completo disponível mediante solicitação formal.</p>
+                    <p class="script-synopsis"><strong>Sinopse:</strong> João recebe uma chamada silenciosa de um número desconhecido no meio da noite. Quando atende, não há som do outro lado. Uma sombra misteriosa aparece atrás da cortina, e ele sente uma brisa fria inexplicável.</p>
                     
                     <div class="script-actions">
-                        <a href="#contato" class="btn btn-primary">Solicitar Roteiro Completo</a>
+                        <a href="#contato" class="btn btn-primary">Solicitar Roteiro</a>
                         <button class="btn btn-secondary" onclick="toggleReactions('chamada-silenciosa')">❤️ Reagir</button>
                     </div>
-                    <div id="reactions-chamada-silenciosa" class="reactions-container" style="display:none;">
+                    
+                    <div id="reactions-chamada-silenciosa" class="reactions-container" style="display:none">
                         <h4>O que você achou?</h4>
                         <div class="reactions-buttons">
-                            <button class="reaction-btn" onclick="addReaction('chamada-silenciosa', 'like')" data-reaction="like">
+                            <button class="reaction-btn" onclick="addReaction('chamada-silenciosa', 'like')" data-reaction="like" aria-label="Gostei">
                                 <span class="reaction-emoji">👍</span>
                                 <span class="reaction-count" id="count-chamada-silenciosa-like">0</span>
                             </button>
-                            <button class="reaction-btn" onclick="addReaction('chamada-silenciosa', 'love')" data-reaction="love">
+                            <button class="reaction-btn" onclick="addReaction('chamada-silenciosa', 'love')" data-reaction="love" aria-label="Amei">
                                 <span class="reaction-emoji">❤️</span>
                                 <span class="reaction-count" id="count-chamada-silenciosa-love">0</span>
                             </button>
-                            <button class="reaction-btn" onclick="addReaction('chamada-silenciosa', 'wow')" data-reaction="wow">
+                            <button class="reaction-btn" onclick="addReaction('chamada-silenciosa', 'wow')" data-reaction="wow" aria-label="Uau">
                                 <span class="reaction-emoji">😮</span>
                                 <span class="reaction-count" id="count-chamada-silenciosa-wow">0</span>
                             </button>
-                            <button class="reaction-btn" onclick="addReaction('chamada-silenciosa', 'scared')" data-reaction="scared">
+                            <button class="reaction-btn" onclick="addReaction('chamada-silenciosa', 'scared')" data-reaction="scared" aria-label="Assustador">
                                 <span class="reaction-emoji">😱</span>
                                 <span class="reaction-count" id="count-chamada-silenciosa-scared">0</span>
                             </button>
                         </div>
-                        <div class="reactions-total" id="total-chamada-silenciosa">Total de reações: <strong>0</strong></div>
+                        <div class="reactions-total" id="total-chamada-silenciosa">Total: <strong>0</strong></div>
                     </div>
                 </article>
 
+                <!-- Outros roteiros com mesma otimização -->
                 <article class="script-card">
                     <div class="script-header">
                         <h3>"Na Minha Linguagem!"</h3>
@@ -233,238 +167,22 @@ document.getElementById('custom-ad-container').addEventListener('click', functio
                         <span>📽️ Série Dev Vida</span>
                         <span>⏱️ 1-2 min</span>
                         <span>👥 2 personagens</span>
-                        <span>🏠 Interior (Escritório/Sala)</span>
                     </div>
                     
-                    <img src="imagens/mandioca.png" alt="Imagem conceito Mandioca" class="imagem-roteiro" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; margin: 20px auto; display: block; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <img src="imagens/mandioca.png" 
+                         alt="Conceito Mandioca" 
+                         width="600" 
+                         height="400"
+                         loading="lazy"
+                         class="imagem-roteiro">
                     
-                    <p class="script-synopsis"><strong>Sinopse:</strong> Uma comédia curta onde dois amigos entram em um dilema cultural absurdo quando linguagens de programação são confundidas com idiomas estrangeiros. O mal-entendido atinge o auge quando Paulo pergunta como dizer "mandioca" em PHP, resultando em uma revelação cômica sobre comandos de código.</p>
+                    <p class="script-synopsis"><strong>Sinopse:</strong> Comédia sobre linguagens de programação confundidas com idiomas estrangeiros.</p>
                     
-                    <div class="roteiro-texto" style="background: #f8f9fa; padding: 30px; border-radius: 8px; margin: 25px 0; border-left: 4px solid #27ae60; font-family: 'Courier New', monospace; font-size: 0.95em;">
-                        <h4 style="color: #2c3c50; margin: 25px 0 15px 0; font-size: 1.3em; font-family: 'Segoe UI', sans-serif;">ROTEIRO COMPLETO</h4>
-                        
-                        <p style="font-weight: bold; color: #27ae60; text-transform: uppercase; margin: 20px 0 10px 0;">INT. SALA DE ESTAR - DIA</p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">PAULO está sentado no sofá, olhando curiosamente para a tela do notebook de CARLOS, que está debruçado sobre a mesa.</p>
-                        
-                        <p style="font-weight: bold; color: #2c3c50; margin: 15px 0 5px 0;">PAULO</p>
-                        <p style="margin-left: 60px; font-style: italic; color: #666;">(Olha curioso para a tela)</p>
-                        <p style="margin-left: 40px; color: #444; line-height: 1.6;">— Que coisa é essa aí?</p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">Carlos para de digitar por um instante e vira o rosto, sorrindo.</p>
-                        
-                        <p style="font-weight: bold; color: #2c3c50; margin: 15px 0 5px 0;">CARLOS</p>
-                        <p style="margin-left: 60px; font-style: italic; color: #666;">(Sorri)</p>
-                        <p style="margin-left: 40px; color: #444; line-height: 1.6;">— Na minha linguagem, a gente chama isso de bug.</p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">Paulo franze a testa, fazendo cara de quem não entendeu nada.</p>
-                        
-                        <p style="font-weight: bold; color: #2c3c50; margin: 15px 0 5px 0;">PAULO</p>
-                        <p style="margin-left: 60px; font-style: italic; color: #666;">(Faz cara de quem não entendeu nada)</p>
-                        <p style="margin-left: 40px; color: #444; line-height: 1.6;">— Que língua é essa?</p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">Carlos volta a atenção para a tela, enquanto responde casualmente.</p>
-                        
-                        <p style="font-weight: bold; color: #2c3c50; margin: 15px 0 5px 0;">CARLOS</p>
-                        <p style="margin-left: 40px; color: #444; line-height: 1.6;">— PHP, JavaScript, Python… alguma dessas.</p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">Paulo se afasta levemente, confuso e admirado com a estranheza dos nomes.</p>
-                        
-                        <p style="font-weight: bold; color: #2c3c50; margin: 15px 0 5px 0;">PAULO</p>
-                        <p style="margin-left: 60px; font-style: italic; color: #666;">(Confuso, admirado)</p>
-                        <p style="margin-left: 40px; color: #444; line-height: 1.6;">— Estranho… nunca ouvi falar.</p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">Paulo faz uma pausa, pensando, enquanto Carlos continua digitando.</p>
-                        
-                        <p style="font-weight: bold; color: #2c3c50; margin: 15px 0 5px 0;">PAULO</p>
-                        <p style="margin-left: 40px; color: #444; line-height: 1.6;">— E… como é que se diz "mandioca" nesse tal de PHP?</p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">Carlos solta uma risada baixa e começa a digitar rápido no teclado.</p>
-                        
-                        <p style="font-weight: bold; color: #2c3c50; margin: 15px 0 5px 0;">CARLOS</p>
-                        <p style="margin-left: 60px; font-style: italic; color: #666;">(Ri enquanto digita)</p>
-                        <p style="margin-left: 40px; color: #444; line-height: 1.6;">— Assim, ó: echo "mandioca";</p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">Paulo dá um passo para trás, espantado, como se tivesse visto um fantasma.</p>
-                        
-                        <p style="font-weight: bold; color: #2c3c50; margin: 15px 0 5px 0;">PAULO</p>
-                        <p style="margin-left: 60px; font-style: italic; color: #666;">(Dá um passo para trás, espantado)</p>
-                        <p style="margin-left: 40px; color: #444; line-height: 1.6;">— Que estranho!</p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">Ele gesticula, tentando processar a informação.</p>
-                        
-                        <p style="font-weight: bold; color: #2c3c50; margin: 15px 0 5px 0;">PAULO</p>
-                        <p style="margin-left: 40px; color: #444; line-height: 1.6;">— Primeiro fala "echo" e depois joga uma palavra de outro idioma? Nem árabe nem chinês falam assim… Isso é de que país afinal?</p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">Carlos para de digitar, olha para o amigo e sorri, divertido com a confusão.</p>
-                        
-                        <p style="font-weight: bold; color: #2c3c50; margin: 15px 0 5px 0;">CARLOS</p>
-                        <p style="margin-left: 60px; font-style: italic; color: #666;">(Sorri, divertido)</p>
-                        <p style="margin-left: 40px; color: #444; line-height: 1.6;">...</p>
-                        
-                        <p style="font-weight: bold; color: #27ae60; text-transform: uppercase; margin: 20px 0 10px 0;">CORTA PARA:</p>
-                        
-                        <p style="text-align: center; margin-top: 30px; font-style: italic; color: #7f8c8d; font-family: 'Segoe UI', sans-serif;">FIM</p>
-                    </div>
-                    
-                    <p style="font-style: italic; color: #7f8c8d; margin-top: 15px;">Projeto leve, filmável e de baixo custo. Disponível para leitura e aquisição.</p>
                     <div class="script-actions">
-                        <a href="#contato" class="btn btn-primary">Solicitar Roteiro Completo</a>
+                        <a href="#contato" class="btn btn-primary">Solicitar Roteiro</a>
                         <button class="btn btn-secondary" onclick="toggleReactions('na-minha-linguagem')">❤️ Reagir</button>
                     </div>
-                    <div id="reactions-na-minha-linguagem" class="reactions-container" style="display:none;">
-                        <h4>O que você achou?</h4>
-                        <div class="reactions-buttons">
-                            <button class="reaction-btn" onclick="addReaction('na-minha-linguagem', 'like')" data-reaction="like">
-                                <span class="reaction-emoji">👍</span>
-                                <span class="reaction-count" id="count-na-minha-linguagem-like">0</span>
-                            </button>
-                            <button class="reaction-btn" onclick="addReaction('na-minha-linguagem', 'love')" data-reaction="love">
-                                <span class="reaction-emoji">❤️</span>
-                                <span class="reaction-count" id="count-na-minha-linguagem-love">0</span>
-                            </button>
-                            <button class="reaction-btn" onclick="addReaction('na-minha-linguagem', 'laugh')" data-reaction="laugh">
-                                <span class="reaction-emoji">😂</span>
-                                <span class="reaction-count" id="count-na-minha-linguagem-laugh">0</span>
-                            </button>
-                            <button class="reaction-btn" onclick="addReaction('na-minha-linguagem', 'clever')" data-reaction="clever">
-                                <span class="reaction-emoji">🤓</span>
-                                <span class="reaction-count" id="count-na-minha-linguagem-clever">0</span>
-                            </button>
-                        </div>
-                        <div class="reactions-total" id="total-na-minha-linguagem">Total de reações: <strong>0</strong></div>
-                    </div>
                 </article>
-
-                <article class="script-card">
-                    <div class="script-header">
-                        <h3>"Homem que fez porcaria!"</h3>
-                        <span class="script-tag comedy">Comédia</span>
-                    </div>
-                    <div class="script-meta">
-                        <span>⏱️ 2-3 min</span>
-                        <span>👥 2 personagens</span>
-                        <span>🏠 Interior (Casa)</span>
-                    </div>
-                    
-                    <img src="imagens/porcaria.png" alt="Imagem conceito Porcaria" class="imagem-roteiro" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; margin: 20px auto; display: block; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                    
-                    <p class="script-synopsis"><strong>Sinopse:</strong> Um mal-entendido hilarante acontece quando um homem anuncia à sua esposa que "fez uma porcaria". A mulher fica apavorada imaginando o pior, mas descobre que ele estava falando literalmente sobre abrir um negócio relacionado à venda de porcos. Uma comédia sobre equívocos linguísticos e empreendedorismo inesperado.</p>
-                    
-                    <div class="roteiro-texto" style="background: #f8f9fa; padding: 30px; border-radius: 8px; margin: 25px 0; border-left: 4px solid #27ae60; font-family: 'Courier New', monospace; font-size: 0.95em;">
-                        <h4 style="color: #2c3c50; margin: 25px 0 15px 0; font-size: 1.3em; font-family: 'Segoe UI', sans-serif;">ROTEIRO COMPLETO</h4>
-                        
-                        <p style="font-weight: bold; color: #27ae60; text-transform: uppercase; margin: 20px 0 10px 0;">INT. SALA DE ESTAR - DIA</p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">JOÃO (30 anos) está em pé na sala, nervoso, segurando um envelope com dinheiro. Sua esposa, MARIA (28 anos), está sentada no sofá, tranquila.</p>
-                        
-                        <p style="font-weight: bold; color: #2c3c50; margin: 15px 0 5px 0;">JOÃO</p>
-                        <p style="margin-left: 40px; color: #444; line-height: 1.6;">Amor, preciso te contar uma coisa...</p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">Maria olha para ele com naturalidade.</p>
-                        
-                        <p style="font-weight: bold; color: #2c3c50; margin: 15px 0 5px 0;">MARIA</p>
-                        <p style="margin-left: 40px; color: #444; line-height: 1.6;">Fala, amor. Pode falar à vontade.</p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">João suspira fundo, como se estivesse prestes a confessar algo grave.</p>
-                        
-                        <p style="font-weight: bold; color: #2c3c50; margin: 15px 0 5px 0;">JOÃO</p>
-                        <p style="margin-left: 60px; font-style: italic; color: #666;">(Suspira fundo)</p>
-                        <p style="margin-left: 40px; color: #444; line-height: 1.6;">Então... eu fiz uma porcaria.</p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">Maria se levanta assustada, os olhos arregalados.</p>
-                        
-                        <p style="font-weight: bold; color: #2c3c50; margin: 15px 0 5px 0;">MARIA</p>
-                        <p style="margin-left: 60px; font-style: italic; color: #666;">(Assustada)</p>
-                        <p style="margin-left: 40px; color: #444; line-height: 1.6;">Como assim? Porcaria? Que porcaria?</p>
-                        
-                        <p style="font-weight: bold; color: #2c3c50; margin: 15px 0 5px 0;">JOÃO</p>
-                        <p style="margin-left: 40px; color: #444; line-height: 1.6;">Calma, calma! Não é o que você tá pensando. Olha só isso.</p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">João mostra o envelope cheio de dinheiro. Maria fica ainda mais chocada.</p>
-                        
-                        <p style="font-weight: bold; color: #2c3c50; margin: 15px 0 5px 0;">MARIA</p>
-                        <p style="margin-left: 40px; color: #444; line-height: 1.6;">Você fez merda pra conseguir isso e ainda vem me mostrar o dinheiro?</p>
-                        
-                        <p style="font-weight: bold; color: #2c3c50; margin: 15px 0 5px 0;">JOÃO</p>
-                        <p style="margin-left: 40px; color: #444; line-height: 1.6;">Não, não. Eu não fiz merda. Eu fiz... porcaria!</p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">Maria está completamente confusa, andando de um lado para o outro.</p>
-                        
-                        <p style="font-weight: bold; color: #2c3c50; margin: 15px 0 5px 0;">MARIA</p>
-                        <p style="margin-left: 40px; color: #444; line-height: 1.6;">Não entendo, o que é que você fez? Olha João, porque? Você quer nos sustentar com o dinheiro de merda? Que exemplo você quer dar pros nossos filhos?</p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">João tenta acalmá-la, segurando suas mãos.</p>
-                        
-                        <p style="font-weight: bold; color: #2c3c50; margin: 15px 0 5px 0;">JOÃO</p>
-                        <p style="margin-left: 40px; color: #444; line-height: 1.6;">Eu não sei se você está entendendo como. Mas afinal, como se chama o lugar onde é vendido hamburger?</p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">Maria para, confusa com a mudança de assunto.</p>
-                        
-                        <p style="font-weight: bold; color: #2c3c50; margin: 15px 0 5px 0;">MARIA</p>
-                        <p style="margin-left: 40px; color: #444; line-height: 1.6;">Hamburgueria.</p>
-                        
-                        <p style="font-weight: bold; color: #2c3c50; margin: 15px 0 5px 0;">JOÃO</p>
-                        <p style="margin-left: 40px; color: #444; line-height: 1.6;">E como se chama o lugar onde se vende porco?</p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">Maria para para pensar, a ficha começando a cair.</p>
-                        
-                        <p style="font-weight: bold; color: #2c3c50; margin: 15px 0 5px 0;">MARIA</p>
-                        <p style="margin-left: 40px; color: #444; line-height: 1.6;">Porcaria.</p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">Ela arregala os olhos, finalmente entendendo.</p>
-                        
-                        <p style="font-weight: bold; color: #2c3c50; margin: 15px 0 5px 0;">MARIA</p>
-                        <p style="margin-left: 40px; color: #444; line-height: 1.6;">Hamm então você fez porcaria?</p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">João sorri aliviado, abrindo os braços.</p>
-                        
-                        <p style="font-weight: bold; color: #2c3c50; margin: 15px 0 5px 0;">JOÃO</p>
-                        <p style="margin-left: 40px; color: #444; line-height: 1.6;">Exatamente isso amor!</p>
-                        
-                        <p style="color: #444; line-height: 1.8; margin: 10px 0;">Maria suspira, aliviada, e começa a rir do mal-entendido. João se junta à risada.</p>
-                        
-                        <p style="font-weight: bold; color: #27ae60; text-transform: uppercase; margin: 20px 0 10px 0;">FADE OUT.</p>
-                        
-                        <p style="text-align: center; margin-top: 30px; font-style: italic; color: #7f8c8d; font-family: 'Segoe UI', sans-serif;">FIM</p>
-                    </div>
-                    
-                    <p style="font-style: italic; color: #7f8c8d; margin-top: 15px;">Comédia familiar leve, filmável em uma única locação. Perfeita para curta-metragem ou sketch. Disponível para leitura e aquisição.</p>
-                    <div class="script-actions">
-                        <a href="#contato" class="btn btn-primary">Solicitar Roteiro Completo</a>
-                        <button class="btn btn-secondary" onclick="toggleReactions('homem-porcaria')">❤️ Reagir</button>
-                    </div>
-                    <div id="reactions-homem-porcaria" class="reactions-container" style="display:none;">
-                        <h4>O que você achou?</h4>
-                        <div class="reactions-buttons">
-                            <button class="reaction-btn" onclick="addReaction('homem-porcaria', 'like')" data-reaction="like">
-                                <span class="reaction-emoji">👍</span>
-                                <span class="reaction-count" id="count-homem-porcaria-like">0</span>
-                            </button>
-                            <button class="reaction-btn" onclick="addReaction('homem-porcaria', 'love')" data-reaction="love">
-                                <span class="reaction-emoji">❤️</span>
-                                <span class="reaction-count" id="count-homem-porcaria-love">0</span>
-                            </button>
-                            <button class="reaction-btn" onclick="addReaction('homem-porcaria', 'laugh')" data-reaction="laugh">
-                                <span class="reaction-emoji">😂</span>
-                                <span class="reaction-count" id="count-homem-porcaria-laugh">0</span>
-                            </button>
-                            <button class="reaction-btn" onclick="addReaction('homem-porcaria', 'funny')" data-reaction="funny">
-                                <span class="reaction-emoji">🤣</span>
-                                <span class="reaction-count" id="count-homem-porcaria-funny">0</span>
-                            </button>
-                        </div>
-                        <div class="reactions-total" id="total-homem-porcaria">Total de reações: <strong>0</strong></div>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <section id="recursos" class="resources">
-            <div class="container">
-                <h2>📚 Recursos Educacionais</h2>
-                <p>Acesse conteúdos gratuitos sobre técnicas de roteiro, análise de filmes e desenvolvimento de projetos audiovisuais.</p>
-                <a href="blog.html" class="btn btn-primary">Ver todos os recursos</a>
             </div>
         </section>
 
@@ -475,14 +193,13 @@ document.getElementById('custom-ad-container').addEventListener('click', functio
                 <div class="contact-info">
                     <div class="contact-card">
                         <h3>📧 Email</h3>
-                        <p><a href="/cdn-cgi/l/email-protection#4e232f203b2b223a21202a2f232f780e29232f2722602d2123"><span class="__cf_email__" data-cfemail="fe939f908b9b928a91909a9f939fc8be99939f9792d09d9193">mtondama@gmail.com&#160;</span></a></p>
+                        <p><a href="mailto:manueltondama6@gmail.com">manueltondama6@gmail.com</a></p>
                     </div>
                     <div class="contact-card">
                         <h3>💬 WhatsApp</h3>
-                        <p><a href="https://wa.me/244940266827?text=Olá%20Lelson%2C%20vim%20do%20site%20Oficina%20de%20Roteiro" target="_blank">+244 940 266 827</a></p>
+                        <p><a href="https://wa.me/244940266827" target="_blank" rel="noopener">+244 940 266 827</a></p>
                     </div>
                 </div>
-                <p class="contact-subtitle"><strong>Lelson António</strong> | Roteirista Profissional</p>
             </div>
         </section>
     </main>
@@ -495,18 +212,18 @@ document.getElementById('custom-ad-container').addEventListener('click', functio
                     <p>Roteiros profissionais e consultoria especializada</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Links Rápidos</h4>
-                    <ul>
-                        <li><a href="sobre.html">Sobre</a></li>
-                        <li><a href="servicos.html">Serviços</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="politica-privacidade.html">Política de Privacidade</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
                     <h4>Contato</h4>
-                    <p>Email: <a href="/cdn-cgi/l/email-protection#0469656a716168706b6a6065696532446369656d682a676b69"><span class="__cf_email__" data-cfemail="781519160d1d140c17161c1915194e381f15191114561b1715">mtondama@gmail.com&#160;</span></a></p>
-                    <p>WhatsApp: <a href="https://wa.me/244940266827" target="_blank">+244 940 266 827</a></p>
+                    <p>Email: <a href="mailto:manueltondama6@gmail.com">manueltondama6@gmail.com</a></p>
+                    <p>WhatsApp: <a href="https://wa.me/244940266827" target="_blank" rel="noopener">+244 940 266 827</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
+                <p>&copy; 2026 Lelson António - Oficina de Roteiro. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript defer -->
+    <script defer src="script.js"></script>
+</body>
+</html>
