@@ -4,46 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Preconnect crítico -->
+    <!-- Preconnect para recursos externos -->
     <link rel="preconnect" href="https://pagead2.googlesyndication.com">
-    <link rel="dns-prefetch" href="https://quge5.com">
+    <link rel="preconnect" href="https://quge5.com">
     
-    <meta name="description" content="Oficina de Roteiro - Roteiros profissionais, consultoria criativa e recursos para roteiristas.">
+    <!-- Meta tags essenciais -->
+    <meta name="description" content="Oficina de Roteiro - Roteiros profissionais, consultoria criativa e recursos para roteiristas. Escrita de roteiros para cinema, TV e plataformas digitais.">
+    <meta name="keywords" content="roteiro, roteirista, consultoria, escrita criativa, cinema, audiovisual, Angola, Lelson António">
+    <meta name="author" content="Lelson António">
     <meta name="theme-color" content="#1e3c72">
     
-    <title>Oficina de Roteiro | Roteiros Profissionais</title>
+    <title>Oficina de Roteiro | Roteiros e Consultoria Profissional</title>
     
-    <!-- CSS Crítico Inline Mínimo -->
+    <!-- CSS Inline Crítico -->
     <style>
+        /* Critical CSS - Above the fold */
         *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.6;color:#333;background:#f8f9fa}
-        .main-header{background:linear-gradient(135deg,#1e3c72,#2a5298);color:#fff;padding:60px 20px;text-align:center}
-        .header-content h1{font-size:2.5em;margin-bottom:10px}
-        .main-nav{background:#2c3e50;position:sticky;top:0;z-index:1000}
-        .nav-container{max-width:1200px;margin:0 auto;padding:0 20px;height:60px;display:flex;align-items:center}
+        body{font-family:'Inter','Segoe UI',sans-serif;line-height:1.6;color:#333;background-color:#f8f9fa}
+        .main-header{background:linear-gradient(135deg,#1e3c72 0%,#2a5298 100%);color:#fff;padding:80px 20px;text-align:center}
+        .header-content h1{font-size:3em;margin-bottom:15px;font-weight:700}
+        .main-nav{background-color:#2c3e50;position:sticky;top:0;z-index:1000}
+        .nav-container{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:0 20px;height:60px}
         .container{max-width:1200px;margin:0 auto;padding:0 20px}
     </style>
     
-    <!-- CSS Principal - Preload + Async -->
-    <link rel="preload" href="styles-otimizado.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="styles-otimizado.css"></noscript>
+    <!-- CSS Principal (defer) -->
+    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="styles.css"></noscript>
     
     <!-- Google AdSense - Async -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7482420290445582" crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7482420290445582"
+     crossorigin="anonymous"></script>
 </head>
 <body>
     <header class="main-header">
         <div class="header-content">
             <h1>Oficina de Roteiro</h1>
-            <p class="tagline">Transformando ideias em histórias</p>
+            <p class="tagline">Transformando ideias em histórias que conectam</p>
         </div>
     </header>
     
     <nav class="main-nav">
         <div class="nav-container">
-            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu">
-                <span></span><span></span><span></span>
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir Menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
+            
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Início</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
@@ -54,10 +62,13 @@
         </div>
     </nav>
 
-    <!-- Ad Space -->
+    <!-- Ad Space Otimizado -->
     <div class="ad-space header-ad" style="min-height:90px">
         <div id="monetag-header" style="width:100%;max-width:728px;margin:0 auto">
-            <script src="https://quge5.com/88/tag.min.js" data-zone="199812" async data-cfasync="false"></script>
+            <script src="https://quge5.com/88/tag.min.js" 
+                data-zone="199812" 
+                async 
+                data-cfasync="false"></script>
         </div>
     </div>
     
@@ -65,7 +76,8 @@
         <section class="hero">
             <div class="container">
                 <h2>Bem-vindo à Oficina de Roteiro</h2>
-                <p class="intro-text">Espaço dedicado à criação e desenvolvimento de roteiros profissionais. Encontre roteiros originais disponíveis para leitura e aquisição, além de recursos práticos para aprimorar sua escrita.</p>
+                <p class="intro-text">Este é um espaço dedicado à criação, desenvolvimento e comercialização de roteiros profissionais. Aqui você encontra roteiros originais disponíveis para leitura e aquisição, além de recursos práticos para aprimorar sua escrita e entender o mercado audiovisual.</p>
+                <p class="intro-text">Todos os materiais são desenvolvidos com foco em qualidade narrativa, viabilidade de produção e potencial comercial. Cada projeto é cuidadosamente elaborado para equilibrar criatividade artística com viabilidade técnica e orçamentária.</p>
             </div>
         </section>
 
@@ -74,22 +86,17 @@
                 <h2>📚 Recursos para Roteiristas</h2>
                 
                 <div class="video-embed">
-                    <h3>🎬 Como Velozes e Furiosos Faturou US$ 700 Mi</h3>
+                    <h3>🎬 Como Velozes e Furiosos Faturou US$ 700 Mi (e Seu Roteiro Não)</h3>
+                    <p><strong>Descrição:</strong> Velozes e Furiosos DEZ faturou setecentos milhões de dólares. O SEU roteiro... provavelmente, não. E se eu te disser que não é sobre ter mais talento, nem fazer mais ação, mas sobre um ÚNICO SEGREDO que a Universal Pictures dominou?</p>
                     
-                    <!-- YouTube com facade para melhor performance -->
-                    <div class="video-container" style="background:#000;cursor:pointer" onclick="this.innerHTML='<iframe src=&quot;https://www.youtube.com/embed/kcqCvkotV-Y?autoplay=1&quot; allow=&quot;autoplay;encrypted-media&quot; allowfullscreen style=&quot;width:100%;height:100%;position:absolute;top:0;left:0;border:0&quot;></iframe>'">
-                        <img src="https://img.youtube.com/vi/kcqCvkotV-Y/maxresdefault.jpg" 
-                             alt="Thumbnail do vídeo" 
-                             width="1280" 
-                             height="720"
-                             loading="lazy"
-                             style="width:100%;height:auto;display:block">
-                        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:68px;height:48px;background:red;border-radius:12px">
-                            <svg viewBox="0 0 68 48" style="width:100%;height:100%">
-                                <path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00"></path>
-                                <path d="M 45,24 27,14 27,34" fill="#fff"></path>
-                            </svg>
-                        </div>
+                    <!-- Lazy loading do YouTube -->
+                    <div class="video-container" style="background:#000">
+                        <iframe loading="lazy" src="https://www.youtube.com/embed/kcqCvkotV-Y" 
+                                title="Como Velozes e Furiosos Faturou US$ 700 Mi" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
                     </div>
                 </div>
             </div>
@@ -108,40 +115,40 @@
                         <span>📽️ Episódio 1</span>
                         <span>⏱️ 3-5 min</span>
                         <span>👥 2 personagens</span>
+                        <span>🏠 Interior</span>
                     </div>
                     
-                    <!-- Imagem otimizada com dimensões explícitas -->
+                    <!-- Imagem otimizada com lazy loading -->
                     <img src="imagens/chamada-silenciosa.png" 
                          alt="Cena de A Chamada Silenciosa" 
                          width="600" 
                          height="400"
                          loading="lazy"
-                         decoding="async"
                          class="imagem-roteiro">
                     
-                    <p class="script-synopsis"><strong>Sinopse:</strong> João recebe uma chamada silenciosa no meio da noite. Uma sombra misteriosa aparece e uma brisa fria inexplicável toma conta do ambiente.</p>
+                    <p class="script-synopsis"><strong>Sinopse:</strong> João recebe uma chamada silenciosa de um número desconhecido no meio da noite. Quando atende, não há som do outro lado. Uma sombra misteriosa aparece atrás da cortina, e ele sente uma brisa fria inexplicável.</p>
                     
                     <div class="script-actions">
                         <a href="#contato" class="btn btn-primary">Solicitar Roteiro</a>
-                        <button class="btn btn-secondary" onclick="toggleReactions('chamada-silenciosa')" type="button">❤️ Reagir</button>
+                        <button class="btn btn-secondary" onclick="toggleReactions('chamada-silenciosa')">❤️ Reagir</button>
                     </div>
                     
                     <div id="reactions-chamada-silenciosa" class="reactions-container" style="display:none">
                         <h4>O que você achou?</h4>
                         <div class="reactions-buttons">
-                            <button class="reaction-btn" onclick="addReaction('chamada-silenciosa','like')" data-reaction="like" type="button" aria-label="Gostei">
+                            <button class="reaction-btn" onclick="addReaction('chamada-silenciosa', 'like')" data-reaction="like" aria-label="Gostei">
                                 <span class="reaction-emoji">👍</span>
                                 <span class="reaction-count" id="count-chamada-silenciosa-like">0</span>
                             </button>
-                            <button class="reaction-btn" onclick="addReaction('chamada-silenciosa','love')" data-reaction="love" type="button" aria-label="Amei">
+                            <button class="reaction-btn" onclick="addReaction('chamada-silenciosa', 'love')" data-reaction="love" aria-label="Amei">
                                 <span class="reaction-emoji">❤️</span>
                                 <span class="reaction-count" id="count-chamada-silenciosa-love">0</span>
                             </button>
-                            <button class="reaction-btn" onclick="addReaction('chamada-silenciosa','wow')" data-reaction="wow" type="button" aria-label="Uau">
+                            <button class="reaction-btn" onclick="addReaction('chamada-silenciosa', 'wow')" data-reaction="wow" aria-label="Uau">
                                 <span class="reaction-emoji">😮</span>
                                 <span class="reaction-count" id="count-chamada-silenciosa-wow">0</span>
                             </button>
-                            <button class="reaction-btn" onclick="addReaction('chamada-silenciosa','scared')" data-reaction="scared" type="button" aria-label="Assustador">
+                            <button class="reaction-btn" onclick="addReaction('chamada-silenciosa', 'scared')" data-reaction="scared" aria-label="Assustador">
                                 <span class="reaction-emoji">😱</span>
                                 <span class="reaction-count" id="count-chamada-silenciosa-scared">0</span>
                             </button>
@@ -150,6 +157,7 @@
                     </div>
                 </article>
 
+                <!-- Outros roteiros com mesma otimização -->
                 <article class="script-card">
                     <div class="script-header">
                         <h3>"Na Minha Linguagem!"</h3>
@@ -158,6 +166,7 @@
                     <div class="script-meta">
                         <span>📽️ Série Dev Vida</span>
                         <span>⏱️ 1-2 min</span>
+                        <span>👥 2 personagens</span>
                     </div>
                     
                     <img src="imagens/mandioca.png" 
@@ -165,14 +174,13 @@
                          width="600" 
                          height="400"
                          loading="lazy"
-                         decoding="async"
                          class="imagem-roteiro">
                     
-                    <p class="script-synopsis"><strong>Sinopse:</strong> Comédia sobre linguagens de programação confundidas com idiomas.</p>
+                    <p class="script-synopsis"><strong>Sinopse:</strong> Comédia sobre linguagens de programação confundidas com idiomas estrangeiros.</p>
                     
                     <div class="script-actions">
                         <a href="#contato" class="btn btn-primary">Solicitar Roteiro</a>
-                        <button class="btn btn-secondary" onclick="toggleReactions('na-minha-linguagem')" type="button">❤️ Reagir</button>
+                        <button class="btn btn-secondary" onclick="toggleReactions('na-minha-linguagem')">❤️ Reagir</button>
                     </div>
                 </article>
             </div>
@@ -181,6 +189,7 @@
         <section id="contato" class="contact">
             <div class="container">
                 <h2>Entre em Contato</h2>
+                <p>Interessado em roteiros, consultoria ou colaboração profissional?</p>
                 <div class="contact-info">
                     <div class="contact-card">
                         <h3>📧 Email</h3>
@@ -200,20 +209,21 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h4>Oficina de Roteiro</h4>
-                    <p>Roteiros profissionais</p>
+                    <p>Roteiros profissionais e consultoria especializada</p>
                 </div>
                 <div class="footer-section">
                     <h4>Contato</h4>
-                    <p><a href="mailto:manueltondama6@gmail.com">manueltondama6@gmail.com</a></p>
+                    <p>Email: <a href="mailto:manueltondama6@gmail.com">manueltondama6@gmail.com</a></p>
+                    <p>WhatsApp: <a href="https://wa.me/244940266827" target="_blank" rel="noopener">+244 940 266 827</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Lelson António</p>
+                <p>&copy; 2026 Lelson António - Oficina de Roteiro. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript ULTRA otimizado - defer -->
-    <script defer src="script-ultra-otimizado.js"></script>
+    <!-- JavaScript defer -->
+    <script defer src="script.js"></script>
 </body>
 </html>
